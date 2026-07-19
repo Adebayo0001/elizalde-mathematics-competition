@@ -93,3 +93,14 @@ html {
 .float-badge {
   animation: float-badge 3s ease-in-out infinite;
 }
+
+.emc-hero {
+  min-height: 85vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 240px 5% 40px;
+  box-sizing: border-box;
+}

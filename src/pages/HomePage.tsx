@@ -1,0 +1,409 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Globe,
+  Sparkles,
+  Trophy,
+  Users,
+  BookOpen,
+  Layers,
+  GraduationCap,
+  Brain,
+  Target,
+  Play,
+} from "lucide-react";
+
+import Logo from "../components/Logo";
+import MissionVisionSection from "../components/MissionVisionSection";
+import ImpactSection from "../components/ImpactSection";
+import CompetitionStagesSection from "../components/CompetitionStagesSection";
+import TimelineCalendarSection from "../components/TimelineCalendarSection";
+import WorldOfMathematiciansSection from "../components/WorldOfMathematiciansSection";
+import FAQSection from "../components/FAQSection";
+import MedalistsSection from "../components/MedalistsSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import ParticipatingCountriesSection from "../components/ParticipatingCountriesSection";
+
+const heroImages = [
+  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=2000",
+];
+
+export default function HomePage() {
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-brand-bg font-sans text-brand-dark antialiased selection:bg-brand-teal/10 selection:text-brand-teal scroll-smooth">
+      {/* ──────────────────────────────────────────────────────────────────
+          1. NAVIGATION HEADER
+          ────────────────────────────────────────────────────────────────── */}
+      <header className="absolute top-0 left-0 right-0 z-40">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+          {/* Brand/Logo */}
+          <a href="#" className="flex items-center gap-3 group focus:outline-none">
+            <Logo className="h-12 w-12 group-hover:rotate-6 transition-transform duration-300" />
+            <div className="leading-none">
+              <span className="font-display font-extrabold text-lg text-brand-dark tracking-tight block">
+                EMC 2026
+              </span>
+              <span className="text-[10px] font-bold font-display text-brand-teal uppercase tracking-widest block mt-0.5">
+                Mathematics Competition
+              </span>
+            </div>
+          </a>
+
+          {/* Desktop Nav Links */}
+          <nav className="hidden xl:flex items-center gap-7 text-[13px] font-semibold font-display tracking-wide text-brand-dark/80">
+            <a href="#about" className="hover:text-brand-teal transition-colors">
+              About
+            </a>
+            <a href="#competition-stages" className="hover:text-brand-teal transition-colors">
+              Stages
+            </a>
+            <a href="#roadmap" className="hover:text-brand-teal transition-colors">
+              Roadmap
+            </a>
+            <a href="#world-of-mathematicians" className="hover:text-brand-teal transition-colors">
+              Spotlight
+            </a>
+            <a href="#winners" className="hover:text-brand-teal transition-colors">
+              Medalists
+            </a>
+            <a href="#testimonials" className="hover:text-brand-teal transition-colors">
+              Testimonials
+            </a>
+            <a href="#faq" className="hover:text-brand-teal transition-colors">
+              FAQ
+            </a>
+          </nav>
+
+          {/* Header CTA Button */}
+          <div>
+            <Link
+              to="/register"
+              id="nav-register-btn"
+              className="px-5 py-2.5 bg-brand-teal/10 backdrop-blur-sm hover:bg-brand-teal text-brand-teal hover:text-white font-semibold rounded-xl text-xs uppercase tracking-widest transition-all border border-brand-teal/20 hover:border-brand-teal focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal cursor-pointer"
+            >
+              Register
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        {/* ──────────────────────────────────────────────────────────────────
+            2. HERO SECTION — Full-Width Image Overlay (Reference Pattern #1)
+            ────────────────────────────────────────────────────────────────── */}
+        <section id="hero" className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-brand-bg flex items-end text-brand-dark">
+          {/* Fading Background Images */}
+          {heroImages.map((src, index) => (
+            <div
+              key={src}
+              className={`absolute inset-0 w-full h-full z-0 pointer-events-none transition-opacity duration-1000 ease-in-out ${
+                index === currentHeroImage ? "opacity-30" : "opacity-0"
+              }`}
+            >
+              <img
+                src={src}
+                alt=""
+                className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-linear ${
+                  index === currentHeroImage ? "scale-110" : "scale-100"
+                }`}
+              />
+            </div>
+          ))}
+
+          {/* Gradient Overlay — lighter, but still strong enough at bottom for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/60 to-transparent z-[1]" />
+
+          {/* Blueprint/Grid Pattern Overlay */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-[1]">
+            <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
+          </div>
+
+          {/* Hero Content — positioned at bottom-left like reference */}
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-16 lg:pb-24 pt-32 relative z-10 w-full">
+            <div className="max-w-3xl space-y-6">
+
+
+              {/* Large Editorial Headline */}
+              <h1 className="font-display font-semibold text-[32px] lg:text-[54px] text-brand-dark leading-[1.08] tracking-tight">
+                Every student has a moment where they realize what they're capable of.
+              </h1>
+
+              <p className="text-slate-600 font-sans text-[15px] lg:text-[17px] leading-[1.6] max-w-2xl">
+                EMC gives students around the world the chance to test their thinking, build their confidence, and discover what they can really do — in math and in themselves.
+              </p>
+
+              {/* CTA Row */}
+              <div className="flex flex-col sm:flex-row items-start gap-4 pt-2">
+                <a
+                  href="#about"
+                  className="px-6 py-4 border border-brand-teal hover:bg-brand-teal/5 text-brand-teal font-semibold rounded-2xl text-sm transition-colors text-center"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            {/* Social Proof Bar — bottom edge overlay */}
+            <div className="mt-12 pt-6 border-t border-brand-dark/10 flex flex-wrap items-center gap-8 text-[13px] font-medium text-slate-500">
+              <span className="flex items-center gap-1.5">
+                <Globe className="h-4 w-4 text-brand-teal" />
+                35+ Countries Participating
+              </span>
+              <span className="hidden sm:inline text-slate-700">•</span>
+              <span className="flex items-center gap-1.5">
+                <Trophy className="h-4 w-4 text-brand-teal" />
+                Global Championship Stage
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* ──────────────────────────────────────────────────────────────────
+            3. ABOUT SECTION — Two Column Layout
+            ────────────────────────────────────────────────────────────────── */}
+        <section id="about" className="py-16 lg:py-28 bg-brand-bg">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              
+              {/* Left Column — Image */}
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
+                <img 
+                  src="/images/about_us_students.jpg" 
+                  alt="Students arriving at the competition"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              </div>
+
+              {/* Right Column — Text & 4 Icon Feature Cards */}
+              <div className="flex flex-col">
+                {/* Header */}
+                <div className="text-left mb-12">
+                  <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-green uppercase">
+                    About Elizalde Mathematics Competition
+                  </span>
+                  <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
+                    Together, We Solve.
+                  </h2>
+                  <div className="text-slate-500 font-sans mt-5 text-[14px] lg:text-[15px] leading-[1.6] space-y-4 text-justify">
+                    <p>
+                      The Elizalde Mathematics Competition (EMC) is an International math contest dedicated to engaging students in the beauty and power of mathematics. Founded on the principles of academic excellence and inclusivity, EMC is designed to spark curiosity, challenge young minds, and cultivate a lifelong interest in mathematics across diverse student communities.
+                    </p>
+                    <p>
+                      More than just a competition, EMC serves as a developmental platform that encourages participants to think critically, solve problems creatively, and apply logical reasoning to real-world scenarios. Through a series of thoughtfully curated rounds, students are exposed to stimulating mathematical challenges that deepen their understanding and stretch their intellectual capabilities.
+                    </p>
+                    <p>
+                      Whether students are just beginning their mathematical journey or already excelling at advanced levels, EMC offers an enriching experience that promotes growth, resilience, and innovation. By participating, students not only gain recognition on a global stage but also join a vibrant community of aspiring mathematicians who are passionate about learning and discovery.
+                    </p>
+                    <p className="font-medium text-brand-dark">
+                      Join thousands of students across the globe. Compete. Learn. Excel.
+                    </p>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ──────────────────────────────────────────────────────────────────
+            4. MISSION & VISION SECTION — Stacked Images + Text
+            ────────────────────────────────────────────────────────────────── */}
+        <MissionVisionSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            4b. IMPACT SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <ImpactSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            10. WORLD OF MATHEMATICIANS SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <WorldOfMathematiciansSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            12. GLOBAL FINALISTS / MEDALISTS — Article Cards (Reference Pattern #8)
+            ────────────────────────────────────────────────────────────────── */}
+        <MedalistsSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            5. TESTIMONIALS — Carousel with Dot Pagination
+            ────────────────────────────────────────────────────────────────── */}
+        <TestimonialsSection />
+
+
+
+        {/* ──────────────────────────────────────────────────────────────────
+            7. PARTICIPATING COUNTRIES — Brand Row (Reference Pattern #6)
+            ────────────────────────────────────────────────────────────────── */}
+        <ParticipatingCountriesSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            8. COMPETITION STAGES SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <CompetitionStagesSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            9. EVENT CALENDAR / OLYMPIAD ROADMAP SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <TimelineCalendarSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            11. FAQ SECTION — Split Layout (Reference Pattern #7)
+            ────────────────────────────────────────────────────────────────── */}
+        <FAQSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            13. CLOSING CALL TO ACTION
+            ────────────────────────────────────────────────────────────────── */}
+        <section id="register-cta" className="relative py-14 lg:py-24 bg-brand-teal text-white overflow-hidden">
+          {/* Visual Accents */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white rounded-full animate-pulse pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white rounded-full opacity-60 pointer-events-none" />
+          </div>
+
+          <div className="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-8">
+            <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-gold uppercase block">
+              Enroll Your Candidates
+            </span>
+            
+            <h2 className="font-display font-semibold text-[26px] lg:text-[36px] tracking-tight leading-[1.15] max-w-2xl mx-auto text-white">
+              Give your student the stage they deserve.
+            </h2>
+            
+            <p className="text-slate-100 font-sans text-[15px] lg:text-[16px] leading-[1.6] max-w-xl mx-auto">
+              Registration for EMC 2026 is officially open. Coordinate teams of 3–4 students across Elementary, Middle, or High School brackets.
+            </p>
+
+            <div className="pt-4">
+              <Link
+                to="/register"
+                id="cta-register-school-btn"
+                className="w-full sm:w-auto px-8 py-4 bg-brand-red hover:bg-[#b82a22] text-white font-bold rounded-2xl text-base transition-all shadow-lg shadow-brand-red/20 inline-flex items-center justify-center gap-2 group focus:ring-4 focus:ring-brand-red/30 cursor-pointer"
+              >
+                Register
+                <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Verification Tag */}
+            <div className="pt-6 text-xs text-brand-bg/80 flex items-center justify-center gap-2">
+              <CheckCircle2 className="h-4 w-4 text-brand-gold" />
+              <span>Standard paper packets sent internationally upon roster confirmation</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          14. FOOTER — Social Links Bar + CTA Footer (Reference Pattern #9, #10)
+          ────────────────────────────────────────────────────────────────── */}
+      {/* Social Links Strip */}
+      <div className="bg-brand-bg border-t border-slate-200/60 py-5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold font-display uppercase tracking-wider text-slate-500">
+          <a href="#" className="hover:text-brand-teal transition-colors">Facebook</a>
+          <a href="#" className="hover:text-brand-teal transition-colors">Twitter</a>
+          <a href="#" className="hover:text-brand-teal transition-colors">Instagram</a>
+          <a href="#" className="hover:text-brand-teal transition-colors">LinkedIn</a>
+        </div>
+      </div>
+
+      {/* Main CTA Footer */}
+      <footer className="bg-brand-bg border-t border-slate-200/60 text-brand-dark py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          {/* Large CTA Heading */}
+          <div className="mb-16">
+            <h2 className="font-display font-bold text-[32px] lg:text-[52px] text-brand-dark leading-[1.1] tracking-tight max-w-2xl">
+              Together, We Solve.
+              <br />
+              <span className="text-slate-500">
+                Just drop us a line —{" "}
+                <a href="mailto:support@emcompetition.org" className="text-brand-teal hover:text-brand-gold transition-colors underline underline-offset-4 decoration-brand-teal/40">
+                  support@emcompetition.org
+                </a>
+              </span>
+            </h2>
+          </div>
+
+          {/* Footer Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start mb-12">
+            <div className="md:col-span-4 space-y-4">
+              <div className="flex items-center gap-2.5">
+                <Logo className="h-8 w-8" />
+                <span className="font-display font-extrabold text-sm text-brand-dark tracking-wide uppercase">
+                  EMC Tournament
+                </span>
+              </div>
+              <p className="text-xs text-slate-500 leading-relaxed max-w-xs font-sans">
+                The Elizalde Mathematics Competition inspires young thinkers around the world to unlock their scientific and logical potential through real-world team challenges.
+              </p>
+            </div>
+
+            <div className="md:col-span-2 space-y-3">
+              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-dark uppercase">
+                Brackets
+              </h5>
+              <ul className="text-xs space-y-2 font-sans text-slate-500">
+                <li>Elementary (Grades 4–6)</li>
+                <li>Middle School (Grades 7–9)</li>
+                <li>High School (Grades 10–12)</li>
+              </ul>
+            </div>
+
+            <div className="md:col-span-2 space-y-3">
+              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-dark uppercase">
+                Competitions
+              </h5>
+              <ul className="text-xs space-y-2 font-sans text-slate-500">
+                <li>Pre-Olympiad Conference</li>
+                <li>Math Projects</li>
+                <li>National Round</li>
+                <li>International Round</li>
+              </ul>
+            </div>
+
+            <div className="md:col-span-4 space-y-3">
+              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-dark uppercase">
+                Registration Help
+              </h5>
+              <p className="text-xs text-slate-500 leading-relaxed font-sans">
+                Have questions regarding standard paper rosters, exam centers, or timeline extensions?
+              </p>
+              <div className="text-xs font-bold text-brand-teal font-sans">
+                support@emcompetition.org
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-slate-200 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <p className="font-sans">© 2026 Elizalde Mathematics Competition. All rights reserved. Together, We Solve.</p>
+            <div className="flex gap-6 font-sans">
+              <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-slate-400 transition-colors">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* REGISTRATION FORM MODAL WINDOW REMOVED IN FAVOR OF DEDICATED PAGE */}
+    </div>
+  );
+}

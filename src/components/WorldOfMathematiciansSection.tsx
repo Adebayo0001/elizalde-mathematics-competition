@@ -19,7 +19,7 @@ const spotlightStudents: SpotlightStudent[] = [
     country: "Bulgaria",
     spotlightText: "Elena organized a virtual study club that helped 18 elementary bracket competitors master complex geometric coordinate systems. Her patience and passion illustrate the true spirit of mathematical companionship.",
     highlight: "Coached 18 younger peers",
-    photoUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=300&h=300",
+    photoUrl: "https://scontent-los4-1.xx.fbcdn.net/v/t39.30808-6/495382619_990501873291414_3612276526910567374_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x853&ctp=s1280x853&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFv6y7bM9mTJYWCmLoUpv86IM-Cgj_Uw9Ygz4KCP9TD1mzdrPxJCFA60RQkbY5q9LQyNs6L_Oe7FCwdZhpasQot&_nc_ohc=o7FQb64lt0MQ7kNvwGIyoUD&_nc_oc=AdpUkaQAiTdjhHaRtjayjeEJjpFFPeShM_IRCaix-ZLfzZuL_sCfTAl9qrnPJ68xcAfde0OWvT6UPl4A1IGhOICy&_nc_zt=23&_nc_ht=scontent-los4-1.xx&_nc_gid=3LZFZbICEBBduXvjFwe48w&_nc_ss=7d2a8&oh=00_AQAkaRWz_M_snsCySwep_QVM3ByiJEupgn9ZmuNbWLu30Q&oe=6A633E42",
   },
   {
     name: "Kenji Sato",
@@ -28,7 +28,7 @@ const spotlightStudents: SpotlightStudent[] = [
     country: "Japan",
     spotlightText: "Kenji was recognized by our international jury for constructing an exceptionally elegant geometric proof during the Team Project Stage, resolving a multi-variable grid problem with rare originality.",
     highlight: "Awarded Jury Originality Citation",
-    photoUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300&h=300",
+    photoUrl: "https://scontent-los4-1.xx.fbcdn.net/v/t39.30808-6/539593770_1072374651770802_6069385857612464208_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x853&ctp=s1280x853&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGAWrKlVTiuMvAgm4VMg-OW9eeSqCaabu3155KoJppu7TmBWj-xlkxuzL5Z3J3Wxj7I_u3-VIrnrnFS_Yh4SMBe&_nc_ohc=JyTI1LTRPb8Q7kNvwEYwuYq&_nc_oc=AdqIQl3oEukCBaq2n0OoJHKMQDmc_0WFFVbqShvVGeh6MS38UzCUyVApkDNTIHLcE38E0mNipLmKskBfmPOpU7Kw&_nc_zt=23&_nc_ht=scontent-los4-1.xx&_nc_gid=CfIlTZwpblZZFw7994Qdqg&_nc_ss=7d2a8&oh=00_AQB4a15GF9uQRcifhhds0PAbWIHA8drMMrzNgfhz8OY__Q&oe=6A633E84",
   },
   {
     name: "Amadi Diallo",
@@ -37,7 +37,7 @@ const spotlightStudents: SpotlightStudent[] = [
     country: "Senegal",
     spotlightText: "Amadi spearheaded coordinates for a remote high school team under severe connectivity limitations. His perseverance brought three school team math projects into full publication standards.",
     highlight: "Published 3 team math modules",
-    photoUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300&h=300",
+    photoUrl: "https://scontent-los4-1.xx.fbcdn.net/v/t39.30808-6/495380972_990501793291422_1182093296632822667_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x853&ctp=s1280x853&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHUAZ8aemcCjcgGnt6clcxc1SprCsYzWXzVKmsKxjNZfOoOpAACT7yNCTvicIX7DJl2YysBn_64lw-UdHEPCSFR&_nc_ohc=aXn6Y4YsreoQ7kNvwF910sZ&_nc_oc=Adr2ZmiqFQopChIJCEpvaJyNU8KOvBoWk5OlgeDSRyaUnrDgF5V9EIExWQHHEjK9A2-VIQxDLs1Wf_xWWBnkHnev&_nc_zt=23&_nc_ht=scontent-los4-1.xx&_nc_gid=Jf_edBxOa6mKe_k1s-PegQ&_nc_ss=7d2a8&oh=00_AQBN43CxtTLPmtfr4adhZ56dkzJNAYFokTJfQtJxcYal-Q&oe=6A633F3F",
   }
 ];
 
