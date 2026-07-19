@@ -65,7 +65,7 @@ export default function App() {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden xl:flex items-center gap-7 text-xs font-bold font-display uppercase tracking-wider text-brand-dark/80">
+          <nav className="hidden xl:flex items-center gap-7 text-[13px] font-semibold font-display tracking-wide text-brand-dark/80">
             <a href="#about" className="hover:text-brand-teal transition-colors">
               About
             </a>
@@ -200,7 +200,7 @@ export default function App() {
                   <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
                     Together, We Solve.
                   </h2>
-                  <div className="text-slate-500 font-sans mt-5 text-[14px] lg:text-[15px] leading-[1.6] space-y-4">
+                  <div className="text-slate-500 font-sans mt-5 text-[14px] lg:text-[15px] leading-[1.6] space-y-4 text-justify">
                     <p>
                       The Elizalde Mathematics Competition (EMC) is an International math contest dedicated to engaging students in the beauty and power of mathematics. Founded on the principles of academic excellence and inclusivity, EMC is designed to spark curiosity, challenge young minds, and cultivate a lifelong interest in mathematics across diverse student communities.
                     </p>

@@ -13,6 +13,15 @@
   --color-brand-dark: #141414;
   --color-brand-bg: #FAF9F6;
 
+  /* Global 70% reduction in roundness for buttons and containers */
+  --radius-sm: 0.0375rem;
+  --radius: 0.075rem;
+  --radius-md: 0.1125rem;
+  --radius-lg: 0.15rem;
+  --radius-xl: 0.225rem;
+  --radius-2xl: 0.3rem;
+  --radius-3xl: 0.45rem;
+
   --animate-fade-in: fade-in 0.6s ease-out forwards;
   --animate-slide-up: slide-up 0.5s ease-out forwards;
   --animate-scale-in: scale-in 0.4s ease-out forwards;
