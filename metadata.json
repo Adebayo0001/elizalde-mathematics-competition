@@ -1,0 +1,6 @@
+{
+  "name": "Elizalde Mathematics Competition",
+  "description": "Official homepage of the Elizalde Mathematics Competition (EMC) — an international mathematics competition challenging students to solve real problems, build teamwork, and discover their full potential.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

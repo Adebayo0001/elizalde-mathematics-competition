@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <g fill="rgba(255, 255, 255, 0.15)" font-family="Times New Roman, serif" font-style="italic">
+    <text x="50" y="80" font-size="24">f(x) = ax² + bx + c</text>
+    <text x="350" y="60" font-size="32">∑</text>
+    <text x="380" y="55" font-size="24">1/n² = π²/6</text>
+    <text x="120" y="240" font-size="48">∫</text>
+    <text x="140" y="230" font-size="24">e^x dx = e^x + C</text>
+    <text x="320" y="300" font-size="28">e^{iπ} + 1 = 0</text>
+    <text x="80" y="420" font-size="24">A = πr²</text>
+    <text x="280" y="460" font-size="26">a² + b² = c²</text>
+    <text x="220" y="160" font-size="22">F = G (m₁m₂)/r²</text>
+    <text x="450" y="200" font-size="20">E = mc²</text>
+    <text x="40" y="550" font-size="24">sin²θ + cos²θ = 1</text>
+    <text x="450" y="530" font-size="28">∇ × E = -∂B/∂t</text>
+    <text x="30" y="330" font-size="18">x = (-b ± √(b² - 4ac)) / 2a</text>
+    <text x="420" y="100" font-size="20">ΔxΔp ≥ ℏ/2</text>
+    <text x="250" y="370" font-size="22">P(A|B) = P(B|A)P(A) / P(B)</text>
+    <text x="400" y="400" font-size="26">V - E + F = 2</text>
+  </g>
+</svg>
