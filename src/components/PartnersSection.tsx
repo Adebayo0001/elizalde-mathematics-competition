@@ -13,7 +13,7 @@ export default function PartnersSection() {
         {/* Monochromatic Logo Grid */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-12 md:gap-16 opacity-60">
           {/* Logo 1 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-teal hover:opacity-100 transition-all duration-300">
+          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
             <Globe className="h-6 w-6 shrink-0" />
             <div className="text-left leading-none">
               <div className="font-display font-black text-xs uppercase tracking-wider">
@@ -26,7 +26,7 @@ export default function PartnersSection() {
           </div>
 
           {/* Logo 2 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-teal hover:opacity-100 transition-all duration-300">
+          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
             <Landmark className="h-6 w-6 shrink-0" />
             <div className="text-left leading-none">
               <div className="font-display font-black text-xs uppercase tracking-wider">
@@ -39,7 +39,7 @@ export default function PartnersSection() {
           </div>
 
           {/* Logo 3 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-teal hover:opacity-100 transition-all duration-300">
+          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
             <Cpu className="h-6 w-6 shrink-0" />
             <div className="text-left leading-none">
               <div className="font-display font-black text-xs uppercase tracking-wider">
@@ -52,7 +52,7 @@ export default function PartnersSection() {
           </div>
 
           {/* Logo 4 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-teal hover:opacity-100 transition-all duration-300">
+          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
             <Compass className="h-6 w-6 shrink-0" />
             <div className="text-left leading-none">
               <div className="font-display font-black text-xs uppercase tracking-wider">
@@ -68,3 +68,4 @@ export default function PartnersSection() {
     </section>
   );
 }
+

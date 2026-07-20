@@ -128,14 +128,14 @@ export default function MathDiagram() {
       {/* 3. EMC Academic Challenge Tournament 2026 Card */}
       {/* Placed breaking out of the bottom right corner slightly */}
       <div className="absolute -bottom-6 -right-2 md:-right-8 bg-white p-4 rounded-none shadow-2xl border border-slate-100 flex items-center gap-4 z-20 hover:-translate-y-2 transition-transform duration-300">
-        <div className="bg-brand-teal/10 text-brand-teal font-display font-extrabold text-sm md:text-base px-3 py-2 rounded-none">
+        <div className="bg-brand-blue/10 text-brand-blue font-display font-extrabold text-sm md:text-base px-3 py-2 rounded-none">
           EMC
         </div>
         <div className="pr-4">
           <div className="font-sans font-bold text-brand-dark text-sm md:text-[15px] leading-tight">
             Academic Challenge
           </div>
-          <div className="font-sans font-semibold text-brand-teal text-xs md:text-sm mt-0.5">
+          <div className="font-sans font-semibold text-brand-blue text-xs md:text-sm mt-0.5">
             Tournament 2026
           </div>
         </div>
@@ -143,3 +143,4 @@ export default function MathDiagram() {
     </div>
   );
 }
+

@@ -145,7 +145,7 @@ export default function MedalistsSection() {
             <button
               onClick={() => setSelectedYear(2025)}
               className={`px-5 py-2 rounded-none text-xs font-bold font-display tracking-wider transition-all cursor-pointer ${
-                selectedYear === 2025 ? "bg-brand-teal text-white shadow-sm" : "text-slate-500 hover:text-brand-dark"
+                selectedYear === 2025 ? "bg-brand-blue text-white shadow-sm" : "text-slate-500 hover:text-brand-dark"
               }`}
             >
               EMC 2025
@@ -153,7 +153,7 @@ export default function MedalistsSection() {
             <button
               onClick={() => setSelectedYear(2024)}
               className={`px-5 py-2 rounded-none text-xs font-bold font-display tracking-wider transition-all cursor-pointer ${
-                selectedYear === 2024 ? "bg-brand-teal text-white shadow-sm" : "text-slate-500 hover:text-brand-dark"
+                selectedYear === 2024 ? "bg-brand-blue text-white shadow-sm" : "text-slate-500 hover:text-brand-dark"
               }`}
             >
               EMC 2024
@@ -216,7 +216,7 @@ export default function MedalistsSection() {
                   />
                   {/* Award badge overlay */}
                   <div className={`absolute top-3 left-3 px-2.5 py-1 rounded-none text-[9px] font-bold font-display uppercase tracking-wider text-white shadow-md ${
-                    isGold ? "bg-brand-gold" : isSilver ? "bg-slate-500" : "bg-brand-teal"
+                    isGold ? "bg-brand-gold" : isSilver ? "bg-slate-500" : "bg-brand-blue"
                   }`}>
                     {student.award}
                   </div>
@@ -225,7 +225,7 @@ export default function MedalistsSection() {
                 {/* Card Content — below image */}
                 <div className="p-5 space-y-3">
                   {/* Category tag */}
-                  <span className="text-[10px] font-bold font-display text-brand-teal uppercase tracking-widest">
+                  <span className="text-[10px] font-bold font-display text-brand-blue uppercase tracking-widest">
                     {student.category}
                   </span>
 
@@ -237,7 +237,7 @@ export default function MedalistsSection() {
                   {/* School + Country */}
                   <div className="flex items-center justify-between text-xs text-slate-500 font-sans pt-2 border-t border-slate-100">
                     <span className="truncate mr-2">{student.school}</span>
-                    <span className="font-bold font-display text-brand-teal uppercase text-[10px] shrink-0">{student.country}</span>
+                    <span className="font-bold font-display text-brand-blue uppercase text-[10px] shrink-0">{student.country}</span>
                   </div>
                 </div>
               </StaggerItem>
@@ -255,3 +255,4 @@ export default function MedalistsSection() {
     </section>
   );
 }
+

@@ -23,7 +23,7 @@ import ImpactSection from "../components/ImpactSection";
 import CompetitionStagesSection from "../components/CompetitionStagesSection";
 import TimelineCalendarSection from "../components/TimelineCalendarSection";
 import WorldOfMathematiciansSection from "../components/WorldOfMathematiciansSection";
-import MathDiagram from "../components/MathDiagram";
+
 import FAQSection from "../components/FAQSection";
 import MedalistsSection from "../components/MedalistsSection";
 import TestimonialsSection from "../components/TestimonialsSection";
@@ -49,7 +49,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-brand-bg font-sans text-brand-dark antialiased selection:bg-brand-teal/10 selection:text-brand-teal scroll-smooth">
+    <div className="min-h-screen bg-brand-bg font-sans text-brand-dark antialiased selection:bg-brand-blue/10 selection:text-brand-blue scroll-smooth">
       {/* ──────────────────────────────────────────────────────────────────
           1. NAVIGATION HEADER
           ────────────────────────────────────────────────────────────────── */}
@@ -62,7 +62,7 @@ export default function HomePage() {
               <span className="font-display font-extrabold text-lg text-brand-dark tracking-tight block">
                 EMC 2026
               </span>
-              <span className="text-[10px] font-bold font-display text-brand-teal uppercase tracking-widest block mt-0.5">
+              <span className="text-[10px] font-bold font-display text-brand-blue uppercase tracking-widest block mt-0.5">
                 Mathematics Competition
               </span>
             </div>
@@ -70,25 +70,25 @@ export default function HomePage() {
 
           {/* Desktop Nav Links */}
           <nav className="hidden xl:flex items-center gap-7 text-[13px] font-semibold font-display tracking-wide text-brand-dark/80">
-            <a href="#about" className="hover:text-brand-teal transition-colors">
+            <a href="#about" className="hover:text-brand-blue transition-colors">
               About
             </a>
-            <a href="#competition-stages" className="hover:text-brand-teal transition-colors">
+            <a href="#competition-stages" className="hover:text-brand-blue transition-colors">
               Stages
             </a>
-            <a href="#roadmap" className="hover:text-brand-teal transition-colors">
+            <a href="#roadmap" className="hover:text-brand-blue transition-colors">
               Roadmap
             </a>
-            <a href="#world-of-mathematicians" className="hover:text-brand-teal transition-colors">
+            <a href="#world-of-mathematicians" className="hover:text-brand-blue transition-colors">
               Spotlight
             </a>
-            <a href="#winners" className="hover:text-brand-teal transition-colors">
+            <a href="#winners" className="hover:text-brand-blue transition-colors">
               Medalists
             </a>
-            <a href="#testimonials" className="hover:text-brand-teal transition-colors">
+            <a href="#testimonials" className="hover:text-brand-blue transition-colors">
               Testimonials
             </a>
-            <a href="#faq" className="hover:text-brand-teal transition-colors">
+            <a href="#faq" className="hover:text-brand-blue transition-colors">
               FAQ
             </a>
           </nav>
@@ -98,7 +98,7 @@ export default function HomePage() {
             <Link
               href="/register"
               id="nav-register-btn"
-              className="px-5 py-2.5 bg-brand-teal/10 backdrop-blur-sm hover:bg-brand-teal text-brand-teal hover:text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all border border-brand-teal/20 hover:border-brand-teal focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal cursor-pointer"
+              className="px-5 py-2.5 bg-brand-blue/10 backdrop-blur-sm hover:bg-brand-blue text-brand-blue hover:text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all border border-brand-blue/20 hover:border-brand-blue focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer"
             >
               Register
             </Link>
@@ -110,7 +110,7 @@ export default function HomePage() {
         {/* ──────────────────────────────────────────────────────────────────
             2. HERO SECTION — Full-Width Image Overlay (Reference Pattern #1)
             ────────────────────────────────────────────────────────────────── */}
-        <section id="hero" className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-brand-bg flex items-end text-brand-dark pt-32 lg:pt-40">
+        <section id="hero" className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-brand-blue flex items-end text-white pt-32 lg:pt-40">
           {/* Fading Background Images */}
           {heroImages.map((src, index) => (
             <div
@@ -130,7 +130,7 @@ export default function HomePage() {
           ))}
 
           {/* Gradient Overlay — lighter, but still strong enough at bottom for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/60 to-transparent z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/80 to-transparent z-[1]" />
 
           {/* Blueprint/Grid Pattern Overlay */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-[1]">
@@ -148,11 +148,11 @@ export default function HomePage() {
 
 
               {/* Large Editorial Headline */}
-              <h1 className="font-display font-semibold text-3xl sm:text-4xl lg:text-6xl text-brand-dark leading-[1.08] tracking-tight">
-                Every student has a moment where they realize what they're capable of.
+              <h1 className="font-display font-semibold text-3xl sm:text-4xl lg:text-6xl text-white leading-[1.08] tracking-tight">
+                Every student has a <span className="text-brand-lime">moment</span> where they realize what they're capable of.
               </h1>
 
-              <p className="text-slate-600 font-sans text-base sm:text-lg leading-[1.6] max-w-2xl">
+              <p className="text-white/80 font-sans text-base sm:text-lg leading-[1.6] max-w-2xl">
                 EMC gives students around the world the chance to test their thinking, build their confidence, and discover what they can really do — in math and in themselves.
               </p>
 
@@ -160,7 +160,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-start gap-4 pt-2">
                 <a
                   href="#about"
-                  className="px-6 py-4 border border-brand-teal hover:bg-brand-teal/5 text-brand-teal font-semibold rounded-none text-sm transition-colors text-center"
+                  className="px-6 py-4 border border-white hover:bg-white/10 text-white font-semibold rounded-none text-sm transition-colors text-center"
                 >
                   Learn More
                 </a>
@@ -168,14 +168,14 @@ export default function HomePage() {
             </motion.div>
 
             {/* Social Proof Bar — bottom edge overlay */}
-            <div className="mt-12 pt-6 border-t border-brand-dark/10 flex flex-wrap items-center gap-8 text-[13px] font-medium text-slate-500">
+            <div className="mt-12 pt-6 border-t border-white/10 flex flex-wrap items-center gap-8 text-[13px] font-medium text-white/70">
               <span className="flex items-center gap-1.5">
-                <Globe className="h-4 w-4 text-brand-teal" />
+                <Globe className="h-4 w-4 text-white" />
                 35+ Countries Participating
               </span>
-              <span className="hidden sm:inline text-slate-700">•</span>
+              <span className="hidden sm:inline text-white/40">•</span>
               <span className="flex items-center gap-1.5">
-                <Trophy className="h-4 w-4 text-brand-teal" />
+                <Trophy className="h-4 w-4 text-white" />
                 Global Championship Stage
               </span>
             </div>
@@ -189,10 +189,16 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
               
-              {/* Left Column — Math Graphic */}
+              {/* Left Column — Image */}
               <div className="lg:col-span-5 w-full">
                 <ScrollReveal direction="right" delay={0.1}>
-                  <MathDiagram />
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src="/images/EMC-global-winner.jpeg" 
+                      alt="EMC Global Winner" 
+                      className="w-full h-auto object-cover shadow-xl"
+                    />
+                  </div>
                 </ScrollReveal>
               </div>
 
@@ -284,7 +290,7 @@ export default function HomePage() {
         {/* ──────────────────────────────────────────────────────────────────
             13. CLOSING CALL TO ACTION
             ────────────────────────────────────────────────────────────────── */}
-        <section id="register-cta" className="relative py-14 lg:py-24 bg-brand-teal text-white overflow-hidden">
+        <section id="register-cta" className="relative py-14 lg:py-24 bg-brand-blue text-white overflow-hidden">
           {/* Visual Accents */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white rounded-none animate-pulse pointer-events-none" />
@@ -308,7 +314,7 @@ export default function HomePage() {
               <Link
                 href="/register"
                 id="cta-register-school-btn"
-                className="w-full sm:w-auto px-8 py-4 bg-brand-red hover:bg-[#b82a22] text-white font-bold rounded-none text-base transition-all shadow-lg shadow-brand-red/20 inline-flex items-center justify-center gap-2 group focus:ring-4 focus:ring-brand-red/30 cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-brand-blue font-bold rounded-none text-base transition-all shadow-lg shadow-black/10 inline-flex items-center justify-center gap-2 group focus:ring-4 focus:ring-white/30 cursor-pointer"
               >
                 Register
                 <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
@@ -328,26 +334,26 @@ export default function HomePage() {
           14. FOOTER — Social Links Bar + CTA Footer (Reference Pattern #9, #10)
           ────────────────────────────────────────────────────────────────── */}
       {/* Social Links Strip */}
-      <div className="bg-brand-bg border-t border-slate-200/60 py-5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold font-display uppercase tracking-wider text-slate-500">
-          <a href="#" className="hover:text-brand-teal transition-colors">Facebook</a>
-          <a href="#" className="hover:text-brand-teal transition-colors">Twitter</a>
-          <a href="#" className="hover:text-brand-teal transition-colors">Instagram</a>
-          <a href="#" className="hover:text-brand-teal transition-colors">LinkedIn</a>
+      <div className="bg-brand-blue border-t border-white/10 py-5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold font-display uppercase tracking-wider text-white/70">
+          <a href="#" className="hover:text-white transition-colors">Facebook</a>
+          <a href="#" className="hover:text-white transition-colors">Twitter</a>
+          <a href="#" className="hover:text-white transition-colors">Instagram</a>
+          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
         </div>
       </div>
 
       {/* Main CTA Footer */}
-      <footer className="bg-brand-bg border-t border-slate-200/60 text-brand-dark py-16 lg:py-24">
+      <footer className="bg-brand-blue border-t border-white/10 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           {/* Large CTA Heading */}
           <div className="mb-16">
-            <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-dark leading-[1.1] tracking-tight max-w-2xl">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight max-w-2xl">
               Together, We Solve.
               <br />
-              <span className="text-slate-500">
+              <span className="text-white/70">
                 Just drop us a line —{" "}
-                <a href="mailto:support@emcompetition.org" className="text-brand-teal hover:text-brand-gold transition-colors underline underline-offset-4 decoration-brand-teal/40">
+                <a href="mailto:support@emcompetition.org" className="text-brand-lime hover:text-brand-gold transition-colors underline underline-offset-4 decoration-brand-lime/40">
                   support@emcompetition.org
                 </a>
               </span>
@@ -357,22 +363,22 @@ export default function HomePage() {
           {/* Footer Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start mb-12">
             <div className="md:col-span-4 space-y-4">
-              <div className="flex items-center gap-2.5">
-                <Logo className="h-8 w-8" />
-                <span className="font-display font-extrabold text-sm text-brand-dark tracking-wide uppercase">
+              <div className="flex items-center gap-2.5 text-white">
+                <Logo className="h-8 w-8 text-white" />
+                <span className="font-display font-extrabold text-sm text-white tracking-wide uppercase">
                   EMC Tournament
                 </span>
               </div>
-              <p className="text-xs text-slate-500 leading-relaxed max-w-xs font-sans">
+              <p className="text-xs text-white/70 leading-relaxed max-w-xs font-sans">
                 The Elizalde Mathematics Competition inspires young thinkers around the world to unlock their scientific and logical potential through real-world team challenges.
               </p>
             </div>
 
             <div className="md:col-span-2 space-y-3">
-              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-dark uppercase">
+              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-white uppercase">
                 Brackets
               </h5>
-              <ul className="text-xs space-y-2 font-sans text-slate-500">
+              <ul className="text-xs space-y-2 font-sans text-white/70">
                 <li>Elementary (Grades 4–6)</li>
                 <li>Middle School (Grades 7–9)</li>
                 <li>High School (Grades 10–12)</li>
@@ -380,10 +386,10 @@ export default function HomePage() {
             </div>
 
             <div className="md:col-span-2 space-y-3">
-              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-dark uppercase">
+              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-white uppercase">
                 Competitions
               </h5>
-              <ul className="text-xs space-y-2 font-sans text-slate-500">
+              <ul className="text-xs space-y-2 font-sans text-white/70">
                 <li>Pre-Olympiad Conference</li>
                 <li>Math Projects</li>
                 <li>National Round</li>
@@ -392,24 +398,24 @@ export default function HomePage() {
             </div>
 
             <div className="md:col-span-4 space-y-3">
-              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-dark uppercase">
+              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-white uppercase">
                 Registration Help
               </h5>
-              <p className="text-xs text-slate-500 leading-relaxed font-sans">
+              <p className="text-xs text-white/70 leading-relaxed font-sans">
                 Have questions regarding standard paper rosters, exam centers, or timeline extensions?
               </p>
-              <div className="text-xs font-bold text-brand-teal font-sans">
+              <div className="text-xs font-bold text-brand-lime font-sans">
                 support@emcompetition.org
               </div>
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-slate-200 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div className="pt-8 border-t border-white/10 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
             <p className="font-sans">© 2026 Elizalde Mathematics Competition. All rights reserved. Together, We Solve.</p>
             <div className="flex gap-6 font-sans">
-              <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-slate-400 transition-colors">Terms of Use</a>
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
             </div>
           </div>
         </div>
@@ -419,3 +425,4 @@ export default function HomePage() {
     </div>
   );
 }
+

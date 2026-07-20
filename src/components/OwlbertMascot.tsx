@@ -97,3 +97,4 @@ export default function OwlbertMascot({ className = "h-40 w-40" }: { className?:
     </svg>
   );
 }
+

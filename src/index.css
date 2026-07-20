@@ -6,12 +6,13 @@
   --font-display: "Poppins", sans-serif;
   --font-mono: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-teal: #0F7173;
-  --color-brand-green: #2E8B3D;
+  --color-brand-blue: #1B2A8C;
+  --color-brand-green: #7CB928;
+  --color-brand-lime: #C6D62E;
   --color-brand-gold: #F2A93B;
   --color-brand-red: #D9342B;
   --color-brand-dark: #141414;
-  --color-brand-bg: #FAF9F6;
+  --color-brand-bg: #FFFFFF;
 
   /* Global 70% reduction in roundness for buttons and containers */
   --radius-sm: 0.0375rem;
@@ -104,3 +105,4 @@ html {
   padding: 240px 5% 40px;
   box-sizing: border-box;
 }
+

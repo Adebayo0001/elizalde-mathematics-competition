@@ -36,13 +36,13 @@ export default function ParticipatingCountriesSection() {
           {/* Split header */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10">
             <div className="lg:col-span-6 space-y-3">
-              <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-teal uppercase block">
+              <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-blue uppercase block">
                 Global Scale
               </span>
               <h2 className="font-display font-semibold text-[26px] lg:text-[36px] text-brand-dark tracking-tight leading-[1.15]">
                 EMC Participating Countries Around the Globe
               </h2>
-              <div className="h-1.5 w-12 bg-brand-teal rounded-none " />
+              <div className="h-1.5 w-12 bg-brand-blue rounded-none " />
             </div>
             
             <div className="lg:col-span-6">
@@ -57,7 +57,7 @@ export default function ParticipatingCountriesSection() {
             {participatingCountries.map((country, idx) => (
               <div
                 key={idx}
-                className="bg-brand-bg rounded-none p-4 border border-slate-200/50 hover:border-brand-teal/30 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between group h-24"
+                className="bg-brand-bg rounded-none p-4 border border-slate-200/50 hover:border-brand-blue/30 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between group h-24"
               >
                 <img 
                   src={`https://flagcdn.com/w40/${country.code}.png`} 
@@ -78,9 +78,9 @@ export default function ParticipatingCountriesSection() {
           </div>
 
           {/* Global summary card */}
-          <div className="mt-10 bg-brand-bg text-brand-dark rounded-none p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-brand-teal/20">
+          <div className="mt-10 bg-brand-bg text-brand-dark rounded-none p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-brand-blue/20">
             <div className="flex items-center gap-4 text-center sm:text-left">
-              <div className="h-12 w-12 rounded-none bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold font-display text-base shrink-0 border border-brand-teal/20">
+              <div className="h-12 w-12 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold font-display text-base shrink-0 border border-brand-blue/20">
                 35+
               </div>
               <div>
@@ -95,7 +95,7 @@ export default function ParticipatingCountriesSection() {
 
             <a
               href="mailto:support@emcompetition.org"
-              className="px-6 py-3 bg-brand-teal hover:bg-brand-teal/90 text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-colors inline-flex items-center gap-1.5 shrink-0"
+              className="px-6 py-3 bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-colors inline-flex items-center gap-1.5 shrink-0"
             >
               Become a partner hub
               <ArrowUpRight className="h-4 w-4" />
@@ -106,3 +106,4 @@ export default function ParticipatingCountriesSection() {
     </section>
   );
 }
+

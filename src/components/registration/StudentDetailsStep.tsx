@@ -27,7 +27,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
           <input
             required
             type="text"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.firstName}
             onChange={(e) => updateData({ firstName: e.target.value })}
             placeholder="John"
@@ -37,7 +37,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Middle Name</label>
           <input
             type="text"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.middleName}
             onChange={(e) => updateData({ middleName: e.target.value })}
             placeholder="Michael"
@@ -48,7 +48,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
           <input
             required
             type="text"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.lastName}
             onChange={(e) => updateData({ lastName: e.target.value })}
             placeholder="Doe"
@@ -62,7 +62,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
           <input
             required
             type="date"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.dob}
             onChange={(e) => updateData({ dob: e.target.value })}
           />
@@ -71,7 +71,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Gender</label>
           <select
             required
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.gender}
             onChange={(e) => updateData({ gender: e.target.value })}
           >
@@ -89,7 +89,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Current Grade</label>
           <select
             required
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.grade}
             onChange={(e) => updateData({ grade: e.target.value })}
           >
@@ -109,7 +109,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Nationality</label>
           <select
             required
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.nationality}
             onChange={(e) => updateData({ nationality: e.target.value })}
           >
@@ -127,7 +127,7 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
       <div className="pt-6 flex justify-end">
         <button
           type="submit"
-          className="px-8 py-4 bg-brand-dark hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
+          className="px-8 py-4 bg-brand-dark hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
         >
           Next Step
         </button>
@@ -135,3 +135,4 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
     </form>
   );
 }
+
