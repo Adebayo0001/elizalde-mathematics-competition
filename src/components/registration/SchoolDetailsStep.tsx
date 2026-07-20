@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { RegistrationData } from "../../pages/RegistrationPage";
+import { RegistrationData } from "../../app/register/page";
 
 type Props = {
   data: RegistrationData["school"];
@@ -27,7 +28,7 @@ export default function SchoolDetailsStep({ data, updateData, onNext, onBack }: 
           <input
             required
             type="text"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.schoolName}
             onChange={(e) => updateData({ schoolName: e.target.value })}
             placeholder="e.g. Springfield High School"
@@ -39,7 +40,7 @@ export default function SchoolDetailsStep({ data, updateData, onNext, onBack }: 
           <input
             required
             type="text"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.schoolAddress}
             onChange={(e) => updateData({ schoolAddress: e.target.value })}
             placeholder="123 Education Ave"
@@ -51,7 +52,7 @@ export default function SchoolDetailsStep({ data, updateData, onNext, onBack }: 
           <input
             required
             type="tel"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.phone}
             onChange={(e) => updateData({ phone: e.target.value })}
             placeholder="+1 (555) 000-0000"
@@ -63,7 +64,7 @@ export default function SchoolDetailsStep({ data, updateData, onNext, onBack }: 
           <input
             required
             type="email"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.email}
             onChange={(e) => updateData({ email: e.target.value })}
             placeholder="contact@school.edu"
@@ -74,7 +75,7 @@ export default function SchoolDetailsStep({ data, updateData, onNext, onBack }: 
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Alternative Email</label>
           <input
             type="email"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.altEmail}
             onChange={(e) => updateData({ altEmail: e.target.value })}
             placeholder="admin@school.edu (Optional)"
@@ -86,7 +87,7 @@ export default function SchoolDetailsStep({ data, updateData, onNext, onBack }: 
           <input
             required
             type="text"
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.residentialAddress}
             onChange={(e) => updateData({ residentialAddress: e.target.value })}
             placeholder="Student's home address"
@@ -98,13 +99,13 @@ export default function SchoolDetailsStep({ data, updateData, onNext, onBack }: 
         <button
           type="button"
           onClick={onBack}
-          className="px-8 py-4 text-slate-500 hover:text-brand-dark hover:bg-slate-100 font-bold font-display uppercase tracking-widest rounded-xl transition-all cursor-pointer"
+          className="px-8 py-4 text-slate-500 hover:text-brand-dark hover:bg-slate-100 font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
         >
           Go Back
         </button>
         <button
           type="submit"
-          className="px-8 py-4 bg-brand-dark hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-xl transition-all cursor-pointer"
+          className="px-8 py-4 bg-brand-dark hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
         >
           Next Step
         </button>

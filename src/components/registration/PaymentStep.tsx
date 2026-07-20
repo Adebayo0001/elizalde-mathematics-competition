@@ -1,5 +1,6 @@
+"use client";
 import React, { useState } from "react";
-import { RegistrationData } from "../../pages/RegistrationPage";
+import { RegistrationData } from "../../app/register/page";
 import { PaystackButton } from "react-paystack";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -51,7 +52,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
   if (paymentStatus === "success") {
     return (
       <div className="text-center py-12 animate-in zoom-in duration-500">
-        <div className="w-24 h-24 bg-brand-green/10 text-brand-green rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="w-24 h-24 bg-brand-green/10 text-brand-green rounded-none flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 className="w-12 h-12" />
         </div>
         <h2 className="text-3xl font-display font-bold text-brand-dark mb-4">Registration Complete!</h2>
@@ -60,7 +61,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
         </p>
         <button 
           onClick={() => window.location.href = '/'}
-          className="px-8 py-4 bg-brand-dark hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-xl transition-all"
+          className="px-8 py-4 bg-brand-dark hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all"
         >
           Return to Homepage
         </button>
@@ -75,7 +76,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
         <p className="text-sm text-slate-500 font-sans">Please review the details below before proceeding to payment.</p>
       </div>
 
-      <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+      <div className="bg-slate-50 rounded-none p-6 border border-slate-200">
         <h3 className="font-display font-bold text-brand-dark uppercase tracking-widest text-sm mb-4 border-b border-slate-200 pb-2">Order Summary</h3>
         
         <div className="space-y-4 font-sans text-sm">
@@ -103,7 +104,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
         </div>
       </div>
 
-      <div className="flex items-start gap-3 p-4 bg-amber-50 text-amber-800 rounded-xl border border-amber-200">
+      <div className="flex items-start gap-3 p-4 bg-amber-50 text-amber-800 rounded-none border border-amber-200">
         <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
         <div className="text-xs font-sans leading-relaxed">
           <strong>Note:</strong> You will be securely redirected to Paystack to complete this transaction. By clicking the button below, you agree to our Terms and Conditions.
@@ -114,7 +115,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
         <button
           type="button"
           onClick={onBack}
-          className="w-full md:w-auto px-8 py-4 text-slate-500 hover:text-brand-dark hover:bg-slate-100 font-bold font-display uppercase tracking-widest rounded-xl transition-all cursor-pointer text-center"
+          className="w-full md:w-auto px-8 py-4 text-slate-500 hover:text-brand-dark hover:bg-slate-100 font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer text-center"
         >
           Go Back
         </button>
@@ -122,7 +123,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
         {/* We use PaystackButton as a custom styled component */}
         <PaystackButton 
           {...componentProps} 
-          className="w-full md:w-auto px-8 py-4 bg-brand-green hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-xl transition-all cursor-pointer text-center shadow-lg hover:shadow-brand-teal/20"
+          className="w-full md:w-auto px-8 py-4 bg-brand-green hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer text-center shadow-lg hover:shadow-brand-teal/20"
         />
       </div>
     </div>

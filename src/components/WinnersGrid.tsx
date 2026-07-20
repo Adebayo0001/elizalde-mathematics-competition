@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Award, Trophy, Star } from "lucide-react";
 
@@ -48,7 +49,7 @@ export default function WinnersGrid() {
           <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-dark mt-2 tracking-tight">
             Global Finals Winners
           </h2>
-          <div className="h-1.5 w-12 bg-brand-gold mx-auto mt-4 rounded-full" />
+          <div className="h-1.5 w-12 bg-brand-gold mx-auto mt-4 rounded-none " />
           <p className="text-slate-500 font-sans mt-4 text-base">
             Meet the students who proved what they could do. From team projects to complex exams, these young minds led the international bracket.
           </p>
@@ -58,16 +59,16 @@ export default function WinnersGrid() {
           {winnersData.map((winner, index) => (
             <div
               key={index}
-              className="group bg-white hover:bg-white rounded-2xl p-6 border border-slate-200/50 hover:border-brand-gold/30 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative"
+              className="group bg-white hover:bg-white rounded-none p-6 border border-slate-200/50 hover:border-brand-gold/30 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative"
             >
               {/* Badge Overlay */}
-              <div className="absolute top-4 right-4 bg-brand-gold/10 text-brand-gold p-2 rounded-full shadow-xs">
+              <div className="absolute top-4 right-4 bg-brand-gold/10 text-brand-gold p-2 rounded-none shadow-xs">
                 <Trophy className="h-4 w-4" />
               </div>
 
               {/* Photo Frame */}
               <div className="relative mb-6">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-md ring-1 ring-slate-100 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-32 h-32 rounded-none overflow-hidden border-4 border-white shadow-md ring-1 ring-slate-100 group-hover:scale-105 transition-transform duration-300">
                   <img
                     src={winner.photoUrl}
                     alt={winner.name}
@@ -76,7 +77,7 @@ export default function WinnersGrid() {
                   />
                 </div>
                 {/* Placement Banner */}
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 bg-brand-gold text-white rounded-full text-[10px] font-bold uppercase tracking-wider shadow-md">
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 bg-brand-gold text-white rounded-none text-[10px] font-bold uppercase tracking-wider shadow-md">
                   {winner.placement}
                 </div>
               </div>

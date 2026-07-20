@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { Calendar, Users, Award, ShieldAlert, Sparkles, Trophy } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface CalendarEvent {
   date: string;
@@ -55,44 +57,48 @@ const timelineEvents: CalendarEvent[] = [
 
 export default function TimelineCalendarSection() {
   return (
-    <section id="roadmap" className="py-16 lg:py-28 bg-brand-green/[0.03] text-brand-dark relative overflow-hidden border-y border-slate-100">
-      {/* Decorative vectors */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] border border-brand-green/10 rounded-full pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-brand-green/10 rounded-full pointer-events-none" />
+    <section id="roadmap" className="py-16 lg:py-28 bg-brand-red text-white relative overflow-hidden border-y border-brand-red">
+      {/* Subtle Math Formula Texture Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-100"
+        style={{ 
+          backgroundImage: "url('/math-texture.svg')",
+          backgroundSize: "800px 800px",
+          backgroundRepeat: "repeat",
+          backgroundPosition: "center"
+        }}
+      />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
-          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-green uppercase">
-            Interactive Calendar
-          </span>
-          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+          <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.12]">
             The Olympiad Roadmap — EMC 2026
           </h2>
-          <div className="h-1.5 w-12 bg-brand-green mx-auto mt-4 rounded-full" />
-          <p className="text-slate-500 font-sans mt-5 text-[15px] lg:text-[16px] leading-[1.6]">
+          <div className="h-1.5 w-12 bg-white/30 mx-auto mt-4 rounded-none" />
+          <p className="font-sans mt-5 text-sm sm:text-base leading-[1.6] text-white/80">
             A comprehensive milestone tracker for both teachers coordinating groups and students training for their moment on the world stage.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Vertical/Timeline Flow */}
-        <div className="relative border-l border-brand-green/20 max-w-4xl mx-auto pl-6 sm:pl-10 space-y-12">
+        <StaggerContainer className="relative border-l border-white/20 max-w-4xl mx-auto pl-6 sm:pl-10 space-y-12">
           {timelineEvents.map((event, index) => (
-            <div key={index} className="relative group">
+            <StaggerItem key={index} className="relative group">
               {/* Vertical timeline node indicator */}
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 h-6 w-6 rounded-full bg-white border-2 border-brand-green flex items-center justify-center shadow-md shadow-brand-green/20 group-hover:scale-110 transition-transform duration-300">
-                <div className="h-2 w-2 rounded-full bg-brand-green" />
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 h-6 w-6 rounded-none bg-white border-2 border-brand-red flex items-center justify-center shadow-md shadow-black/20 group-hover:scale-110 transition-transform duration-300">
+                <div className="h-2 w-2 rounded-none bg-brand-red" />
               </div>
 
               {/* Event card layout */}
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-green/30 transition-all duration-300">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 bg-white rounded-none p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-red/30 transition-all duration-300">
                 
                 {/* Date & Badge Block */}
                 <div className="md:col-span-4 space-y-2">
-                  <div className="text-brand-green font-display font-bold text-lg sm:text-xl">
+                  <div className="text-slate-900 font-display font-bold text-lg sm:text-xl">
                     {event.date}
                   </div>
-                  <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-green/10 text-brand-green px-2.5 py-1 rounded-full border border-brand-green/20">
+                  <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-red/10 text-brand-red px-2.5 py-1 rounded-none border border-brand-red/20">
                     {event.badge}
                   </span>
                 </div>
@@ -100,28 +106,28 @@ export default function TimelineCalendarSection() {
                 {/* Event Main Content */}
                 <div className="md:col-span-8 space-y-3">
                   <div className="flex items-center gap-2.5">
-                    <div className="text-brand-green bg-brand-green/10 p-1.5 rounded-lg border border-brand-green/20">
+                    <div className="text-brand-red bg-brand-red/10 p-1.5 rounded-none border border-brand-red/20">
                       {event.icon}
                     </div>
-                    <h3 className="font-display font-semibold text-[16px] lg:text-[18px] text-brand-dark group-hover:text-brand-green transition-colors tracking-tight leading-[1.2]">
+                    <h3 className="font-display font-semibold text-base sm:text-lg text-brand-dark group-hover:text-brand-red transition-colors tracking-tight leading-[1.2]">
                       {event.title}
                     </h3>
                   </div>
 
-                  <p className="text-[13px] lg:text-[14px] text-slate-600 font-sans leading-[1.6]">
+                  <p className="text-xs sm:text-sm text-slate-600 font-sans leading-[1.6]">
                     {event.description}
                   </p>
 
                   <div className="pt-2 flex flex-wrap items-center gap-2 text-[11px] font-semibold text-slate-500 font-sans">
-                    <span className="text-brand-green">Target Audience:</span>
-                    <span className="bg-slate-50 px-2 py-0.5 rounded-md text-slate-600 border border-slate-200">{event.audience}</span>
+                    <span className="text-brand-red">Target Audience:</span>
+                    <span className="bg-slate-50 px-2 py-0.5 rounded-none text-slate-600 border border-slate-200">{event.audience}</span>
                   </div>
                 </div>
 
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

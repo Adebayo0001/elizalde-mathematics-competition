@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { Users, Sparkles, MessageCircle, Heart } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface SpotlightStudent {
   name: string;
@@ -46,27 +48,27 @@ export default function WorldOfMathematiciansSection() {
     <section id="world-of-mathematicians" className="py-16 lg:py-28 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
           <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-teal uppercase">
             Student Spotlights
           </span>
-          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
+          <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark mt-3 tracking-tight leading-[1.12]">
             The World of Mathematicians
           </h2>
-          <div className="h-1.5 w-12 bg-brand-teal mx-auto mt-4 rounded-full" />
-          <p className="text-slate-500 font-sans mt-5 text-[15px] lg:text-[16px] leading-[1.6]">
+          <div className="h-1.5 w-12 bg-brand-teal mx-auto mt-4 rounded-none " />
+          <p className="text-slate-500 font-sans mt-5 text-sm sm:text-base leading-[1.6]">
             A celebration of outstanding student leadership, community support, and mathematical curiosity outside of direct exam results. These young thinkers inspire us all.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Spotlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
           {spotlightStudents.map((student, idx) => {
             const isFeatured = idx === 1;
             return (
-              <div
+              <StaggerItem
                 key={idx}
-                className={`group bg-white rounded-2xl border transition-all duration-300 overflow-hidden flex flex-col relative ${
+                className={`group bg-white rounded-none border transition-all duration-300 overflow-hidden flex flex-col relative ${
                   isFeatured
                     ? "border-brand-teal/40 shadow-xl scale-[1.03] lg:scale-[1.05] ring-1 ring-brand-teal/20 z-10"
                     : "border-slate-200/50 hover:border-brand-teal/30 hover:shadow-xl"
@@ -82,7 +84,7 @@ export default function WorldOfMathematiciansSection() {
                   />
                   {/* Badge overlay */}
                   {isFeatured && (
-                    <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-brand-teal text-white text-[10px] font-bold font-display uppercase px-3.5 py-1 rounded-full shadow-md tracking-wider">
+                    <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-brand-teal text-white text-[10px] font-bold font-display uppercase px-3.5 py-1 rounded-none shadow-md tracking-wider">
                       Featured Leader
                     </div>
                   )}
@@ -92,7 +94,7 @@ export default function WorldOfMathematiciansSection() {
                 <div className="p-5 flex flex-col flex-grow">
                   <div className="space-y-4 flex-grow">
                     <div>
-                      <h3 className="font-display font-semibold text-[16px] lg:text-[17px] text-brand-dark group-hover:text-brand-teal transition-colors tracking-tight leading-[1.2]">
+                      <h3 className="font-display font-semibold text-base sm:text-lg text-brand-dark group-hover:text-brand-teal transition-colors tracking-tight leading-[1.2]">
                         {student.name}
                       </h3>
                       <div className="text-xs text-slate-500 font-medium font-sans mt-1">
@@ -102,14 +104,14 @@ export default function WorldOfMathematiciansSection() {
                     </div>
 
                     {/* Narrative spotlight block */}
-                    <p className="text-[13px] lg:text-[14px] text-slate-600 font-sans leading-[1.6] italic">
+                    <p className="text-xs sm:text-sm text-slate-600 font-sans leading-[1.6] italic">
                       "{student.spotlightText}"
                     </p>
                   </div>
 
                   {/* Bottom Spotlight Badge Details */}
                   <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold font-display tracking-wide text-brand-teal uppercase">
-                    <span className="bg-brand-teal/5 px-2.5 py-1 rounded-md border border-brand-teal/10">
+                    <span className="bg-brand-teal/5 px-2.5 py-1 rounded-none border border-brand-teal/10">
                       {student.role}
                     </span>
                     <span className="text-brand-gold flex items-center gap-1">
@@ -118,10 +120,10 @@ export default function WorldOfMathematiciansSection() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

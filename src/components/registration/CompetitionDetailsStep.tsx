@@ -1,5 +1,6 @@
+"use client";
 import React, { useRef } from "react";
-import { RegistrationData } from "../../pages/RegistrationPage";
+import { RegistrationData } from "../../app/register/page";
 import { Upload } from "lucide-react";
 
 type Props = {
@@ -39,7 +40,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Competition Category</label>
           <select
             required
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.category}
             onChange={(e) => updateData({ category: e.target.value })}
           >
@@ -54,7 +55,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Mode of Participation</label>
           <select
             required
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
             value={data.mode}
             onChange={(e) => updateData({ mode: e.target.value })}
           >
@@ -68,7 +69,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark block mb-2">Passport Photograph</label>
           <div 
             onClick={() => fileInputRef.current?.click()}
-            className="border-2 border-dashed border-slate-300 bg-slate-50 hover:bg-slate-100 transition-colors rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer text-center"
+            className="border-2 border-dashed border-slate-300 bg-slate-50 hover:bg-slate-100 transition-colors rounded-none p-8 flex flex-col items-center justify-center cursor-pointer text-center"
           >
             <Upload className="w-8 h-8 text-slate-400 mb-3" />
             <span className="text-sm font-bold text-brand-dark">
@@ -86,14 +87,14 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
         </div>
 
         <div className="space-y-4 md:col-span-2 pt-4">
-          <label className="flex items-start gap-4 cursor-pointer p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 transition-colors">
+          <label className="flex items-start gap-4 cursor-pointer p-4 rounded-none border border-slate-200 bg-slate-50 hover:bg-slate-100 transition-colors">
             <div className="flex-shrink-0 mt-1">
               <input
                 type="checkbox"
                 required
                 checked={data.consent}
                 onChange={(e) => updateData({ consent: e.target.checked })}
-                className="w-5 h-5 text-brand-teal rounded border-slate-300 focus:ring-brand-teal focus:ring-2"
+                className="w-5 h-5 text-brand-teal rounded-none border-slate-300 focus:ring-brand-teal focus:ring-2"
               />
             </div>
             <div className="text-sm text-slate-600 font-sans">
@@ -108,13 +109,13 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
         <button
           type="button"
           onClick={onBack}
-          className="px-8 py-4 text-slate-500 hover:text-brand-dark hover:bg-slate-100 font-bold font-display uppercase tracking-widest rounded-xl transition-all cursor-pointer"
+          className="px-8 py-4 text-slate-500 hover:text-brand-dark hover:bg-slate-100 font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
         >
           Go Back
         </button>
         <button
           type="submit"
-          className="px-8 py-4 bg-brand-green hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-xl transition-all cursor-pointer"
+          className="px-8 py-4 bg-brand-green hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
         >
           Review & Submit
         </button>

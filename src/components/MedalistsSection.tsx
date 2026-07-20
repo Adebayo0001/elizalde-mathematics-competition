@@ -1,5 +1,7 @@
+"use client";
 import React, { useState } from "react";
 import { Award, Trophy, Star, Shield, Filter } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface Medalist {
   name: string;
@@ -124,7 +126,7 @@ export default function MedalistsSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Section Header — Centered (Reference Pattern #8: "OUR BLOG / Latest articles") */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-gold uppercase">
             Global Elite
           </span>
@@ -134,15 +136,15 @@ export default function MedalistsSection() {
           <p className="text-slate-500 font-sans mt-4 text-[15px] lg:text-[16px] leading-[1.6]">
             Honoring the young minds who demonstrated logical excellence at the EMC Global Finals. Meet our champions, silver medalists, and qualifiers from every corner of the earth.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Year and Type Selection Filters */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-100 pb-6 mb-10">
+        <ScrollReveal className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-100 pb-6 mb-10">
           {/* Year Buttons */}
-          <div className="flex bg-brand-bg p-1 rounded-xl border border-slate-200/50">
+          <div className="flex bg-brand-bg p-1 rounded-none border border-slate-200/50">
             <button
               onClick={() => setSelectedYear(2025)}
-              className={`px-5 py-2 rounded-lg text-xs font-bold font-display tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-2 rounded-none text-xs font-bold font-display tracking-wider transition-all cursor-pointer ${
                 selectedYear === 2025 ? "bg-brand-teal text-white shadow-sm" : "text-slate-500 hover:text-brand-dark"
               }`}
             >
@@ -150,7 +152,7 @@ export default function MedalistsSection() {
             </button>
             <button
               onClick={() => setSelectedYear(2024)}
-              className={`px-5 py-2 rounded-lg text-xs font-bold font-display tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-2 rounded-none text-xs font-bold font-display tracking-wider transition-all cursor-pointer ${
                 selectedYear === 2024 ? "bg-brand-teal text-white shadow-sm" : "text-slate-500 hover:text-brand-dark"
               }`}
             >
@@ -162,7 +164,7 @@ export default function MedalistsSection() {
           <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => setActiveFilter("ALL")}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all border cursor-pointer ${
+              className={`px-4 py-1.5 rounded-none text-xs font-medium transition-all border cursor-pointer ${
                 activeFilter === "ALL"
                   ? "bg-brand-gold/15 text-brand-gold border-brand-gold/30 font-bold"
                   : "bg-white border-slate-200 text-slate-500 hover:text-brand-dark hover:border-slate-300"
@@ -172,7 +174,7 @@ export default function MedalistsSection() {
             </button>
             <button
               onClick={() => setActiveFilter("MEDALS")}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all border cursor-pointer ${
+              className={`px-4 py-1.5 rounded-none text-xs font-medium transition-all border cursor-pointer ${
                 activeFilter === "MEDALS"
                   ? "bg-brand-gold/15 text-brand-gold border-brand-gold/30 font-bold"
                   : "bg-white border-slate-200 text-slate-500 hover:text-brand-dark hover:border-slate-300"
@@ -182,7 +184,7 @@ export default function MedalistsSection() {
             </button>
             <button
               onClick={() => setActiveFilter("QUALIFIERS")}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all border cursor-pointer ${
+              className={`px-4 py-1.5 rounded-none text-xs font-medium transition-all border cursor-pointer ${
                 activeFilter === "QUALIFIERS"
                   ? "bg-brand-gold/15 text-brand-gold border-brand-gold/30 font-bold"
                   : "bg-white border-slate-200 text-slate-500 hover:text-brand-dark hover:border-slate-300"
@@ -191,18 +193,18 @@ export default function MedalistsSection() {
               Qualifiers Only
             </button>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Article-style Card Grid (Reference Pattern: Blog cards with image, tag, title, date) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredMedalists.map((student, index) => {
             const isGold = student.award === "Gold Medalist";
             const isSilver = student.award === "Silver Medalist";
 
             return (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl border border-slate-200/50 hover:border-brand-gold/30 shadow-xs hover:shadow-xl transition-all duration-300 overflow-hidden"
+              <StaggerItem
+                key={`${student.name}-${index}`}
+                className="group bg-white rounded-none border border-slate-200/50 hover:border-brand-gold/30 shadow-xs hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 {/* Large Image — article card style */}
                 <div className="aspect-[4/3] overflow-hidden relative">
@@ -213,7 +215,7 @@ export default function MedalistsSection() {
                     referrerPolicy="no-referrer"
                   />
                   {/* Award badge overlay */}
-                  <div className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-bold font-display uppercase tracking-wider text-white shadow-md ${
+                  <div className={`absolute top-3 left-3 px-2.5 py-1 rounded-none text-[9px] font-bold font-display uppercase tracking-wider text-white shadow-md ${
                     isGold ? "bg-brand-gold" : isSilver ? "bg-slate-500" : "bg-brand-teal"
                   }`}>
                     {student.award}
@@ -238,14 +240,14 @@ export default function MedalistsSection() {
                     <span className="font-bold font-display text-brand-teal uppercase text-[10px] shrink-0">{student.country}</span>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
 
         {/* Empty state when filtering yields no match */}
         {filteredMedalists.length === 0 && (
-          <div className="text-center py-16 bg-brand-bg rounded-2xl border border-dashed border-slate-200">
+          <div className="text-center py-16 bg-brand-bg rounded-none border border-dashed border-slate-200">
             <span className="block text-slate-400 font-display text-xs">No honorees found match these filter rules.</span>
           </div>
         )}

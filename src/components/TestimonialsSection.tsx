@@ -1,5 +1,7 @@
+"use client";
 import React, { useState } from "react";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface Testimonial {
   quote: string;
@@ -53,26 +55,26 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Centered Header (Reference Pattern #4) */}
-        <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
           <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-green uppercase">
             Testimonials
           </span>
           <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
             What Teachers, Students, & Parents Say
           </h2>
-        </div>
+        </ScrollReveal>
 
         {/* Carousel Cards Container */}
         <div className="relative">
           {/* Desktop: show all cards in a row, with active one highlighted */}
-          <div className="hidden md:grid md:grid-cols-3 gap-8 items-stretch">
+          <StaggerContainer className="hidden md:grid md:grid-cols-3 gap-8 items-stretch">
             {testimonials.map((item, idx) => {
               const isActive = activeIndex === idx;
               return (
-                <div
+                <StaggerItem
                   key={idx}
                   onClick={() => goTo(idx)}
-                  className={`rounded-3xl p-6 lg:p-8 border transition-all duration-500 flex flex-col justify-between relative cursor-pointer ${
+                  className={`rounded-none p-6 lg:p-8 border transition-all duration-500 flex flex-col justify-between relative cursor-pointer ${
                     isActive
                       ? "bg-white border-brand-green/30 shadow-xl scale-[1.03] z-10"
                       : "bg-white/60 border-slate-200/50 hover:border-brand-green/20 shadow-xs hover:shadow-md opacity-80 hover:opacity-100"
@@ -104,14 +106,14 @@ export default function TestimonialsSection() {
                       {item.location}
                     </p>
                   </div>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
 
           {/* Mobile: Single card carousel */}
           <div className="md:hidden">
-            <div className="rounded-3xl p-6 bg-white border border-brand-green/30 shadow-xl flex flex-col justify-between">
+            <ScrollReveal className="rounded-none p-6 bg-white border border-brand-green/30 shadow-xl flex flex-col justify-between">
               <div className="space-y-5">
                 <div className="flex gap-1">
                   {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
@@ -133,20 +135,20 @@ export default function TestimonialsSection() {
                   {testimonials[activeIndex].location}
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* Navigation Arrows - Mobile */}
           <div className="md:hidden flex items-center justify-between mt-6">
             <button
               onClick={goPrev}
-              className="h-10 w-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer"
+              className="h-10 w-10 rounded-none border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer"
             >
               <ChevronLeft className="h-5 w-5 text-slate-600" />
             </button>
             <button
               onClick={goNext}
-              className="h-10 w-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer"
+              className="h-10 w-10 rounded-none border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer"
             >
               <ChevronRight className="h-5 w-5 text-slate-600" />
             </button>
@@ -159,7 +161,7 @@ export default function TestimonialsSection() {
             <button
               key={idx}
               onClick={() => goTo(idx)}
-              className={`rounded-full transition-all duration-300 cursor-pointer ${
+              className={`rounded-none transition-all duration-300 cursor-pointer ${
                 activeIndex === idx
                   ? "h-3 w-3 bg-brand-green dot-active"
                   : "h-2.5 w-2.5 bg-slate-300 hover:bg-slate-400"

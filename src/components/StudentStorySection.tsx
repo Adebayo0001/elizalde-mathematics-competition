@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Quote } from "lucide-react";
 
@@ -14,14 +15,14 @@ export default function StudentStorySection() {
           </h2>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-100/50 border border-slate-200/50 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden">
+        <div className="bg-white rounded-none p-8 md:p-12 shadow-xl shadow-slate-100/50 border border-slate-200/50 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden">
           {/* Accent decoration */}
-          <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-full blur-2xl opacity-70 -z-0" />
-          <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-brand-green/5 rounded-full blur-3xl opacity-75 -z-0" />
+          <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/5 rounded-none blur-2xl opacity-70 -z-0" />
+          <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-brand-green/5 rounded-none blur-3xl opacity-75 -z-0" />
 
           {/* Student Photo */}
           <div className="relative shrink-0 z-10">
-            <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-lg border-4 border-white ring-1 ring-slate-200">
+            <div className="w-48 h-48 rounded-none overflow-hidden shadow-lg border-4 border-white ring-1 ring-slate-200">
               <img
                 src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300&h=300"
                 alt="Maimunah Salako"
@@ -30,7 +31,7 @@ export default function StudentStorySection() {
               />
             </div>
             {/* Tag Badge */}
-            <span className="absolute -bottom-3 right-4 px-3 py-1 bg-brand-green text-white font-display text-[10px] font-bold tracking-wider rounded-full uppercase shadow-md shadow-brand-green/20">
+            <span className="absolute -bottom-3 right-4 px-3 py-1 bg-brand-green text-white font-display text-[10px] font-bold tracking-wider rounded-none uppercase shadow-md shadow-brand-green/20">
               Past Competitor
             </span>
           </div>
@@ -56,8 +57,8 @@ export default function StudentStorySection() {
               </div>
               
               <div className="hidden sm:block">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none bg-brand-green/10 text-brand-green text-xs font-semibold">
+                  <span className="w-2 h-2 rounded-none bg-brand-green animate-pulse" />
                   Now pursuing STEM at University
                 </span>
               </div>

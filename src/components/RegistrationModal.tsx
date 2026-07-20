@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, CheckCircle2, Loader2, Award, Calendar, GraduationCap } from "lucide-react";
@@ -115,7 +116,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl z-10 border border-slate-100"
+            className="relative w-full max-w-lg overflow-hidden rounded-none bg-white shadow-2xl z-10 border border-slate-100"
           >
             {/* Header */}
             <div className="bg-slate-50 border-b border-slate-100 px-6 py-4 flex items-center justify-between">
@@ -130,7 +131,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
               <button
                 id="close-registration-modal"
                 onClick={onClose}
-                className="p-1.5 rounded-full hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
+                className="p-1.5 rounded-none hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -145,7 +146,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-6"
                 >
-                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-brand-green/10 text-brand-green mb-4 ring-8 ring-brand-green/5">
+                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-none bg-brand-green/10 text-brand-green mb-4 ring-8 ring-brand-green/5">
                     <CheckCircle2 className="h-10 w-10" />
                   </div>
                   <h4 className="font-display font-bold text-2xl text-brand-dark mb-2">
@@ -156,7 +157,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                     An confirmation email and onboarding packet have been sent to <strong>{formData.repEmail}</strong>.
                   </p>
 
-                  <div className="bg-brand-bg rounded-xl p-4 text-left max-w-sm mx-auto mb-8 border border-slate-100 space-y-2">
+                  <div className="bg-brand-bg rounded-none p-4 text-left max-w-sm mx-auto mb-8 border border-slate-100 space-y-2">
                     <div className="flex items-start gap-2.5 text-xs text-slate-600">
                       <GraduationCap className="h-4 w-4 text-brand-teal shrink-0 mt-0.5" />
                       <div>
@@ -189,7 +190,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                   <button
                     id="finish-registration"
                     onClick={handleReset}
-                    className="w-full sm:w-auto px-6 py-2.5 bg-brand-teal hover:bg-brand-teal/90 text-white font-medium rounded-xl text-sm transition-all focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal cursor-pointer"
+                    className="w-full sm:w-auto px-6 py-2.5 bg-brand-teal hover:bg-brand-teal/90 text-white font-medium rounded-none text-sm transition-all focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal cursor-pointer"
                   >
                     Return to Homepage
                   </button>
@@ -203,7 +204,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                       {[1, 2, 3].map((s) => (
                         <React.Fragment key={s}>
                           <div
-                            className={`h-2 rounded-full transition-all duration-300 ${
+                            className={`h-2 rounded-none transition-all duration-300 ${
                               s <= step ? "bg-brand-teal flex-grow" : "bg-slate-100 w-10"
                             }`}
                           />
@@ -241,7 +242,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                           placeholder="e.g. Greensprings School"
                           value={formData.schoolName}
                           onChange={(e) => setFormData({ ...formData, schoolName: e.target.value })}
-                          className={`w-full px-4 py-2.5 rounded-xl border ${
+                          className={`w-full px-4 py-2.5 rounded-none border ${
                             errors.schoolName ? "border-brand-red bg-brand-red/5 focus:ring-brand-red" : "border-slate-200 focus:ring-brand-teal"
                           } focus:border-transparent focus:ring-2 outline-none transition-all text-sm`}
                         />
@@ -260,7 +261,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                           placeholder="e.g. Nigeria, Bulgaria, Singapore"
                           value={formData.country}
                           onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                          className={`w-full px-4 py-2.5 rounded-xl border ${
+                          className={`w-full px-4 py-2.5 rounded-none border ${
                             errors.country ? "border-brand-red bg-brand-red/5 focus:ring-brand-red" : "border-slate-200 focus:ring-brand-teal"
                           } focus:border-transparent focus:ring-2 outline-none transition-all text-sm`}
                         />
@@ -297,7 +298,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                           placeholder="e.g. Dr. Sarah Alabi"
                           value={formData.repName}
                           onChange={(e) => setFormData({ ...formData, repName: e.target.value })}
-                          className={`w-full px-4 py-2.5 rounded-xl border ${
+                          className={`w-full px-4 py-2.5 rounded-none border ${
                             errors.repName ? "border-brand-red bg-brand-red/5 focus:ring-brand-red" : "border-slate-200 focus:ring-brand-teal"
                           } focus:border-transparent focus:ring-2 outline-none transition-all text-sm`}
                         />
@@ -317,7 +318,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                             placeholder="coach@school.edu"
                             value={formData.repEmail}
                             onChange={(e) => setFormData({ ...formData, repEmail: e.target.value })}
-                            className={`w-full px-4 py-2.5 rounded-xl border ${
+                            className={`w-full px-4 py-2.5 rounded-none border ${
                               errors.repEmail ? "border-brand-red bg-brand-red/5 focus:ring-brand-red" : "border-slate-200 focus:ring-brand-teal"
                             } focus:border-transparent focus:ring-2 outline-none transition-all text-sm`}
                           />
@@ -336,7 +337,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                             placeholder="+1 (555) 000-0000"
                             value={formData.repPhone}
                             onChange={(e) => setFormData({ ...formData, repPhone: e.target.value })}
-                            className={`w-full px-4 py-2.5 rounded-xl border ${
+                            className={`w-full px-4 py-2.5 rounded-none border ${
                               errors.repPhone ? "border-brand-red bg-brand-red/5 focus:ring-brand-red" : "border-slate-200 focus:ring-brand-teal"
                             } focus:border-transparent focus:ring-2 outline-none transition-all text-sm`}
                           />
@@ -366,14 +367,14 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
                       {/* Selection Grid */}
                       <div className="space-y-2">
-                        <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors cursor-pointer">
+                        <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-none hover:bg-slate-50 transition-colors cursor-pointer">
                           <input
                             type="checkbox"
                             checked={formData.elementarySelected}
                             onChange={(e) =>
                               setFormData({ ...formData, elementarySelected: e.target.checked })
                             }
-                            className="h-4.5 w-4.5 text-brand-teal rounded-sm border-slate-300 focus:ring-brand-teal cursor-pointer"
+                            className="h-4.5 w-4.5 text-brand-teal rounded-none border-slate-300 focus:ring-brand-teal cursor-pointer"
                           />
                           <div>
                             <span className="block text-sm font-semibold text-slate-800">
@@ -385,14 +386,14 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                           </div>
                         </label>
 
-                        <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors cursor-pointer">
+                        <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-none hover:bg-slate-50 transition-colors cursor-pointer">
                           <input
                             type="checkbox"
                             checked={formData.middleSelected}
                             onChange={(e) =>
                               setFormData({ ...formData, middleSelected: e.target.checked })
                             }
-                            className="h-4.5 w-4.5 text-brand-teal rounded-sm border-slate-300 focus:ring-brand-teal cursor-pointer"
+                            className="h-4.5 w-4.5 text-brand-teal rounded-none border-slate-300 focus:ring-brand-teal cursor-pointer"
                           />
                           <div>
                             <span className="block text-sm font-semibold text-slate-800">
@@ -404,14 +405,14 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                           </div>
                         </label>
 
-                        <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors cursor-pointer">
+                        <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-none hover:bg-slate-50 transition-colors cursor-pointer">
                           <input
                             type="checkbox"
                             checked={formData.highSelected}
                             onChange={(e) =>
                               setFormData({ ...formData, highSelected: e.target.checked })
                             }
-                            className="h-4.5 w-4.5 text-brand-teal rounded-sm border-slate-300 focus:ring-brand-teal cursor-pointer"
+                            className="h-4.5 w-4.5 text-brand-teal rounded-none border-slate-300 focus:ring-brand-teal cursor-pointer"
                           />
                           <div>
                             <span className="block text-sm font-semibold text-slate-800">
@@ -435,7 +436,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                           onChange={(e) =>
                             setFormData({ ...formData, expectedStudents: e.target.value })
                           }
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-brand-teal focus:border-transparent focus:ring-2 outline-none text-sm bg-white"
+                          className="w-full px-4 py-2.5 rounded-none border border-slate-200 focus:ring-brand-teal focus:border-transparent focus:ring-2 outline-none text-sm bg-white"
                         >
                           <option value="4">3 - 4 Students (1 Team)</option>
                           <option value="8">6 - 8 Students (2 Teams)</option>
@@ -453,7 +454,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                             onChange={(e) =>
                               setFormData({ ...formData, acceptedTerms: e.target.checked })
                             }
-                            className="h-4 w-4 text-brand-teal rounded-sm border-slate-300 focus:ring-brand-teal mt-0.5"
+                            className="h-4 w-4 text-brand-teal rounded-none border-slate-300 focus:ring-brand-teal mt-0.5"
                           />
                           <span className="text-xs text-slate-500 leading-tight">
                             I verify that I have permission from my school administration to register for EMC 2026 and agree to the competition guidelines.
@@ -473,7 +474,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                         type="button"
                         onClick={handleBack}
                         disabled={isLoading}
-                        className="px-5 py-2 border border-slate-200 text-slate-600 hover:bg-slate-50 rounded-xl text-sm font-medium transition-colors disabled:opacity-50 cursor-pointer"
+                        className="px-5 py-2 border border-slate-200 text-slate-600 hover:bg-slate-50 rounded-none text-sm font-medium transition-colors disabled:opacity-50 cursor-pointer"
                       >
                         Back
                       </button>
@@ -485,7 +486,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                       <button
                         type="button"
                         onClick={handleNext}
-                        className="px-6 py-2 bg-brand-teal hover:bg-brand-teal/95 text-white rounded-xl text-sm font-medium transition-colors ml-auto cursor-pointer"
+                        className="px-6 py-2 bg-brand-teal hover:bg-brand-teal/95 text-white rounded-none text-sm font-medium transition-colors ml-auto cursor-pointer"
                       >
                         Continue
                       </button>
@@ -493,7 +494,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="px-6 py-2 bg-brand-red hover:bg-brand-red/90 text-white rounded-xl text-sm font-medium transition-all shadow-sm shadow-brand-red/20 ml-auto flex items-center gap-2 disabled:bg-brand-red/75 cursor-pointer"
+                        className="px-6 py-2 bg-brand-red hover:bg-brand-red/90 text-white rounded-none text-sm font-medium transition-all shadow-sm shadow-brand-red/20 ml-auto flex items-center gap-2 disabled:bg-brand-red/75 cursor-pointer"
                       >
                         {isLoading ? (
                           <>

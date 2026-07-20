@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Calendar, ArrowRight } from "lucide-react";
 
@@ -44,14 +45,14 @@ export default function NewsSection() {
           <h2 className="font-display font-semibold text-[26px] lg:text-[36px] text-brand-dark mt-2 tracking-tight leading-[1.15]">
             Latest from EMC
           </h2>
-          <div className="h-1.5 w-12 bg-brand-green mx-auto mt-4 rounded-full" />
+          <div className="h-1.5 w-12 bg-brand-green mx-auto mt-4 rounded-none " />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {newsItems.map((item, index) => (
             <article
               key={index}
-              className="group bg-white rounded-2xl border border-slate-200/50 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-green/30 transition-all duration-300 flex flex-col h-full"
+              className="group bg-white rounded-none border border-slate-200/50 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-green/30 transition-all duration-300 flex flex-col h-full"
             >
               {/* Image Container with Consistent 4:3 Crop aspect-ratio */}
               <div className="relative aspect-4/3 w-full overflow-hidden bg-slate-100">
@@ -61,7 +62,7 @@ export default function NewsSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
-                <span className="absolute top-4 left-4 bg-brand-green text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md shadow-md">
+                <span className="absolute top-4 left-4 bg-brand-green text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-none shadow-md">
                   {item.tag}
                 </span>
               </div>

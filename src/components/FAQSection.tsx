@@ -1,5 +1,7 @@
+"use client";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, HelpCircle, Play } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface FAQItem {
   question: string;
@@ -45,31 +47,31 @@ export default function FAQSection() {
           {/* Left Column: Heading + Accordion */}
           <div className="lg:col-span-6 space-y-8">
             {/* Play icon badge */}
-            <div className="h-12 w-12 rounded-2xl bg-brand-teal text-white flex items-center justify-center">
+            <ScrollReveal className="h-12 w-12 rounded-none bg-brand-teal text-white flex items-center justify-center">
               <Play className="h-5 w-5 fill-white ml-0.5" />
-            </div>
+            </ScrollReveal>
 
             {/* Section Header — left-aligned */}
-            <div className="space-y-3">
-              <h2 className="font-display font-bold text-[28px] lg:text-[38px] text-brand-dark tracking-tight leading-[1.12]">
+            <ScrollReveal className="space-y-3">
+              <h2 className="font-display font-bold text-3xl lg:text-4xl text-brand-dark tracking-tight leading-[1.12]">
                 Frequently Asked Questions
               </h2>
-            </div>
+            </ScrollReveal>
 
             {/* Accordion */}
-            <div className="space-y-3">
+            <StaggerContainer className="space-y-3">
               {faqData.map((item, idx) => {
                 const isOpen = openIndex === idx;
                 return (
-                  <div
+                  <StaggerItem
                     key={idx}
-                    className="bg-white rounded-2xl border border-slate-200/50 hover:border-brand-teal/20 transition-all duration-300 overflow-hidden"
+                    className="bg-white rounded-none border border-slate-200/50 hover:border-brand-teal/20 transition-all duration-300 overflow-hidden"
                   >
                     <button
                       onClick={() => toggleItem(idx)}
                       className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-brand-dark hover:text-brand-teal transition-colors focus:outline-none cursor-pointer"
                     >
-                      <span className="text-[14px] lg:text-[15px] leading-[1.4] flex items-center gap-2.5">
+                      <span className="text-sm sm:text-base leading-[1.4] flex items-center gap-2.5">
                         <span className="text-brand-teal text-lg">+</span>
                         {item.question}
                       </span>
@@ -88,20 +90,20 @@ export default function FAQSection() {
                         isOpen ? "max-h-60 border-t border-slate-100 py-4 px-5 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
                       }`}
                     >
-                      <p className="text-slate-600 text-[13px] lg:text-[14px] leading-[1.6]">
+                      <p className="text-slate-600 text-xs sm:text-sm leading-[1.6]">
                         {item.answer}
                       </p>
                     </div>
-                  </div>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerContainer>
           </div>
 
           {/* Right Column: Large Image + Overlapping Stat Badges */}
-          <div className="lg:col-span-6 relative">
+          <ScrollReveal className="lg:col-span-6 relative">
             {/* Main image */}
-            <div className="rounded-3xl overflow-hidden shadow-lg">
+            <div className="rounded-none overflow-hidden shadow-lg">
               <div className="aspect-[4/5] lg:aspect-[3/4]">
                 <img
                   src="https://scontent-los4-1.xx.fbcdn.net/v/t39.30808-6/482242974_945002121174723_6667028209231091350_n.jpg?stp=dst-jpg_tt6&cstp=mx1132x789&ctp=s1132x789&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGdTpCLKcSw1C1L99adgPJDXfvm_UmK5G5d--b9SYrkbqfJQb-92qjRvlVJeo4SUkhWeYDhq1zfiMUfhWb_OWTV&_nc_ohc=6icyO1sQIesQ7kNvwHN6VND&_nc_oc=AdqNkiHxj7eYW2wDF0ylnhOVUpX46F3Pr3fJxvRPjjjPHEraOJZoeCXJWYAxv143XZ7vokvvUk413x3V5Bc0Z1E4&_nc_zt=23&_nc_ht=scontent-los4-1.xx&_nc_gid=_Ii6u8mRtlTIICgNsAhu8g&_nc_ss=7d2a8&oh=00_AQAkxWdWDuQSQ1RWwofBD7vchnQi2Q_Ua-F7kWpv9q1lSA&oe=6A61B9BB"
@@ -115,7 +117,7 @@ export default function FAQSection() {
             {/* Overlapping Stat Badges (like reference "100+ Instructions" and "16 Programs") */}
             <div className="absolute -bottom-6 left-4 lg:-bottom-8 lg:left-6 flex gap-3 z-10">
               {/* Stat 1 */}
-              <div className="bg-brand-red text-white rounded-2xl px-5 py-4 shadow-xl float-badge">
+              <div className="bg-brand-red text-white rounded-none px-5 py-4 shadow-xl float-badge">
                 <span className="text-[10px] font-display font-bold uppercase tracking-wider block text-white/70">
                   Countries
                 </span>
@@ -128,7 +130,7 @@ export default function FAQSection() {
               </div>
 
               {/* Stat 2 */}
-              <div className="bg-brand-teal text-white rounded-2xl px-5 py-4 shadow-xl float-badge" style={{ animationDelay: '0.5s' }}>
+              <div className="bg-brand-teal text-white rounded-none px-5 py-4 shadow-xl float-badge" style={{ animationDelay: '0.5s' }}>
                 <span className="text-[10px] font-display font-bold uppercase tracking-wider block text-brand-gold">
                   Programs
                 </span>
@@ -140,7 +142,7 @@ export default function FAQSection() {
                 </span>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
