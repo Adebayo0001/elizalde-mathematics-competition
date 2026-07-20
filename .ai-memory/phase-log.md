@@ -45,3 +45,28 @@
 
 **Key decisions made:**
 - Opted for a 2x2 grid for the 4 feature cards within the right column to maintain a compact, balanced look next to the image.
+
+**Date/Time:** 2026-07-20T00:41:00+01:00
+**Phase ID:** Phase 1 - Registration Routing & Form Wizard Structure
+**State:** `c:\Users\user\Desktop\3-elizalde-mathematics-competition - Copy` (Current working directory)
+
+**What was completed:**
+- Refactored the single-page application into a multi-page app using `react-router-dom`.
+- Moved `App.tsx`'s original homepage content to `src/pages/HomePage.tsx`.
+- Created a dedicated `src/pages/RegistrationPage.tsx` with a multi-step registration wizard.
+- Built step components: `StudentDetailsStep.tsx`, `SchoolDetailsStep.tsx`, `CompetitionDetailsStep.tsx`, and `PaymentStep.tsx`.
+- Fixed relative import paths due to directory restructuring.
+
+**How this aligns with the general plan:**
+- Moves the user closer to a fully functional student registration flow instead of the previous mock modal.
+- Introduces routing necessary for scalability.
+
+**Pending items:**
+- Actual integration of the `react-paystack` library into the `PaymentStep.tsx`.
+- Backend/Database connection for saving the form state.
+
+**Environment changes:**
+- Installed `react-router-dom` and `react-paystack` via npm.
+
+**Key decisions made:**
+- Opted to use standard `react-router-dom` over a framework like Next.js since the app was already built with Vite. Centralized form state in the parent `RegistrationPage.tsx` component to make it easy to persist later.

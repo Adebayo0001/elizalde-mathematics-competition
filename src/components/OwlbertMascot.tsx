@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function OwlbertMascot({ className = "h-40 w-40" }: { className?: string }) {

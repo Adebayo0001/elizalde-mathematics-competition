@@ -1,20 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
-  <g fill="rgba(255, 255, 255, 0.15)" font-family="Times New Roman, serif" font-style="italic">
-    <text x="50" y="80" font-size="24">f(x) = ax² + bx + c</text>
-    <text x="350" y="60" font-size="32">∑</text>
-    <text x="380" y="55" font-size="24">1/n² = π²/6</text>
-    <text x="120" y="240" font-size="48">∫</text>
-    <text x="140" y="230" font-size="24">e^x dx = e^x + C</text>
-    <text x="320" y="300" font-size="28">e^{iπ} + 1 = 0</text>
-    <text x="80" y="420" font-size="24">A = πr²</text>
-    <text x="280" y="460" font-size="26">a² + b² = c²</text>
-    <text x="220" y="160" font-size="22">F = G (m₁m₂)/r²</text>
-    <text x="450" y="200" font-size="20">E = mc²</text>
-    <text x="40" y="550" font-size="24">sin²θ + cos²θ = 1</text>
-    <text x="450" y="530" font-size="28">∇ × E = -∂B/∂t</text>
-    <text x="30" y="330" font-size="18">x = (-b ± √(b² - 4ac)) / 2a</text>
-    <text x="420" y="100" font-size="20">ΔxΔp ≥ ℏ/2</text>
-    <text x="250" y="370" font-size="22">P(A|B) = P(B|A)P(A) / P(B)</text>
-    <text x="400" y="400" font-size="26">V - E + F = 2</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <g fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Geometric Shapes -->
+    <circle cx="150" cy="150" r="40" />
+    <polygon points="300,100 350,180 250,180" />
+    <rect x="700" y="80" width="60" height="60" transform="rotate(15 730 110)" />
+    <path d="M 850 250 A 50 50 0 0 1 950 250" />
+    <circle cx="200" cy="800" r="60" />
+    <polygon points="500,850 560,950 440,950" transform="rotate(-20 500 900)" />
+    
+    <!-- Connective lines / graphs -->
+    <path d="M 50 400 Q 150 300 250 500 T 450 400" />
+    <path d="M 750 600 Q 850 700 950 550" />
+    <path d="M 50 900 L 150 800 L 200 850" />
+    <path d="M 800 50 L 900 150 L 850 200" />
+
+    <!-- Axes -->
+    <line x1="400" y1="200" x2="400" y2="300" />
+    <line x1="350" y1="250" x2="450" y2="250" />
+    
+    <line x1="600" y1="800" x2="600" y2="900" />
+    <line x1="550" y1="850" x2="650" y2="850" />
+  </g>
+
+  <g fill="rgba(255, 255, 255, 0.25)" font-family="Times New Roman, serif" font-style="italic">
+    <!-- Large prominent symbols -->
+    <text x="80" y="300" font-size="120" opacity="0.4">∫</text>
+    <text x="800" y="450" font-size="100" opacity="0.4">∑</text>
+    <text x="350" y="600" font-size="90" opacity="0.4">π</text>
+    <text x="650" y="150" font-size="80" opacity="0.4">∞</text>
+    <text x="150" y="650" font-size="100" opacity="0.4">√</text>
+    <text x="850" y="800" font-size="90" opacity="0.4">Ω</text>
+    <text x="450" y="950" font-size="80" opacity="0.4">Δ</text>
+
+    <!-- Detailed Formulas with varied rotations -->
+    <text x="250" y="120" font-size="32" transform="rotate(-10 250 120)">e^{iπ} + 1 = 0</text>
+    <text x="500" y="100" font-size="28" transform="rotate(5 500 100)">f(x) = ax² + bx + c</text>
+    <text x="100" y="450" font-size="24" transform="rotate(15 100 450)">a² + b² = c²</text>
+    <text x="650" y="300" font-size="36" transform="rotate(-5 650 300)">E = mc²</text>
+    <text x="450" y="450" font-size="28" transform="rotate(-15 450 450)">F = G(m₁m₂)/r²</text>
+    <text x="850" y="250" font-size="22" transform="rotate(20 850 250)">A = πr²</text>
+    
+    <text x="100" y="750" font-size="28" transform="rotate(-25 100 750)">sin²θ + cos²θ = 1</text>
+    <text x="350" y="780" font-size="32" transform="rotate(10 350 780)">∇ × E = -∂B/∂t</text>
+    <text x="650" y="650" font-size="24" transform="rotate(-10 650 650)">x = (-b ± √(b² - 4ac)) / 2a</text>
+    <text x="800" y="900" font-size="30" transform="rotate(15 800 900)">ΔxΔp ≥ ℏ/2</text>
+    <text x="250" y="950" font-size="26" transform="rotate(-5 250 950)">P(A|B) = P(B|A)P(A) / P(B)</text>
+    <text x="750" y="550" font-size="28" transform="rotate(-20 750 550)">V - E + F = 2</text>
+    
+    <text x="400" y="350" font-size="24">dy/dx</text>
+    <text x="200" y="550" font-size="22">lim(n→∞)</text>
+    <text x="600" y="500" font-size="26">∫ e^x dx = e^x + C</text>
   </g>
 </svg>
