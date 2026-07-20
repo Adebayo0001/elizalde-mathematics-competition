@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -31,22 +31,7 @@ import ParticipatingCountriesSection from "../components/ParticipatingCountriesS
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import WhoCanParticipateSection from "../components/WhoCanParticipateSection";
 
-const heroImages = [
-  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=2000",
-];
-
 export default function HomePage() {
-  const [currentHeroImage, setCurrentHeroImage] = useState(0);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-brand-dark antialiased selection:bg-brand-blue/10 selection:text-brand-blue scroll-smooth">
@@ -108,34 +93,22 @@ export default function HomePage() {
 
       <main>
         {/* ──────────────────────────────────────────────────────────────────
-            2. HERO SECTION — Full-Width Image Overlay (Reference Pattern #1)
+            2. HERO SECTION — Full-Width Video Background
             ────────────────────────────────────────────────────────────────── */}
         <section id="hero" className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-brand-blue flex items-end text-white pt-32 lg:pt-40">
-          {/* Fading Background Images */}
-          {heroImages.map((src, index) => (
-            <div
-              key={src}
-              className={`absolute inset-0 w-full h-full z-0 pointer-events-none transition-opacity duration-1000 ease-in-out ${
-                index === currentHeroImage ? "opacity-30" : "opacity-0"
-              }`}
-            >
-              <img
-                src={src}
-                alt=""
-                className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-linear ${
-                  index === currentHeroImage ? "scale-110" : "scale-100"
-                }`}
-              />
-            </div>
-          ))}
+          {/* Video Background */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+          >
+            <source src="/images/hero-bg.mp4" type="video/mp4" />
+          </video>
 
-          {/* Gradient Overlay — lighter, but still strong enough at bottom for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/80 to-transparent z-[1]" />
-
-          {/* Blueprint/Grid Pattern Overlay */}
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-[1]">
-            <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
-          </div>
+          {/* Gradient Overlay — ensures text readability over video */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/70 to-brand-blue/40 z-[1]" />
 
           {/* Hero Content — positioned at bottom-left like reference */}
           <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-16 lg:pb-24 pt-20 lg:pt-32 relative z-10 w-full">
