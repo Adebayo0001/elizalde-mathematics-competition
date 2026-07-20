@@ -47,7 +47,7 @@ export default function FAQSection() {
           {/* Left Column: Heading + Accordion */}
           <div className="lg:col-span-6 space-y-8">
             {/* Play icon badge */}
-            <ScrollReveal className="h-12 w-12 rounded-none bg-brand-teal text-white flex items-center justify-center">
+            <ScrollReveal className="h-12 w-12 rounded-none bg-brand-blue text-white flex items-center justify-center">
               <Play className="h-5 w-5 fill-white ml-0.5" />
             </ScrollReveal>
 
@@ -65,19 +65,19 @@ export default function FAQSection() {
                 return (
                   <StaggerItem
                     key={idx}
-                    className="bg-white rounded-none border border-slate-200/50 hover:border-brand-teal/20 transition-all duration-300 overflow-hidden"
+                    className="bg-white rounded-none border border-slate-200/50 hover:border-brand-blue/20 transition-all duration-300 overflow-hidden"
                   >
                     <button
                       onClick={() => toggleItem(idx)}
-                      className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-brand-dark hover:text-brand-teal transition-colors focus:outline-none cursor-pointer"
+                      className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-brand-dark hover:text-brand-blue transition-colors focus:outline-none cursor-pointer"
                     >
                       <span className="text-sm sm:text-base leading-[1.4] flex items-center gap-2.5">
-                        <span className="text-brand-teal text-lg">+</span>
+                        <span className="text-brand-blue text-lg">+</span>
                         {item.question}
                       </span>
                       <span className="shrink-0 text-slate-400">
                         {isOpen ? (
-                          <ChevronUp className="h-4 w-4 text-brand-teal" />
+                          <ChevronUp className="h-4 w-4 text-brand-blue" />
                         ) : (
                           <ChevronDown className="h-4 w-4" />
                         )}
@@ -130,7 +130,7 @@ export default function FAQSection() {
               </div>
 
               {/* Stat 2 */}
-              <div className="bg-brand-teal text-white rounded-none px-5 py-4 shadow-xl float-badge" style={{ animationDelay: '0.5s' }}>
+              <div className="bg-brand-blue text-white rounded-none px-5 py-4 shadow-xl float-badge" style={{ animationDelay: '0.5s' }}>
                 <span className="text-[10px] font-display font-bold uppercase tracking-wider block text-brand-gold">
                   Programs
                 </span>
@@ -148,3 +148,4 @@ export default function FAQSection() {
     </section>
   );
 }
+

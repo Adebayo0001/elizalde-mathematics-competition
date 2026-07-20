@@ -61,7 +61,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
         </p>
         <button 
           onClick={() => window.location.href = '/'}
-          className="px-8 py-4 bg-brand-dark hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all"
+          className="px-8 py-4 bg-brand-dark hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all"
         >
           Return to Homepage
         </button>
@@ -99,7 +99,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
           
           <div className="pt-4 mt-4 border-t border-slate-200 flex justify-between items-center">
             <span className="text-base font-bold text-brand-dark uppercase tracking-wider">Total Registration Fee</span>
-            <span className="text-2xl font-bold font-display text-brand-teal">₦{registrationFee.toLocaleString()}</span>
+            <span className="text-2xl font-bold font-display text-brand-blue">₦{registrationFee.toLocaleString()}</span>
           </div>
         </div>
       </div>
@@ -123,9 +123,10 @@ export default function PaymentStep({ formData, onBack }: Props) {
         {/* We use PaystackButton as a custom styled component */}
         <PaystackButton 
           {...componentProps} 
-          className="w-full md:w-auto px-8 py-4 bg-brand-green hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer text-center shadow-lg hover:shadow-brand-teal/20"
+          className="w-full md:w-auto px-8 py-4 bg-brand-green hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer text-center shadow-lg hover:shadow-brand-blue/20"
         />
       </div>
     </div>
   );
 }
+

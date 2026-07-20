@@ -40,7 +40,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Competition Category</label>
           <select
             required
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.category}
             onChange={(e) => updateData({ category: e.target.value })}
           >
@@ -55,7 +55,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
           <label className="text-xs font-bold font-display uppercase tracking-widest text-brand-dark">Mode of Participation</label>
           <select
             required
-            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-teal focus:bg-white transition-all"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"
             value={data.mode}
             onChange={(e) => updateData({ mode: e.target.value })}
           >
@@ -94,7 +94,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
                 required
                 checked={data.consent}
                 onChange={(e) => updateData({ consent: e.target.checked })}
-                className="w-5 h-5 text-brand-teal rounded-none border-slate-300 focus:ring-brand-teal focus:ring-2"
+                className="w-5 h-5 text-brand-blue rounded-none border-slate-300 focus:ring-brand-blue focus:ring-2"
               />
             </div>
             <div className="text-sm text-slate-600 font-sans">
@@ -115,7 +115,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
         </button>
         <button
           type="submit"
-          className="px-8 py-4 bg-brand-green hover:bg-brand-teal text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
+          className="px-8 py-4 bg-brand-green hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
         >
           Review & Submit
         </button>
@@ -123,3 +123,4 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
     </form>
   );
 }
+

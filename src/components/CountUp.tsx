@@ -39,3 +39,4 @@ export default function CountUp({ end, duration = 2, className }: CountUpProps) 
 
   return <span ref={ref} className={className}>0</span>;
 }
+

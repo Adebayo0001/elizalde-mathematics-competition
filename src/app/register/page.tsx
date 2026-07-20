@@ -110,13 +110,13 @@ export default function RegistrationPage() {
             <div className="flex justify-between relative">
               <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-slate-200 rounded-none z-0" />
               <div 
-                className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-brand-teal rounded-none z-0 transition-all duration-500 ease-out"
+                className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-brand-blue rounded-none z-0 transition-all duration-500 ease-out"
                 style={{ width: `${((step - 1) / 3) * 100}%` }}
               />
               
               {steps.map((s) => (
                 <div key={s.id} className="relative z-10 flex flex-col items-center gap-2">
-                  <div className={`w-8 h-8 rounded-none flex items-center justify-center text-sm font-bold transition-colors duration-300 ${step >= s.id ? 'bg-brand-teal text-white' : 'bg-slate-200 text-slate-400'}`}>
+                  <div className={`w-8 h-8 rounded-none flex items-center justify-center text-sm font-bold transition-colors duration-300 ${step >= s.id ? 'bg-brand-blue text-white' : 'bg-slate-200 text-slate-400'}`}>
                     {step > s.id ? <CheckCircle2 className="w-5 h-5" /> : s.id}
                   </div>
                   <span className={`text-[10px] font-bold font-display uppercase tracking-widest absolute -bottom-6 w-24 text-center ${step >= s.id ? 'text-brand-dark' : 'text-slate-400'}`}>
@@ -147,3 +147,4 @@ export default function RegistrationPage() {
     </div>
   );
 }
+

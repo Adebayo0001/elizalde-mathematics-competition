@@ -49,13 +49,13 @@ export default function WorldOfMathematiciansSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
-          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-teal uppercase">
+          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-blue uppercase">
             Student Spotlights
           </span>
           <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark mt-3 tracking-tight leading-[1.12]">
             The World of Mathematicians
           </h2>
-          <div className="h-1.5 w-12 bg-brand-teal mx-auto mt-4 rounded-none " />
+          <div className="h-1.5 w-12 bg-brand-blue mx-auto mt-4 rounded-none " />
           <p className="text-slate-500 font-sans mt-5 text-sm sm:text-base leading-[1.6]">
             A celebration of outstanding student leadership, community support, and mathematical curiosity outside of direct exam results. These young thinkers inspire us all.
           </p>
@@ -70,8 +70,8 @@ export default function WorldOfMathematiciansSection() {
                 key={idx}
                 className={`group bg-white rounded-none border transition-all duration-300 overflow-hidden flex flex-col relative ${
                   isFeatured
-                    ? "border-brand-teal/40 shadow-xl scale-[1.03] lg:scale-[1.05] ring-1 ring-brand-teal/20 z-10"
-                    : "border-slate-200/50 hover:border-brand-teal/30 hover:shadow-xl"
+                    ? "border-brand-blue/40 shadow-xl scale-[1.03] lg:scale-[1.05] ring-1 ring-brand-blue/20 z-10"
+                    : "border-slate-200/50 hover:border-brand-blue/30 hover:shadow-xl"
                 }`}
               >
                 {/* Large Image — article card style */}
@@ -84,7 +84,7 @@ export default function WorldOfMathematiciansSection() {
                   />
                   {/* Badge overlay */}
                   {isFeatured && (
-                    <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-brand-teal text-white text-[10px] font-bold font-display uppercase px-3.5 py-1 rounded-none shadow-md tracking-wider">
+                    <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-[10px] font-bold font-display uppercase px-3.5 py-1 rounded-none shadow-md tracking-wider">
                       Featured Leader
                     </div>
                   )}
@@ -94,12 +94,12 @@ export default function WorldOfMathematiciansSection() {
                 <div className="p-5 flex flex-col flex-grow">
                   <div className="space-y-4 flex-grow">
                     <div>
-                      <h3 className="font-display font-semibold text-base sm:text-lg text-brand-dark group-hover:text-brand-teal transition-colors tracking-tight leading-[1.2]">
+                      <h3 className="font-display font-semibold text-base sm:text-lg text-brand-dark group-hover:text-brand-blue transition-colors tracking-tight leading-[1.2]">
                         {student.name}
                       </h3>
                       <div className="text-xs text-slate-500 font-medium font-sans mt-1">
                         {student.school}
-                        <span className="font-bold font-display text-brand-teal uppercase ml-2">{student.country}</span>
+                        <span className="font-bold font-display text-brand-blue uppercase ml-2">{student.country}</span>
                       </div>
                     </div>
 
@@ -110,8 +110,8 @@ export default function WorldOfMathematiciansSection() {
                   </div>
 
                   {/* Bottom Spotlight Badge Details */}
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold font-display tracking-wide text-brand-teal uppercase">
-                    <span className="bg-brand-teal/5 px-2.5 py-1 rounded-none border border-brand-teal/10">
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold font-display tracking-wide text-brand-blue uppercase">
+                    <span className="bg-brand-blue/5 px-2.5 py-1 rounded-none border border-brand-blue/10">
                       {student.role}
                     </span>
                     <span className="text-brand-gold flex items-center gap-1">
@@ -128,3 +128,4 @@ export default function WorldOfMathematiciansSection() {
     </section>
   );
 }
+

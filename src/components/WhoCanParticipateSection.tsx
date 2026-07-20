@@ -34,13 +34,13 @@ export default function WhoCanParticipateSection() {
     <section className="py-16 lg:py-28 bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
-          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-teal uppercase">
+          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-blue uppercase">
             Eligibility
           </span>
           <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark mt-3 tracking-tight leading-[1.12]">
             Who Can Participate
           </h2>
-          <div className="h-1.5 w-12 bg-brand-teal mx-auto mt-4 rounded-none" />
+          <div className="h-1.5 w-12 bg-brand-blue mx-auto mt-4 rounded-none" />
           <p className="text-slate-500 font-sans mt-5 text-sm sm:text-base leading-[1.6]">
             Participating schools select 3 to 4 students in each class to represent them on the national and global stage.
           </p>
@@ -70,3 +70,4 @@ export default function WhoCanParticipateSection() {
     </section>
   );
 }
+

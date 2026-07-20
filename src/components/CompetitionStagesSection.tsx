@@ -5,7 +5,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 export default function CompetitionStagesSection() {
   return (
-    <section id="competition-stages" className="relative py-16 lg:py-28 bg-brand-green border-y border-brand-green overflow-hidden">
+    <section id="competition-stages" className="relative py-16 lg:py-28 bg-white border-y border-slate-200 overflow-hidden">
       {/* Subtle Math Formula Texture Background */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-100"
@@ -59,7 +59,7 @@ export default function CompetitionStagesSection() {
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="space-y-6">
                   <div className="flex items-center">
-                    <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-red/10 text-brand-red px-3 py-1 rounded-none border border-brand-red/20">
+                    <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-lime/10 text-brand-green px-3 py-1 rounded-none border border-brand-lime/20">
                       Local Level
                     </span>
                   </div>
@@ -75,7 +75,7 @@ export default function CompetitionStagesSection() {
                   {/* Core Features - Side by side grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-200">
                     <div className="space-y-3">
-                      <div className="h-8 w-8 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
+                      <div className="h-8 w-8 rounded-none bg-brand-lime/10 text-brand-green flex items-center justify-center">
                         <FileText className="h-4 w-4" />
                       </div>
                       <div>
@@ -85,7 +85,7 @@ export default function CompetitionStagesSection() {
                     </div>
 
                     <div className="space-y-3">
-                      <div className="h-8 w-8 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
+                      <div className="h-8 w-8 rounded-none bg-brand-lime/10 text-brand-green flex items-center justify-center">
                         <Landmark className="h-4 w-4" />
                       </div>
                       <div>
@@ -99,7 +99,7 @@ export default function CompetitionStagesSection() {
                 {/* Footer */}
                 <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-500 font-semibold font-sans">
                   <span className="text-slate-600">National Qualification Required</span>
-                  <span className="text-brand-red flex items-center gap-1 font-display font-bold uppercase tracking-wider hover:gap-2 transition-all cursor-pointer">
+                  <span className="text-brand-green flex items-center gap-1 font-display font-bold uppercase tracking-wider hover:gap-2 transition-all cursor-pointer">
                     Feb 22, 2026
                     <ChevronRight className="h-4 w-4" />
                   </span>
@@ -171,3 +171,4 @@ export default function CompetitionStagesSection() {
     </section>
   );
 }
+
