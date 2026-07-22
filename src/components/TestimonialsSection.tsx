@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
@@ -38,6 +38,13 @@ const testimonials: Testimonial[] = [
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    }, 4000); // Auto-slide every 4 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   const goTo = (index: number) => {
     setActiveIndex(index);
   };
@@ -64,129 +71,76 @@ export default function TestimonialsSection() {
           </h2>
         </ScrollReveal>
 
-        {/* Video Testimonial for Teacher */}
+        {/* Video Testimonial for Teacher - Standalone Video */}
         <ScrollReveal className="max-w-4xl mx-auto mb-16 lg:mb-24">
-          <div className="bg-white p-4 lg:p-6 border border-slate-200 shadow-xl relative overflow-hidden group">
-             {/* Decorative accents */}
-             <div className="absolute top-0 left-0 w-1.5 h-full bg-brand-blue" />
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pl-2">
-               <div className="aspect-video bg-slate-900 relative">
-                 <video 
-                   src="/images/testimonials.mp4" 
-                   controls 
-                   className="w-full h-full object-cover"
-                   poster="/images/IMG_20260720_114502_765.jpg.jpeg"
-                 />
-               </div>
-               <div className="py-2 pr-4">
-                 <div className="flex items-center gap-2 mb-4">
-                   <div className="flex gap-1">
-                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
-                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
-                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
-                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
-                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
-                   </div>
-                 </div>
-                 <p className="font-sans text-[14px] lg:text-[15px] leading-[1.65] text-slate-600 italic mb-6">
-                   "EMC has completely transformed the mathematics culture in our department. Our students no longer see math as dry formulas on a chalkboard, but as a collaborative, highly exciting sport on a global court."
-                 </p>
-                 <div>
-                   <h4 className="font-display font-semibold text-[15px] lg:text-[16px] text-brand-dark">Dr. Sarah Jenkins</h4>
-                   <p className="text-xs font-sans font-medium text-slate-500">Head of Mathematics & Senior Coach</p>
-                   <p className="text-[10px] font-bold font-display uppercase tracking-wider text-brand-green mt-1">Oakwood High School, UK</p>
-                 </div>
-               </div>
-             </div>
+          <div className="bg-white p-2 lg:p-3 border border-slate-200 shadow-xl relative overflow-hidden group">
+            <div className="aspect-video bg-slate-900 relative">
+              <video 
+                src="/images/testimonials.mp4" 
+                controls 
+                className="w-full h-full object-cover"
+                poster="/images/IMG_20260720_114502_765.jpg.jpeg"
+              />
+            </div>
           </div>
         </ScrollReveal>
 
-
         {/* Carousel Cards Container */}
-        <div className="relative">
-          {/* Desktop: show all cards in a row, with active one highlighted */}
-          <StaggerContainer className="hidden md:grid md:grid-cols-3 gap-8 items-stretch">
-            {testimonials.map((item, idx) => {
-              const isActive = activeIndex === idx;
-              return (
-                <StaggerItem
-                  key={idx}
-                  onClick={() => goTo(idx)}
-                  className={`rounded-none p-6 lg:p-8 border transition-all duration-500 flex flex-col justify-between relative cursor-pointer ${
-                    isActive
-                      ? "bg-white border-brand-green/30 shadow-xl scale-[1.03] z-10"
-                      : "bg-white/60 border-slate-200/50 hover:border-brand-green/20 shadow-xs hover:shadow-md opacity-80 hover:opacity-100"
-                  }`}
-                >
-                  {/* Quote Content */}
-                  <div className="space-y-5">
-                    {/* 5-Star Rating */}
-                    <div className="flex gap-1">
-                      {[...Array(item.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-brand-gold text-brand-gold" />
-                      ))}
-                    </div>
-
-                    <p className="font-sans text-[14px] lg:text-[15px] leading-[1.65] text-slate-600 italic">
-                      "{item.quote}"
-                    </p>
-                  </div>
-
-                  {/* Author Info */}
-                  <div className="pt-6 border-t border-slate-100 mt-6 space-y-1">
-                    <h4 className="font-display font-semibold text-[15px] lg:text-[16px] text-brand-dark">
-                      {item.author}
-                    </h4>
-                    <p className="text-xs font-sans font-medium text-slate-500">
-                      {item.role}
-                    </p>
-                    <p className="text-[10px] font-bold font-display uppercase tracking-wider text-brand-green">
-                      {item.location}
-                    </p>
-                  </div>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
-
-          {/* Mobile: Single card carousel */}
-          <div className="md:hidden">
-            <ScrollReveal className="rounded-none p-6 bg-white border border-brand-green/30 shadow-xl flex flex-col justify-between">
-              <div className="space-y-5">
-                <div className="flex gap-1">
-                  {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-brand-gold text-brand-gold" />
-                  ))}
-                </div>
-                <p className="font-sans text-[14px] leading-[1.65] text-slate-600 italic">
-                  "{testimonials[activeIndex].quote}"
-                </p>
+        <div className="relative max-w-4xl mx-auto px-4 md:px-12">
+          {/* Single Card Carousel for both Desktop and Mobile */}
+          <ScrollReveal className="rounded-none p-8 md:p-12 bg-white border border-brand-green/30 shadow-xl flex flex-col justify-between text-center min-h-[300px]">
+            <div className="space-y-6 flex-grow flex flex-col justify-center">
+              <div className="flex justify-center gap-1">
+                {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-brand-gold text-brand-gold" />
+                ))}
               </div>
-              <div className="pt-6 border-t border-slate-100 mt-6 space-y-1">
-                <h4 className="font-display font-semibold text-[15px] text-brand-dark">
-                  {testimonials[activeIndex].author}
-                </h4>
-                <p className="text-xs font-sans font-medium text-slate-500">
-                  {testimonials[activeIndex].role}
-                </p>
-                <p className="text-[10px] font-bold font-display uppercase tracking-wider text-brand-green">
-                  {testimonials[activeIndex].location}
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
+              <p className="font-sans text-[16px] md:text-[18px] leading-[1.75] text-slate-700 italic max-w-2xl mx-auto">
+                "{testimonials[activeIndex].quote}"
+              </p>
+            </div>
+            <div className="pt-8 border-t border-slate-100 mt-8 space-y-1">
+              <h4 className="font-display font-semibold text-[16px] md:text-[18px] text-brand-dark">
+                {testimonials[activeIndex].author}
+              </h4>
+              <p className="text-sm font-sans font-medium text-slate-500">
+                {testimonials[activeIndex].role}
+              </p>
+              <p className="text-[11px] font-bold font-display uppercase tracking-wider text-brand-green mt-2">
+                {testimonials[activeIndex].location}
+              </p>
+            </div>
+          </ScrollReveal>
 
-          {/* Navigation Arrows - Mobile */}
-          <div className="md:hidden flex items-center justify-between mt-6">
+          {/* Navigation Arrows */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 md:left-4 z-10 hidden md:block">
             <button
               onClick={goPrev}
-              className="h-10 w-10 rounded-none border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer"
+              className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-md"
+            >
+              <ChevronLeft className="h-5 w-5 md:h-6 md:w-6 text-slate-600" />
+            </button>
+          </div>
+          <div className="absolute top-1/2 -translate-y-1/2 right-0 md:right-4 z-10 hidden md:block">
+            <button
+              onClick={goNext}
+              className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-md"
+            >
+              <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-slate-600" />
+            </button>
+          </div>
+          
+          {/* Mobile Arrows positioned below the card */}
+          <div className="md:hidden flex items-center justify-center gap-6 mt-6">
+            <button
+              onClick={goPrev}
+              className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-sm"
             >
               <ChevronLeft className="h-5 w-5 text-slate-600" />
             </button>
             <button
               onClick={goNext}
-              className="h-10 w-10 rounded-none border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer"
+              className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-sm"
             >
               <ChevronRight className="h-5 w-5 text-slate-600" />
             </button>
@@ -194,7 +148,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Dot Pagination (Reference Pattern) */}
-        <div className="flex items-center justify-center gap-2.5 mt-10">
+        <div className="flex items-center justify-center gap-2.5 mt-8 md:mt-10">
           {testimonials.map((_, idx) => (
             <button
               key={idx}

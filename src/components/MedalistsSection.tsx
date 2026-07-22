@@ -83,7 +83,7 @@ export default function MedalistsSection() {
   const [showAll, setShowAll] = useState<boolean>(false);
 
   const filteredMedalists = medalistsData.filter((student) => student.category === activeCategory);
-  const displayedMedalists = showAll ? filteredMedalists : filteredMedalists.slice(0, 4);
+  const displayedMedalists = showAll ? filteredMedalists : filteredMedalists.slice(0, 7);
 
   return (
     <section id="winners" className="py-16 lg:py-28 bg-white border-b border-slate-100">
@@ -173,7 +173,7 @@ export default function MedalistsSection() {
           )}
         </ScrollReveal>
 
-        {filteredMedalists.length > 4 && !showAll && (
+        {filteredMedalists.length > 7 && !showAll && (
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setShowAll(true)}
@@ -183,7 +183,7 @@ export default function MedalistsSection() {
             </button>
           </div>
         )}
-        {filteredMedalists.length > 4 && showAll && (
+        {filteredMedalists.length > 7 && showAll && (
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setShowAll(false)}
