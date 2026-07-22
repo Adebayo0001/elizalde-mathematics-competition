@@ -1,61 +1,53 @@
 "use client";
-import React from "react";
-import { Calendar, ArrowRight } from "lucide-react";
-
-interface NewsItem {
-  title: string;
-  excerpt: string;
-  date: string;
-  tag: string;
-  imageUrl: string;
-}
-
-const newsItems: NewsItem[] = [
-  {
-    title: "EMC 2026 Registration Opens Globally",
-    excerpt: "Schools from over 40 countries are preparing to submit student rosters for the upcoming national rounds this winter.",
-    date: "July 12, 2026",
-    tag: "Registration",
-    imageUrl: "https://images.unsplash.com/photo-1518133680487-4179e7df786b?auto=format&fit=crop&q=80&w=400&h=300",
-  },
-  {
-    title: "Highlights from the Global Finals in London",
-    excerpt: "Read about the record-setting mathematics scores, collaborative project layouts, and the crowning of this year's top champions.",
-    date: "May 22, 2026",
-    tag: "Global Finals",
-    imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=400&h=300",
-  },
-  {
-    title: "New Mentorship Program Announced",
-    excerpt: "EMC launches a comprehensive virtual tutoring and mentor guidance platform to assist schools entering the competition for the first time.",
-    date: "March 15, 2026",
-    tag: "Mentorship",
-    imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=400&h=300",
-  },
-];
+import React, { useState } from "react";
+import Link from "next/link";
+import { Calendar, ArrowRight, Clock, Sparkles } from "lucide-react";
+import { newsArticles, NewsItem } from "../data/newsData";
+import ArticleModal from "./ArticleModal";
 
 export default function NewsSection() {
+  const [selectedArticle, setSelectedArticle] = useState<NewsItem | null>(null);
+
+  // Take top 3 articles for homepage preview
+  const previewArticles = newsArticles.slice(0, 3);
+
   return (
-    <section id="news" className="py-14 lg:py-24 bg-brand-bg border-t border-slate-100">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-green uppercase">
-            News & Updates
-          </span>
-          <h2 className="font-display font-semibold text-[26px] lg:text-[36px] text-brand-dark mt-2 tracking-tight leading-[1.15]">
-            Latest from EMC
-          </h2>
-          <div className="h-1.5 w-12 bg-brand-green mx-auto mt-4 rounded-none " />
+    <section id="news" className="py-16 lg:py-24 bg-brand-bg border-t border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-green uppercase mb-2">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>News & Updates</span>
+            </div>
+            <h2 className="font-display font-bold text-2xl lg:text-4xl text-brand-dark tracking-tight leading-[1.15]">
+              Latest News & Competition Announcements
+            </h2>
+            <div className="h-1.5 w-12 bg-brand-green mt-4 rounded-none" />
+          </div>
+
+          <div>
+            <Link
+              href="/news"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark hover:bg-brand-blue text-white text-xs font-semibold uppercase tracking-widest transition-colors font-display group shadow-sm"
+            >
+              <span>View All News & Updates</span>
+              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform text-brand-lime" />
+            </Link>
+          </div>
         </div>
 
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {newsItems.map((item, index) => (
+          {previewArticles.map((item) => (
             <article
-              key={index}
-              className="group bg-white rounded-none border border-slate-200/50 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-green/30 transition-all duration-300 flex flex-col h-full"
+              key={item.id}
+              onClick={() => setSelectedArticle(item)}
+              className="group bg-white rounded-none border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-green/40 transition-all duration-300 flex flex-col h-full cursor-pointer"
             >
-              {/* Image Container with Consistent 4:3 Crop aspect-ratio */}
-              <div className="relative aspect-4/3 w-full overflow-hidden bg-slate-100">
+              {/* Image Container with Fixed Height & Cover */}
+              <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100 shrink-0">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
@@ -67,26 +59,34 @@ export default function NewsSection() {
                 </span>
               </div>
 
-              {/* Text Area */}
-              <div className="p-6 flex flex-col flex-grow">
-                {/* Date */}
-                <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium mb-3">
-                  <Calendar className="h-3.5 w-3.5 text-slate-400" />
-                  <time dateTime={item.date} className="font-sans">{item.date}</time>
+              {/* Card Body */}
+              <div className="p-6 flex flex-col flex-grow justify-between">
+                <div>
+                  {/* Meta info */}
+                  <div className="flex items-center gap-4 text-xs text-slate-400 font-medium mb-3">
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="h-3.5 w-3.5 text-slate-400" />
+                      <time dateTime={item.date} className="font-sans">{item.date}</time>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3.5 w-3.5 text-slate-400" />
+                      <span>{item.readTime}</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-display font-semibold text-[18px] lg:text-[20px] text-brand-dark group-hover:text-brand-green transition-colors line-clamp-2 mb-2 leading-[1.25] tracking-tight">
+                    {item.title}
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-[14px] lg:text-[15px] text-slate-500 line-clamp-3 mb-6 leading-[1.6] font-sans">
+                    {item.excerpt}
+                  </p>
                 </div>
 
-                {/* Title */}
-                <h3 className="font-display font-semibold text-[18px] lg:text-[20px] text-brand-dark group-hover:text-brand-green transition-colors line-clamp-2 mb-2 leading-[1.2] tracking-tight">
-                  {item.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-[15px] lg:text-[16px] text-slate-500 line-clamp-3 mb-6 flex-grow leading-[1.6] font-sans">
-                  {item.excerpt}
-                </p>
-
                 {/* Action Link */}
-                <div className="pt-4 border-t border-slate-100 flex items-center gap-1 text-xs font-bold text-brand-dark group-hover:text-brand-green transition-colors">
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-dark group-hover:text-brand-green transition-colors font-display">
                   <span>Read Article</span>
                   <ArrowRight className="h-3.5 w-3.5 transform group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -95,7 +95,12 @@ export default function NewsSection() {
           ))}
         </div>
       </div>
+
+      {/* Story Detail Overlay Modal */}
+      <ArticleModal
+        article={selectedArticle}
+        onClose={() => setSelectedArticle(null)}
+      />
     </section>
   );
 }
-

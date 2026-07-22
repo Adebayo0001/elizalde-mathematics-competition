@@ -14,46 +14,39 @@ interface CalendarEvent {
 
 const timelineEvents: CalendarEvent[] = [
   {
-    date: "Oct 12–14, 2025",
-    title: "Pre-Olympiad Mentoring Conference",
+    date: "Mar 18–19, 2027",
+    title: "Pre-Olympiad Conference",
     description: "Virtual preparation sessions, practice problem workshops, and exclusive teacher mentoring blueprints. Designed to foster confidence early.",
     audience: "Students & Teachers",
     icon: <Users className="h-5 w-5" />,
     badge: "Preparation Phase",
   },
   {
-    date: "Nov 30, 2025",
-    title: "School Registration Deadline",
+    date: "Apr 27, 2027",
+    title: "Registration Deadline",
     description: "Final date for schools and coaches to submit student rosters, select participating categories, and lock team registration data.",
     audience: "Teachers & Coordinators",
     icon: <ShieldAlert className="h-5 w-5" />,
     badge: "Critical Deadline",
   },
   {
-    date: "Feb 22, 2026",
-    title: "National Written Round",
+    date: "May 08, 2027",
+    title: "National Round",
     description: "Concurrent paper-based exams supervised in official local school test centers across all participating country networks.",
     audience: "All Students",
     icon: <Calendar className="h-5 w-5" />,
     badge: "Testing Phase",
   },
   {
-    date: "Mar 15, 2026",
-    title: "Qualification & Invitation Release",
-    description: "Official score verification and publication. Elite national bracket qualifiers receive direct invitations to the Global Finals.",
-    audience: "Qualified Students",
-    icon: <Sparkles className="h-5 w-5" />,
-    badge: "Results Release",
-  },
-  {
-    date: "May 15–18, 2026",
-    title: "EMC Global Finals (London / Online Hybrid)",
-    description: "The main international stage. Finalists gather for the written championship, cooperative math defense projects, and world medals.",
+    date: "Aug 2–9, 2027 (Tentative)",
+    title: "London Final",
+    description: "The main international stage. Finalists gather in London for the written championship, cooperative math defense projects, and world medals.",
     audience: "Global Finalists",
     icon: <Trophy className="h-5 w-5" />,
-    badge: "Championship Stage",
+    badge: "Tentative Date",
   },
 ];
+
 
 export default function TimelineCalendarSection() {
   return (
