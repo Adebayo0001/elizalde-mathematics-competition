@@ -242,7 +242,7 @@ export default function WorldOfMathematiciansSection() {
           </div>
         ) : (
           /* Clean Student Cards Grid */
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer key={selectedYear} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredInductees.map((student) => {
               const style = categoryStyles[student.category] || categoryStyles["High School Category"];
               return (
