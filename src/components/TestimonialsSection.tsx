@@ -13,24 +13,24 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "EMC has completely transformed the mathematics culture in our department. Our students no longer see math as dry formulas on a chalkboard, but as a collaborative, highly exciting sport on a global court.",
-    author: "Dr. Sarah Jenkins",
-    role: "Head of Mathematics & Senior Coach",
-    location: "Oakwood High School, United Kingdom",
+    quote: "My experience with EMC was truly an incredible experience. I have been inspired to embrace bigger challenges in Mathematics and be more creative in all aspect of LIFE. Thank YOU, EMC!",
+    author: "ALVARO AGHENTA",
+    role: "Student Competitor",
+    location: "Nigeria",
     rating: 5,
   },
   {
-    quote: "The Team Project stage forced us to stretch our thinking beyond anything standard exams require. Discovering we could build complex architectural calculations made me realize what I'm truly capable of.",
-    author: "Michael Vance",
-    role: "High School Competitor",
-    location: "Chicago, United States",
+    quote: "I had a wonderful time at the Elizalde Mathematics Competition, EMC challenge me, helped me learn new things, and improved both my math and presentation skills. It was truly a stimulating experience. I enjoyed being at EMC, and I am looking foward to join again this YEAR!",
+    author: "IKECHUKWU OGALA",
+    role: "Student Competitor",
+    location: "Nigeria",
     rating: 5,
   },
   {
-    quote: "Watching my daughter defend her math calculations before a jury of international experts was incredible. EMC didn't just evaluate her academic skills—it gave her real lifetime confidence.",
-    author: "Priya Patel",
-    role: "Parent of 2025 Competitor",
-    location: "Mumbai, India",
+    quote: "EMC Modelling round was one unforgettable experience at the Elizalde Mathematics Competition series, to my TEAMMATES and our mentor, I believe we all had a wonderful and impactful round. Thank YOU, EMC!",
+    author: "Isley George",
+    role: "Student Competitor",
+    location: "USA",
     rating: 5,
   }
 ];
@@ -63,6 +63,44 @@ export default function TestimonialsSection() {
             What Teachers, Students, & Parents Say
           </h2>
         </ScrollReveal>
+
+        {/* Video Testimonial for Teacher */}
+        <ScrollReveal className="max-w-4xl mx-auto mb-16 lg:mb-24">
+          <div className="bg-white p-4 lg:p-6 border border-slate-200 shadow-xl relative overflow-hidden group">
+             {/* Decorative accents */}
+             <div className="absolute top-0 left-0 w-1.5 h-full bg-brand-blue" />
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pl-2">
+               <div className="aspect-video bg-slate-900 relative">
+                 <video 
+                   src="/images/testimonials.mp4" 
+                   controls 
+                   className="w-full h-full object-cover"
+                   poster="/images/IMG_20260720_114502_765.jpg.jpeg"
+                 />
+               </div>
+               <div className="py-2 pr-4">
+                 <div className="flex items-center gap-2 mb-4">
+                   <div className="flex gap-1">
+                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
+                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
+                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
+                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
+                     <Star className="h-4 w-4 fill-brand-gold text-brand-gold" />
+                   </div>
+                 </div>
+                 <p className="font-sans text-[14px] lg:text-[15px] leading-[1.65] text-slate-600 italic mb-6">
+                   "EMC has completely transformed the mathematics culture in our department. Our students no longer see math as dry formulas on a chalkboard, but as a collaborative, highly exciting sport on a global court."
+                 </p>
+                 <div>
+                   <h4 className="font-display font-semibold text-[15px] lg:text-[16px] text-brand-dark">Dr. Sarah Jenkins</h4>
+                   <p className="text-xs font-sans font-medium text-slate-500">Head of Mathematics & Senior Coach</p>
+                   <p className="text-[10px] font-bold font-display uppercase tracking-wider text-brand-green mt-1">Oakwood High School, UK</p>
+                 </div>
+               </div>
+             </div>
+          </div>
+        </ScrollReveal>
+
 
         {/* Carousel Cards Container */}
         <div className="relative">

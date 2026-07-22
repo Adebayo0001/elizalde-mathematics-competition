@@ -172,7 +172,7 @@ export default function HomePage() {
                 <ScrollReveal direction="right" delay={0.1}>
                   <div className="relative shadow-xl mb-6 lg:mb-0">
                     <img 
-                      src="/images/EMC-global-winner.jpeg" 
+                      src="/images/IMG_20260720_114530_719.jpg.jpeg" 
                       alt="EMC Global Winner" 
                       className="w-full h-auto object-cover"
                     />
@@ -269,16 +269,14 @@ export default function HomePage() {
         <MedalistsSection />
 
         {/* ──────────────────────────────────────────────────────────────────
-            5. TESTIMONIALS — Carousel with Dot Pagination
-            ────────────────────────────────────────────────────────────────── */}
-        <TestimonialsSection />
-
-
-
-        {/* ──────────────────────────────────────────────────────────────────
             7. PARTICIPATING COUNTRIES — Brand Row (Reference Pattern #6)
             ────────────────────────────────────────────────────────────────── */}
         <ParticipatingCountriesSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            5. TESTIMONIALS — Carousel with Dot Pagination
+            ────────────────────────────────────────────────────────────────── */}
+        <TestimonialsSection />
 
 
         {/* ──────────────────────────────────────────────────────────────────

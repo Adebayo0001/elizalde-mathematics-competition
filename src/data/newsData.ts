@@ -33,7 +33,7 @@ export const newsArticles: NewsItem[] = [
     excerpt: "Chad Molokwu of The Regent Secondary School emerges as Overall Category Winner, while Nigeria's joint team captures the prestigious Teams Challenge trophy in London.",
     date: "July 20, 2026",
     tag: "Global Finals",
-    imageUrl: "/images/EMC-global-winner.jpeg",
+    imageUrl: "/images/IMG_20260720_114502_765.jpg.jpeg",
     author: {
       name: "Zack Elias",
       role: "Regional Director, EMC Nigeria",
@@ -68,7 +68,7 @@ export const newsArticles: NewsItem[] = [
     excerpt: "Following the successful conclusion of the 2026 EMC National Rounds and London Global Finals, the EMC Nigeria delegation embarked on an awards tour honoring students, teachers, and school leaders.",
     date: "July 18, 2026",
     tag: "Announcements",
-    imageUrl: "/images/about-us.jpeg",
+    imageUrl: "/images/IMG_20260720_114508_069.jpg.jpeg",
     author: {
       name: "Zack Elias",
       role: "Regional Director, EMC Nigeria",
@@ -103,7 +103,7 @@ export const newsArticles: NewsItem[] = [
     excerpt: "Talented young mathematicians competed across national qualifying centers, demonstrating critical thinking and logical reasoning to earn spots at the London Global Finals.",
     date: "June 15, 2026",
     tag: "Registration",
-    imageUrl: "/images/about_us_students_collaborating.png",
+    imageUrl: "/images/IMG_20260720_114514_419.jpg.jpeg",
     author: {
       name: "EMC Academic Steering Committee",
       role: "Global Operations",

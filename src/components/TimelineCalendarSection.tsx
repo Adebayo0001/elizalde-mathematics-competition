@@ -21,7 +21,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Students & Teachers",
     icon: <Users className="h-5 w-5" />,
     badge: "Preparation Phase",
-    imageAccent: "/images/about-us-2.jpeg"
+    imageAccent: "/images/IMG_20260720_114422_425.jpg.jpeg"
   },
   {
     date: "Apr 27, 2027",
@@ -30,7 +30,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Teachers & Coordinators",
     icon: <ShieldAlert className="h-5 w-5" />,
     badge: "Critical Deadline",
-    imageAccent: "/images/about-us.jpeg" // Added image from library
+    imageAccent: "/images/IMG_20260720_114426_250.jpg.jpeg"
   },
   {
     date: "May 08, 2027",
@@ -39,7 +39,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "All Students",
     icon: <Calendar className="h-5 w-5" />,
     badge: "Testing Phase",
-    imageAccent: "/images/about_us_students.jpg"
+    imageAccent: "/images/IMG_20260720_114441_329.jpg.jpeg"
   },
   {
     date: "Aug 2–9, 2027 (Tentative)",
@@ -48,7 +48,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Global Finalists",
     icon: <Trophy className="h-5 w-5" />,
     badge: "Tentative Date",
-    imageAccent: "/images/EMC-global-winner.jpeg"
+    imageAccent: "/images/IMG_20260720_114456_569.jpg.jpeg"
   },
 ];
 
