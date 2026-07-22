@@ -117,7 +117,7 @@ export default function NewsPage() {
                   alt={featuredArticle.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute top-4 left-4 bg-brand-red text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 shadow-md">
                   {featuredArticle.tag}
@@ -229,7 +229,7 @@ export default function NewsPage() {
                     alt={article.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-4 left-4 bg-brand-red text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 shadow-md">
                     {article.tag}
