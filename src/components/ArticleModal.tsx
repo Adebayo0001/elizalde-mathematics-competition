@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { X, Calendar, Clock, User, Share2, Tag, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { NewsItem } from "../data/newsData";
@@ -42,7 +43,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
           >
             {/* Top Bar with Sticky Close Button */}
             <div className="sticky top-0 z-30 flex items-center justify-between px-6 py-4 bg-white/95 backdrop-blur-md border-b border-slate-100">
-              <div className="flex items-center gap-2 text-xs font-semibold text-brand-green uppercase tracking-wider font-display">
+              <div className="flex items-center gap-2 text-xs font-semibold text-brand-red uppercase tracking-wider font-display">
                 <Tag className="w-3.5 h-3.5" />
                 <span>{article.tag}</span>
               </div>
@@ -73,7 +74,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
                     <span>{article.readTime}</span>
                   </div>
                   <div className="flex items-center gap-1.5 font-medium text-slate-700">
-                    <User className="w-4 h-4 text-brand-green" />
+                    <User className="w-4 h-4 text-brand-red" />
                     <span>{article.author.name} — <span className="text-slate-400">{article.author.role}</span></span>
                   </div>
                 </div>
@@ -81,10 +82,12 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
 
               {/* Cover Image */}
               <div className="relative h-64 sm:h-80 lg:h-96 w-full overflow-hidden bg-slate-100 border border-slate-200/50">
-                <img
+                <Image
                   src={article.imageUrl}
                   alt={article.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                  className="object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-brand-dark/90 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">
                   EMC Story Spotlight
@@ -93,15 +96,15 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
 
               {/* Key Takeaways Box */}
               {article.keyTakeaways && article.keyTakeaways.length > 0 && (
-                <div className="p-6 bg-slate-50 border-l-4 border-brand-green space-y-3">
+                <div className="p-6 bg-slate-50 border-l-4 border-brand-red space-y-3">
                   <h4 className="font-display font-bold text-xs uppercase tracking-wider text-brand-dark flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-brand-green" />
+                    <CheckCircle className="w-4 h-4 text-brand-red" />
                     Key Takeaways
                   </h4>
                   <ul className="space-y-2 text-sm text-slate-700 font-sans">
                     {article.keyTakeaways.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2.5">
-                        <span className="h-1.5 w-1.5 rounded-full bg-brand-green mt-2 shrink-0" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-brand-red mt-2 shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}

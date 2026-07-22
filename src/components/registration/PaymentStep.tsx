@@ -52,7 +52,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
   if (paymentStatus === "success") {
     return (
       <div className="text-center py-12 animate-in zoom-in duration-500">
-        <div className="w-24 h-24 bg-brand-green/10 text-brand-green rounded-none flex items-center justify-center mx-auto mb-6">
+        <div className="w-24 h-24 bg-brand-red/10 text-brand-red rounded-none flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 className="w-12 h-12" />
         </div>
         <h2 className="text-3xl font-display font-bold text-brand-dark mb-4">Registration Complete!</h2>
@@ -123,7 +123,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
         {/* We use PaystackButton as a custom styled component */}
         <PaystackButton 
           {...componentProps} 
-          className="w-full md:w-auto px-8 py-4 bg-brand-green hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer text-center shadow-lg hover:shadow-brand-blue/20"
+          className="w-full md:w-auto px-8 py-4 bg-brand-red hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer text-center shadow-lg hover:shadow-brand-blue/20"
         />
       </div>
     </div>

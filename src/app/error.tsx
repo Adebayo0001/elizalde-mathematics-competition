@@ -19,17 +19,9 @@ export default function ErrorBoundary({
     <div className="min-h-screen bg-brand-bg font-sans text-brand-dark flex flex-col justify-between">
       {/* Navbar */}
       <header className="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Logo className="h-12 w-12" />
-            <div className="leading-none">
-              <span className="font-display font-extrabold text-lg text-brand-dark tracking-tight block">
-                EMC 2026
-              </span>
-              <span className="text-[10px] font-bold font-display text-brand-blue uppercase tracking-widest block mt-0.5">
-                Mathematics Competition
-              </span>
-            </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center">
+          <Link href="/" className="flex items-center focus:outline-none">
+            <Logo className="h-14 w-48 sm:h-16 sm:w-56" />
           </Link>
         </div>
       </header>

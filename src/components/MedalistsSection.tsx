@@ -91,7 +91,7 @@ export default function MedalistsSection() {
         
         {/* Section Header */}
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-gold uppercase">
+          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-red uppercase">
             London Elite
           </span>
           <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">

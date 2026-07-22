@@ -1,9 +1,40 @@
-# Memory — Testimonials Update, Image De-duplication & Visual Enhancements
+# Memory — UI Adjustments & Content Updates
 
-Last updated: 2026-07-22 20:29:00+01:00
+Last updated: 2026-07-22 22:42:00+01:00
 
 ## What was built this session
 
+- **Navigation Bar Cleanup**: Removed "Stages", "Medalists", and "Testimonials" links from the top nav and increased font size (`text-[15px]`) for improved readability.
+- **Footer Revamp**: Changed the entire footer background to white, updated text colors to dark shades (`text-slate-800`, `text-brand-dark`), increased font sizes globally within the footer for legibility, and removed the "drop us a line" email sentence.
+- **Text & Copy Changes**: Updated the "Brackets" section in the footer from "Grades" to "Years" and added `whitespace-nowrap` to prevent awkward line breaks.
+- **Image Updates**: Replaced the London Final image in the Roadmap section with `Young Master Challenge-13.jpg.jpeg` and updated the "Beyond Exams" section image to `about-section.jpeg`.
+
+## Decisions made this session
+
+- Decided to adopt a clean, white-themed footer rather than the previous dark brand-blue one, ensuring text and logos contrasted correctly with the new background.
+- Prioritized `whitespace-nowrap` for structural text items (like Grade brackets) to maintain a polished, professional look on different viewport sizes.
+
+## Current state
+
+- Navigation is simplified, the footer is fully restyled and legible, and updated images have been integrated. All changes are functional and applied to `page.tsx`, `TimelineCalendarSection.tsx`, and `MissionVisionSection.tsx`.
+
+## Next session starts with
+
+- Continuing to implement any further content refinements or structural layout adjustments the user needs.
+
+---
+
+## Previous Session: Testimonials Update, Image De-duplication & Visual Enhancements
+
+Last updated: 2026-07-22 20:44:00+01:00
+
+## What was built this session
+
+- **Styling Changes**: Replaced lime green (`#7CB928`) with darker brand green (`#2E8B3D`) globally. Replaced `brand-green` class with `brand-red` (`#D9342B`) across components.
+- **Author Role Update**: Specifically changed "International management of EMC" to "The regional communications team" in `newsData.ts` for the "Nigeria Shines at the 2026 London Finals" article.
+- **Image Fix (`page.tsx`)**: Fixed the floating image collapsing issue by adding an explicit aspect ratio (`aspect-[4/5]`) to the image container.
+- **Tag Style Fix (`CompetitionStagesSection.tsx`, `TimelineCalendarSection.tsx`)**: Replaced `bg-brand-red/10 border-brand-red/20` with `bg-brand-blue/10 border-brand-blue/20` on blue text badges to match branding patterns.
+- **Testimonials Slider (`TestimonialsSection.tsx`)**: Simplified slider by removing borders, shadows, and left/right arrows, and introduced a horizontal sliding transition for a cleaner look.
 - **Math Formula Texture**: Added a faded background formula texture to solid backgrounds to improve depth (`MomentsMarqueeSection.tsx`).
 - **Image De-Duplication**: Replaced duplicate and broken image references with newly uploaded fitted ones (`IMG_20260720...`) across `MomentsMarqueeSection`, `TimelineCalendarSection`, `newsData.ts`, `MissionVisionSection.tsx`, and `page.tsx` for visual variety.
 - **Testimonials Section Update (`src/components/TestimonialsSection.tsx`)**:
@@ -13,16 +44,21 @@ Last updated: 2026-07-22 20:29:00+01:00
 
 ## Decisions made this session
 
+- Simplified the Testimonials slider significantly to create a minimalist floating appearance.
+- Replaced the hard-to-read lime green with a more accessible darker green, and swapped green themes for red themes on badges.
 - Positioned the video testimonial prominently outside and above the carousel cards to prevent layout breaks and emphasize the teacher's quote intuitively.
 - Adjusted the formula texture's `backgroundSize` and `opacity` with `mix-blend-overlay` to ensure it remains subtle without distracting from the content.
 
 ## Problems solved this session
 
+- Fixed a bug where a relative image wrapper collapsed because it lacked an intrinsic aspect ratio by applying `aspect-[4/5]`.
+- Fixed confusing styling logic on the 'Local Level' badge by matching its background to its blue text.
 - Eliminated placeholder content in testimonials to make the section authentic.
 - Fixed duplicated and broken images throughout the codebase to ensure a varied, professional look.
 
 ## Current state
 
+- All new design tweaks are complete. Testimonials slide beautifully, badges are colored correctly, and the global image displays perfectly.
 - Testimonials section is complete with real quotes and a functioning video block.
 - All duplicated images have been replaced with the new, fitted versions.
 - Code is pushed to GitHub on branch `feature/testimonials-update`.

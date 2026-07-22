@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const MOMENT_IMAGES = [
@@ -60,10 +61,12 @@ export default function MomentsMarqueeSection() {
               key={index}
               className="relative h-64 sm:h-72 lg:h-80 w-[300px] sm:w-[400px] lg:w-[450px] shrink-0 overflow-hidden border border-white/10 bg-white/5 group rounded-sm"
             >
-              <img
+              <Image
                 src={src}
                 alt="EMC Event Moment"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                fill
+                sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 450px"
+                className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
           ))}

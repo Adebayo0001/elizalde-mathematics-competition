@@ -5,7 +5,7 @@ import { StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 export default function ImpactSection() {
   return (
-    <section className="relative py-16 lg:py-24 bg-brand-green text-white overflow-hidden">
+    <section className="relative py-16 lg:py-24 bg-brand-red text-white overflow-hidden">
       {/* Subtle Math Formula Texture Background */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-100"

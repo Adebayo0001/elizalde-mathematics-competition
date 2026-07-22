@@ -115,7 +115,7 @@ export default function CompetitionDetailsStep({ data, updateData, onNext, onBac
         </button>
         <button
           type="submit"
-          className="px-8 py-4 bg-brand-green hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
+          className="px-8 py-4 bg-brand-red hover:bg-brand-blue text-white font-bold font-display uppercase tracking-widest rounded-none transition-all cursor-pointer"
         >
           Review & Submit
         </button>

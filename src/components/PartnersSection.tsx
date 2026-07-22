@@ -1,67 +1,36 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Compass, Cpu, Landmark, Globe } from "lucide-react";
 
 export default function PartnersSection() {
   return (
-    <section id="partners" className="py-12 lg:py-16 bg-brand-bg border-t border-slate-100">
+    <section id="partners" className="py-16 lg:py-24 bg-brand-bg border-t border-slate-100">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-slate-400 uppercase">
-          In Collaboration With
+        <span className="text-[13px] lg:text-[15px] font-semibold font-display tracking-[0.08em] text-slate-500 uppercase">
+          Meet Our Partners
         </span>
         
-        {/* Monochromatic Logo Grid */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-12 md:gap-16 opacity-60">
+        {/* Logos Grid */}
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-16 md:gap-32">
           {/* Logo 1 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
-            <Globe className="h-6 w-6 shrink-0" />
-            <div className="text-left leading-none">
-              <div className="font-display font-black text-xs uppercase tracking-wider">
-                Global Math
-              </div>
-              <div className="font-display text-[9px] uppercase tracking-widest">
-                Alliance
-              </div>
-            </div>
+          <div className="relative h-24 w-48 sm:h-32 sm:w-64">
+            <Image
+              src="/images/air-peace.webp"
+              alt="Air Peace"
+              fill
+              className="object-contain"
+            />
           </div>
 
           {/* Logo 2 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
-            <Landmark className="h-6 w-6 shrink-0" />
-            <div className="text-left leading-none">
-              <div className="font-display font-black text-xs uppercase tracking-wider">
-                Sofia Science
-              </div>
-              <div className="font-display text-[9px] uppercase tracking-widest">
-                Institute
-              </div>
-            </div>
-          </div>
-
-          {/* Logo 3 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
-            <Cpu className="h-6 w-6 shrink-0" />
-            <div className="text-left leading-none">
-              <div className="font-display font-black text-xs uppercase tracking-wider">
-                STEM Federation
-              </div>
-              <div className="font-display text-[9px] uppercase tracking-widest">
-                Research Hub
-              </div>
-            </div>
-          </div>
-
-          {/* Logo 4 */}
-          <div className="flex items-center gap-2 text-slate-500 hover:text-brand-blue hover:opacity-100 transition-all duration-300">
-            <Compass className="h-6 w-6 shrink-0" />
-            <div className="text-left leading-none">
-              <div className="font-display font-black text-xs uppercase tracking-wider">
-                Olympiad
-              </div>
-              <div className="font-display text-[9px] uppercase tracking-widest">
-                Foundation
-              </div>
-            </div>
+          <div className="relative h-24 w-48 sm:h-32 sm:w-64">
+            <Image
+              src="/images/lgo-1-238x300.jpg"
+              alt="Partner Logo"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </div>
