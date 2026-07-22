@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -105,10 +106,12 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
 
         {/* Hero Image */}
         <div className="relative h-64 sm:h-80 lg:h-96 w-full overflow-hidden bg-slate-100 border border-slate-200/50">
-          <img
+          <Image
             src={article.imageUrl}
             alt={article.title}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 1024px) 100vw, 896px"
+            className="object-cover"
           />
         </div>
 

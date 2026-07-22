@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Landmark, Globe, FileText, Users, ChevronRight } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
@@ -36,10 +37,13 @@ export default function CompetitionStagesSection() {
             </ScrollReveal>
 
             <ScrollReveal className="relative w-full h-[400px] lg:h-[500px] rounded-none overflow-hidden shadow-2xl border border-slate-200">
-              <img
+              <Image
                 src="/images/EMC-global-winner_2.jpeg"
                 alt="EMC global winner"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">

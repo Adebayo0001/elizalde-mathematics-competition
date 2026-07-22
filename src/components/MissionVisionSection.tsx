@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Compass, Eye, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "./ui/ScrollReveal";
@@ -15,10 +16,12 @@ export default function MissionVisionSection() {
             {/* Large primary image */}
             <div className="rounded-none overflow-hidden shadow-xl relative z-[1]">
               <div className="aspect-[3/4] lg:aspect-[3/4]">
-                <img
+                <Image
                   src="/images/IMG_20260720_114534_965.jpg.jpeg"
                   alt="Elizalde Mathematics Competition students"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -29,10 +32,12 @@ export default function MissionVisionSection() {
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               className="absolute -bottom-6 -right-4 lg:-bottom-8 lg:-right-8 w-[40%] sm:w-[35%] lg:w-[30%] rounded-full bg-white overflow-hidden shadow-2xl border-4 border-white z-[2] aspect-square flex items-center justify-center"
             >
-              <img
+              <Image
                 src="https://scontent-lis1-1.xx.fbcdn.net/v/t39.30808-6/457328701_809259274749009_6911267050332238021_n.jpg?stp=dst-jpg_tt6&cstp=mx800x600&ctp=s800x600&_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF0hH4pGY0TKz-AgHnaBc5NUfjhA2ens89R-OEDZ6ezz9WI0wQ8O-R6-U_qmt87jkpX3S-OgoKZj_lDTms187fs&_nc_ohc=wGqlvuWqL3IQ7kNvwFb-WKz&_nc_oc=AdrMBVZbKNQ15d7VxgE9K4gkHYovynwkl_d-6Jr5nWngNhP6xZBIvdujzyZ6a7fxqKGlij3Y6OoMWJIb79ekSdHm&_nc_zt=23&_nc_ht=scontent-lis1-1.xx&_nc_gid=gLnLqLsgubnM2qEEP-owZQ&_nc_ss=7d2a8&oh=00_AQAmeys63sLzx_DIp2b6qf0TKaiCCXHIQ0eT3QKuCbaHzg&oe=6A61D051"
                 alt="Elizalde Mathematics Competition Logo"
-                className="w-[80%] h-[80%] object-contain"
+                fill
+                sizes="(max-width: 1024px) 40vw, 30vw"
+                className="object-contain"
                 referrerPolicy="no-referrer"
               />
             </motion.div>

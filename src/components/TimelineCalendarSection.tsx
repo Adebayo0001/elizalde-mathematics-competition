@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Calendar, Users, Award, ShieldAlert, Sparkles, Trophy, BookOpen, Lightbulb } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
@@ -132,7 +133,7 @@ export default function TimelineCalendarSection() {
                     <div className="hidden md:flex w-full h-full min-h-[250px] items-stretch justify-center relative">
                       {event.imageAccent && (
                         <div className="relative w-full h-full overflow-hidden rounded-none shadow-xl border border-slate-200 group-hover:-translate-y-1 transition-transform duration-500">
-                          <img src={event.imageAccent} alt={event.title} className="absolute inset-0 w-full h-full object-cover" />
+                          <Image src={event.imageAccent} alt={event.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                           <div className="absolute inset-0 border-[4px] border-white/20 pointer-events-none mix-blend-overlay" />
                         </div>
                       )}

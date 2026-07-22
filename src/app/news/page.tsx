@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Sparkles,
@@ -119,10 +120,12 @@ export default function NewsPage() {
             >
               {/* Image Column */}
               <div className="lg:col-span-7 relative h-64 sm:h-80 lg:h-full min-h-[320px] w-full overflow-hidden bg-slate-200 shrink-0">
-                <img
+                <Image
                   src={featuredArticle.imageUrl}
                   alt={featuredArticle.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute top-4 left-4 bg-brand-green text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 shadow-md">
                   {featuredArticle.tag}
@@ -229,10 +232,12 @@ export default function NewsPage() {
               >
                 {/* Image Container with Fixed Height & Cover */}
                 <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100 shrink-0">
-                  <img
+                  <Image
                     src={article.imageUrl}
                     alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-4 left-4 bg-brand-green text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 shadow-md">
                     {article.tag}

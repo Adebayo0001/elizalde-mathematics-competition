@@ -78,6 +78,7 @@ export default function TestimonialsSection() {
               <video 
                 src="/images/testimonials.mp4" 
                 controls 
+                preload="none"
                 className="w-full h-full object-cover"
                 poster="/images/IMG_20260720_114502_765.jpg.jpeg"
               />

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Award, Trophy, Star } from "lucide-react";
 
 interface Winner {
@@ -69,10 +70,12 @@ export default function WinnersGrid() {
               {/* Photo Frame */}
               <div className="relative mb-6">
                 <div className="w-32 h-32 rounded-none overflow-hidden border-4 border-white shadow-md ring-1 ring-slate-100 group-hover:scale-105 transition-transform duration-300">
-                  <img
+                  <Image
                     src={winner.photoUrl}
                     alt={winner.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 128px, 128px"
+                    className="object-cover"
                     referrerPolicy="no-referrer"
                   />
                 </div>

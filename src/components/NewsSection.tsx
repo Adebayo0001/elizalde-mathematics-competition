@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Calendar, ArrowRight, Clock, Sparkles } from "lucide-react";
 import { newsArticles, NewsItem } from "../data/newsData";
@@ -48,10 +49,12 @@ export default function NewsSection() {
             >
               {/* Image Container with Fixed Height & Cover */}
               <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100 shrink-0">
-                <img
+                <Image
                   src={item.imageUrl}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
                 <span className="absolute top-4 left-4 bg-brand-green text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-none shadow-md">

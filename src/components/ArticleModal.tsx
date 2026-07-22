@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { X, Calendar, Clock, User, Share2, Tag, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { NewsItem } from "../data/newsData";
@@ -81,10 +82,12 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
 
               {/* Cover Image */}
               <div className="relative h-64 sm:h-80 lg:h-96 w-full overflow-hidden bg-slate-100 border border-slate-200/50">
-                <img
+                <Image
                   src={article.imageUrl}
                   alt={article.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                  className="object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-brand-dark/90 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">
                   EMC Story Spotlight

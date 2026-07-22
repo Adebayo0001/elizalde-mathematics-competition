@@ -33,7 +33,7 @@ export function ScrollReveal({
     <motion.div
       initial={{ opacity: 0, y: getInitialY(), x: getInitialX() }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.7, ease: "easeOut", delay }}
       className={className}
       {...props}
@@ -54,7 +54,7 @@ export function StaggerContainer({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={{
         hidden: {},
         visible: {

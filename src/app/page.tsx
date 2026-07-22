@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -171,10 +172,12 @@ export default function HomePage() {
               <div className="lg:col-span-5 w-full">
                 <ScrollReveal direction="right" delay={0.1}>
                   <div className="relative shadow-xl mb-6 lg:mb-0">
-                    <img 
+                    <Image 
                       src="/images/IMG_20260720_114530_719.jpg.jpeg" 
                       alt="EMC Global Winner" 
-                      className="w-full h-auto object-cover"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
                     />
 
                     {/* Floating High-Contrast White Glass Card */}
