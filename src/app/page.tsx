@@ -23,6 +23,7 @@ import ImpactSection from "../components/ImpactSection";
 import CompetitionStagesSection from "../components/CompetitionStagesSection";
 import TimelineCalendarSection from "../components/TimelineCalendarSection";
 import WorldOfMathematiciansSection from "../components/WorldOfMathematiciansSection";
+import MomentsMarqueeSection from "../components/MomentsMarqueeSection";
 
 import FAQSection from "../components/FAQSection";
 import MedalistsSection from "../components/MedalistsSection";
@@ -243,6 +244,21 @@ export default function HomePage() {
         <ImpactSection />
 
         {/* ──────────────────────────────────────────────────────────────────
+            8. COMPETITION STAGES SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <CompetitionStagesSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            9. EVENT CALENDAR / OLYMPIAD ROADMAP SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <TimelineCalendarSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            8.5. MOMENTS MARQUEE SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <MomentsMarqueeSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
             10. WORLD OF MATHEMATICIANS SECTION
             ────────────────────────────────────────────────────────────────── */}
         <WorldOfMathematiciansSection />
@@ -264,15 +280,6 @@ export default function HomePage() {
             ────────────────────────────────────────────────────────────────── */}
         <ParticipatingCountriesSection />
 
-        {/* ──────────────────────────────────────────────────────────────────
-            8. COMPETITION STAGES SECTION
-            ────────────────────────────────────────────────────────────────── */}
-        <CompetitionStagesSection />
-
-        {/* ──────────────────────────────────────────────────────────────────
-            9. EVENT CALENDAR / OLYMPIAD ROADMAP SECTION
-            ────────────────────────────────────────────────────────────────── */}
-        <TimelineCalendarSection />
 
         {/* ──────────────────────────────────────────────────────────────────
             11. FAQ SECTION — Split Layout (Reference Pattern #7)

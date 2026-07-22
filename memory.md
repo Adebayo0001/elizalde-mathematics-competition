@@ -1,64 +1,90 @@
-# Memory — Wall of Mathematicians Redesign, Tailwind v4 Fix & Multi-Year Inductee Roster
+# Memory — Visual Overhauls & Medalists Refinements + Previous (Wall of Mathematicians Redesign)
 
-Last updated: 2026-07-22 17:18:00+01:00
+Last updated: 2026-07-22 19:38:00+01:00
 
-## What was built
+## What was built this session
 
-- **Tailwind v4 Dev Server Fix**: Fixed unstyled HTML rendering during `npm run dev` by creating `tailwind.config.js` with explicit content paths (`./src/**/*.{js,ts,jsx,tsx,mdx}`) and linking `@config "../tailwind.config.js";` in `src/index.css`. Dev CSS bundle expanded from 5KB to 81KB of complete utility rules.
-- **Font Preload Optimization**: Moved Google Fonts (`Inter`, `Poppins`) out of PostCSS `@import` statements in `src/index.css` into `<link rel="stylesheet">` tags in `src/app/layout.tsx` to eliminate CSS optimizer warnings.
-- **Wall of Mathematicians Redesign (`src/components/WorldOfMathematiciansSection.tsx`)**:
-  - Renamed title to **Wall of Mathematicians** with updated subheading: *"Celebrating outstanding student inductees from across Nigeria, the home country of the National Rounds."*
-  - Added **Multi-Year Edition Tabs**: `2025/2026`, `2024/2025`, `2026/2027 (Upcoming)`, and `All Editions`.
-  - Injected official inductees from graphics posters:
-    - **2025/2026 Inductees**: Chad Molokwu, Chisom Ugochukwu, Oladele Oladutire, Oluwatobiloba Tayo-Adewale, Tirenioluwa Balogun, Nsikanabasi Edem, Adriel Chioma, Tirenioluwa Akeredolu, Nathan Sotunde, Oluwatobi Mimiko, Oluwasemilore Oluboyo, Demilade Afon, Aderinsola Awesola, Oluwatishe Ogunjobi, Oluwatimileyin Adedeji.
-    - **2024/2025 Inductees**: Maimunah Salako, Ikechukwu Ogala, Ayomide Awoniyi.
-  - Built **Upcoming Season Teaser Card (`2026/2027`)**: Features the official **`?`** emblem (*"Will Your Name Be Inducted Next?"*) with CTA button linking to `/register`.
-  - Implemented **Compact Top 3 + Directory Roster Layout**: Top 3 inductees rendered in compact cards with 40% reduced image height (`h-36`), and remaining inductees rendered in a high-density 2-column honor table saving >70% vertical scroll space.
+- **Medalists Data Refinements (`src/components/MedalistsSection.tsx`)**:
+  - Removed the "School" column entirely.
+  - Converted names and categories to sentence case formatting.
+  - Grouped and ordered medalists by exact award string ("Gold Medalist", "Silver Medalist", "Bronze Medalist", "London Medalist").
+- **Medalists UI Enhancements**:
+  - Truncated the default display to show only the first 4 medalists per category to improve UX and reduce mobile scrolling fatigue.
+  - Added a "View All" / "Show Less" toggle button to dynamically expand and collapse the full list.
+- **Competition Stages Visual Overhaul (`src/components/CompetitionStagesSection.tsx`)**:
+  - Changed layout from a standard card grid to a **Sticky Split-Screen** design.
+  - Left column holds a full-height, sticky photo of students collaborating.
+  - Right column contains the scrolling stage cards that glide up smoothly next to the static image.
+- **Olympiad Roadmap Visual Overhaul (`src/components/TimelineCalendarSection.tsx`)**:
+  - Transformed the timeline into an aligned two-column layout.
+  - Placed all text cards perfectly aligned on the left, and corresponding visual accents/images aligned on the right.
+  - Implemented `items-stretch` and `h-full` to ensure each image perfectly matches the height of its corresponding text card for an ultra-clean block layout.
+  - Sourced and added `/images/about-us.jpeg` to the April 27th "Registration Deadline" event.
+
+## Decisions made this session
+
+- Replaced "Global Medalist" terminology with "London Medalist" to match the branding of the event location.
+- Used a 2-column layout (Cards left, Images right) for the Roadmap rather than a true zig-zag (alternating left-right) to satisfy the user's requirement for strict vertical alignment of all text and all pictures.
+- Used Framer Motion `transition-transform` extensively for hover states to bring the new visual layouts to life.
+
+## Problems solved this session
+
+- The medalists list was too overwhelming and long for mobile view. Solved by implementing an inline slice mechanism (`filteredMedalists.slice(0, 4)`) toggled via React state.
+
+## Current state
+
+- The Competition Stages and Roadmap sections are now visually distinct, premium, and utilize dynamic scroll/sticky behaviors.
+- The site flows much better and has high visual storytelling density.
+
+## Next session starts with
+
+- Any final adjustments to spacing, typography, or animation timings on the new layout sections if requested by the user.
+
+## Open questions
+
+- Are there any other text-heavy sections that need a similar visual overhaul?
 
 ---
 
 ## Previous Session Memory
 
 ### What was built
-- **White Header Navigation Bar**: Transformed top header in `src/app/page.tsx` into a solid white navbar (`sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm`) with high-contrast dark navigation links (`text-slate-700`) and a solid brand-blue CTA button. Added "News & Updates" link in the header navigation.
-- **Updated Olympiad Roadmap Dates**: Updated `src/components/TimelineCalendarSection.tsx` with 2027 competition dates:
-  - Pre-Olympiad Conference: `Mar 18–19, 2027`
-  - Registration Deadline: `Apr 27, 2027`
-  - National Round: `May 08, 2027`
-  - London Final: `Aug 2–9, 2027 (Tentative)`
+- **Global Finals Medalists Refactor (`src/components/MedalistsSection.tsx`)**:
+  - Replaced the image-based StaggerContainer card layout with a clean, responsive HTML table.
+  - Configured horizontal scrolling (`overflow-x-auto`).
+  - Implemented new category tab filters: `Little Bee`, `Honey Bee`, and `Bloom Bee`.
+- **Framer Motion Architecture Fix**: Addressed StaggerContainer animations failing on tab change via `key={selectedYear}`.
+- **Tailwind v4 Dev Server Fix**: Fixed unstyled HTML rendering during `npm run dev` by creating `tailwind.config.js`.
+- **Font Preload Optimization**: Moved Google Fonts (`Inter`, `Poppins`) out of PostCSS `@import`.
+- **Wall of Mathematicians Redesign (`src/components/WorldOfMathematiciansSection.tsx`)**:
+  - Added **Multi-Year Edition Tabs**: `2025/2026`, `2024/2025`, `2026/2027 (Upcoming)`, and `All Editions`.
+  - Built **Upcoming Season Teaser Card (`2026/2027`)**.
+  - Implemented **Compact Top 3 + Directory Roster Layout**.
+- **White Header Navigation Bar**: Transformed top header in `src/app/page.tsx` into a solid white navbar.
+- **Updated Olympiad Roadmap Dates**: Updated `src/components/TimelineCalendarSection.tsx` with 2027 competition dates.
 - **Mission & Vision Image Update**: Replaced Facebook image URL in `src/components/MissionVisionSection.tsx` with local image `/images/about-us.jpeg`.
-- **Global Winner Floating Badge**: Added high-contrast white glass card (`bg-white/95 backdrop-blur-md shadow-2xl border-l-4 border-brand-gold -bottom-5 sm:-left-5 z-20`) on the global winner photo in `src/app/page.tsx` displaying "EMC UK Global Winner 2026" with a gold `Trophy` icon.
-- **News Data Schema (`src/data/newsData.ts`)**: Built a structured news model supporting titles, excerpts, tags, publication dates, read times, key takeaways, and multi-paragraph storytelling content with 3 official articles.
-- **Homepage News Preview (`src/components/NewsSection.tsx`)**: Rendered 3 preview cards with tags, dates, 4:3 cropped cover photos, and interactive modal reader popups. Mounted on the main landing page (`/`).
-- **Dedicated Newsroom Portal (`src/app/news/page.tsx`)**: Created a dedicated page featuring a brand hero banner, search bar with real-time text matching, category filter tabs, featured hero spotlight card, and card grids.
-- **Storytelling Modal Reader (`src/components/ArticleModal.tsx`)**: Created a full-screen storytelling overlay with Framer Motion slide-up animations, pull quotes, key takeaways, and keyboard accessibility (`ESC` key to close).
-- **Direct Article Permalinks (`src/app/news/[id]/page.tsx`)**: Built an async Server Component with `generateStaticParams()` pre-rendering static HTML for all article URLs.
-- **Error Boundaries & 404 Pages**: Created `src/app/error.tsx` (Global Error Boundary) and `src/app/not-found.tsx` (Custom 404 Page) so runtime errors or missing routes display an EMC 2026 brand recovery page.
+- **Global Winner Floating Badge**: Added high-contrast white glass card on the global winner photo in `src/app/page.tsx`.
+- **News Data Schema (`src/data/newsData.ts`)** and **Homepage News Preview (`src/components/NewsSection.tsx`)**.
+- **Dedicated Newsroom Portal (`src/app/news/page.tsx`)** and **Storytelling Modal Reader (`src/components/ArticleModal.tsx`)**.
+- **Direct Article Permalinks (`src/app/news/[id]/page.tsx`)**.
 
-## Decisions made
+### Decisions made
+- Chose horizontal scrolling for the mobile table over stacked card transforms.
+- Default category filter is now `Little Bee`.
+- Using placeholder names until the user provides the actual 2026 data.
+- **Header Architecture**: Used sticky white header bar.
+- **Dual Story Reader Mechanism**: Interactive modal or SSG permalinks.
+- **Tailwind v4 PostCSS Config**: Linked `@config` to guarantee Dev Server scans output.
 
-- **Vertical Space Optimization**: Combined Top 3 featured spotlight cards (`h-36`) with a 2-column compact directory roster list to accommodate 18+ inductees without creating an infinitely long scroll page.
-- **Header Architecture**: Used sticky white header bar to guarantee complete legibility of navigation items and brand elements against both white and colored page sections.
-- **Dual Story Reader Mechanism**: Articles can be read instantly via an interactive storytelling overlay modal without leaving the page, or accessed directly via SSG permalinks (`/news/[id]`).
-- **Tailwind v4 PostCSS Config**: Linked `@config "../tailwind.config.js";` in `src/index.css` to guarantee Next.js dev server (`npm run dev`) scans all source files and outputs complete utility CSS.
-
-## Problems solved
-
-- Resolved dev server unstyled HTML rendering in `npm run dev` by providing explicit content paths in `tailwind.config.js`.
-- Resolved excessive vertical page scroll on the Wall of Mathematicians by introducing a compact Top 3 + Inductee Roster Table layout.
+### Problems solved
+- Solved Framer Motion `viewport={{ once: true }}` state caching.
+- Handled Next.js dev server port collisions.
+- Resolved dev server unstyled HTML rendering in `npm run dev`.
+- Resolved excessive vertical page scroll on the Wall of Mathematicians.
 - Fixed low legibility on navigation header when overlaying the hero video background.
-- Fixed Next.js "Internal Server Error" screen by introducing `generateStaticParams()`, `notFound()`, `src/app/error.tsx`, and `src/app/not-found.tsx`.
+- Fixed Next.js "Internal Server Error" screen.
 
-## Current state
-
-The entire frontend (Landing Page, Wall of Mathematicians, Newsroom Portal, Registration Page, 404 & Error Boundaries) is fully responsive, high-contrast, type-safe, and pre-rendered with 9 static pages (`✓ Generating static pages 9/9`).
-
-## Next session starts with
-
-- Setting up backend API routes in Next.js to persist registration form submissions to a database (e.g. Supabase).
-- Integrating Paystack payment verification endpoints for registration fees.
-- Setting up automated email notifications upon successful registration.
-
-## Open questions
-
-- Confirm database schema details for school vs individual student registrants.
+### Current state
+- The Medalists Section now correctly displays a responsive data table. All filtering interactions trigger clean Framer Motion staggered animations.
+- The entire frontend is fully responsive, high-contrast, type-safe, and pre-rendered with 9 static pages.
+- The site is successfully running locally.

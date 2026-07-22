@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Calendar, Users, Award, ShieldAlert, Sparkles, Trophy } from "lucide-react";
+import { Calendar, Users, Award, ShieldAlert, Sparkles, Trophy, BookOpen, Lightbulb } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface CalendarEvent {
@@ -10,6 +10,7 @@ interface CalendarEvent {
   audience: string;
   icon: React.ReactNode;
   badge: string;
+  imageAccent?: string;
 }
 
 const timelineEvents: CalendarEvent[] = [
@@ -20,6 +21,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Students & Teachers",
     icon: <Users className="h-5 w-5" />,
     badge: "Preparation Phase",
+    imageAccent: "/images/about-us-2.jpeg"
   },
   {
     date: "Apr 27, 2027",
@@ -28,6 +30,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Teachers & Coordinators",
     icon: <ShieldAlert className="h-5 w-5" />,
     badge: "Critical Deadline",
+    imageAccent: "/images/about-us.jpeg" // Added image from library
   },
   {
     date: "May 08, 2027",
@@ -36,6 +39,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "All Students",
     icon: <Calendar className="h-5 w-5" />,
     badge: "Testing Phase",
+    imageAccent: "/images/about_us_students.jpg"
   },
   {
     date: "Aug 2–9, 2027 (Tentative)",
@@ -44,9 +48,9 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Global Finalists",
     icon: <Trophy className="h-5 w-5" />,
     badge: "Tentative Date",
+    imageAccent: "/images/EMC-global-winner.jpeg"
   },
 ];
-
 
 export default function TimelineCalendarSection() {
   return (
@@ -64,65 +68,83 @@ export default function TimelineCalendarSection() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         {/* Section Header */}
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
           <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight leading-[1.12]">
             The Olympiad Roadmap — EMC 2026
           </h2>
-          <div className="h-1.5 w-12 bg-brand-lime mx-auto mt-4 rounded-none" />
-          <p className="font-sans mt-5 text-sm sm:text-base leading-[1.6] text-slate-600">
+          <div className="h-1.5 w-12 bg-brand-lime mx-auto mt-6 rounded-none" />
+          <p className="font-sans mt-6 text-sm sm:text-base leading-[1.6] text-slate-600">
             A comprehensive milestone tracker for both teachers coordinating groups and students training for their moment on the world stage.
           </p>
         </ScrollReveal>
 
-        {/* Vertical/Timeline Flow */}
-        <StaggerContainer className="relative border-l border-brand-lime/20 max-w-4xl mx-auto pl-6 sm:pl-10 space-y-12">
-          {timelineEvents.map((event, index) => (
-            <StaggerItem key={index} className="relative group">
-              {/* Vertical timeline node indicator */}
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 h-6 w-6 rounded-none bg-white border-2 border-brand-lime flex items-center justify-center shadow-md shadow-black/20 group-hover:scale-110 transition-transform duration-300">
-                <div className="h-2 w-2 rounded-none bg-brand-lime" />
-              </div>
+        {/* Timeline Container */}
+        <div className="relative max-w-5xl mx-auto">
+          {/* The Center Line (hidden on mobile, centered on md+) */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-brand-lime/30 -ml-px" />
 
-              {/* Event card layout */}
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 bg-white rounded-none p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-lime/30 transition-all duration-300">
-                
-                {/* Date & Badge Block */}
-                <div className="md:col-span-4 space-y-2">
-                  <div className="text-slate-900 font-display font-bold text-lg sm:text-xl">
-                    {event.date}
+          <StaggerContainer className="space-y-16 lg:space-y-24">
+            {timelineEvents.map((event, index) => {
+              return (
+                <StaggerItem key={index} className="relative flex flex-col md:flex-row items-stretch justify-between w-full group">
+                  
+                  {/* The Timeline Node (Center dot) */}
+                  <div className="absolute left-6 md:left-1/2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-none bg-white border-2 border-brand-lime shadow-md shadow-brand-lime/20 -translate-x-1/2 flex items-center justify-center z-20 group-hover:scale-125 transition-transform duration-500">
+                    <div className="w-2.5 h-2.5 rounded-none bg-brand-lime animate-pulse" />
                   </div>
-                  <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-lime/10 text-brand-green px-2.5 py-1 rounded-none border border-brand-lime/20">
-                    {event.badge}
-                  </span>
-                </div>
 
-                {/* Event Main Content */}
-                <div className="md:col-span-8 space-y-3">
-                  <div className="flex items-center gap-2.5">
-                    <div className="text-brand-green bg-brand-lime/10 p-1.5 rounded-none border border-brand-lime/20">
-                      {event.icon}
+                  {/* Left Side: Event Cards Aligned */}
+                  <div className="w-full pl-16 md:pl-0 md:w-[45%] md:pr-12 md:text-right flex flex-col items-start md:items-end">
+                    <div className="bg-white rounded-none p-6 sm:p-8 border border-slate-200 shadow-xl hover:shadow-2xl hover:border-brand-lime/50 transition-all duration-300 w-full h-full relative overflow-hidden text-left flex flex-col justify-center">
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-brand-lime/5 rounded-none -mr-4 -mt-4 transform rotate-12 pointer-events-none" />
+                      
+                      <div className="space-y-3 relative z-10">
+                        <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-lime/10 text-brand-green px-2.5 py-1 rounded-none border border-brand-lime/20 mb-1">
+                          {event.badge}
+                        </span>
+                        <div className="text-slate-900 font-display font-bold text-xl sm:text-2xl tracking-tight">
+                          {event.date}
+                        </div>
+                        
+                        <div className="flex items-center gap-3 pt-2">
+                          <div className="text-brand-green bg-brand-lime/10 p-2 rounded-none border border-brand-lime/20">
+                            {event.icon}
+                          </div>
+                          <h3 className="font-display font-semibold text-lg sm:text-xl text-brand-dark group-hover:text-brand-green transition-colors tracking-tight leading-[1.2]">
+                            {event.title}
+                          </h3>
+                        </div>
+
+                        <p className="text-sm text-slate-600 font-sans leading-[1.6] pt-2">
+                          {event.description}
+                        </p>
+
+                        <div className="pt-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold text-slate-500 font-sans">
+                          <span className="text-brand-green">Target Audience:</span>
+                          <span className="bg-slate-50 px-2 py-0.5 rounded-none text-slate-600 border border-slate-200">{event.audience}</span>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="font-display font-semibold text-base sm:text-lg text-brand-dark group-hover:text-brand-green transition-colors tracking-tight leading-[1.2]">
-                      {event.title}
-                    </h3>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-600 font-sans leading-[1.6]">
-                    {event.description}
-                  </p>
-
-                  <div className="pt-2 flex flex-wrap items-center gap-2 text-[11px] font-semibold text-slate-500 font-sans">
-                    <span className="text-brand-green">Target Audience:</span>
-                    <span className="bg-slate-50 px-2 py-0.5 rounded-none text-slate-600 border border-slate-200">{event.audience}</span>
+                  {/* Right Side: Images Aligned */}
+                  <div className="w-full pl-16 md:pl-0 md:w-[45%] mt-8 md:mt-0 md:pl-12">
+                    <div className="hidden md:flex w-full h-full min-h-[250px] items-stretch justify-center relative">
+                      {event.imageAccent && (
+                        <div className="relative w-full h-full overflow-hidden rounded-none shadow-xl border border-slate-200 group-hover:-translate-y-1 transition-transform duration-500">
+                          <img src={event.imageAccent} alt={event.title} className="absolute inset-0 w-full h-full object-cover" />
+                          <div className="absolute inset-0 border-[4px] border-white/20 pointer-events-none mix-blend-overlay" />
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+        </div>
       </div>
     </section>
   );
 }
-
