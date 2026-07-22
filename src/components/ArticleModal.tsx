@@ -81,13 +81,13 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
               </header>
 
               {/* Cover Image */}
-              <div className="relative h-64 sm:h-80 lg:h-96 w-full overflow-hidden bg-slate-100 border border-slate-200/50">
+              <div className="relative aspect-square sm:aspect-video lg:aspect-[16/10] w-full overflow-hidden bg-slate-100 border border-slate-200/50">
                 <Image
                   src={article.imageUrl}
                   alt={article.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 896px"
-                  className="object-cover"
+                  className="object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-brand-dark/90 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">
                   EMC Story Spotlight
