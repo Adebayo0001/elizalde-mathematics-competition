@@ -2,17 +2,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const images = [
-  "/images/EMC-global-winner.jpeg",
-  "/images/about-us-2.jpeg",
-  "/images/about-us.jpeg",
-  "/images/about_us_students.jpg",
-  "/images/about_us_students_collaborating.png",
-  "/images/math.png.jpg",
+const MOMENT_IMAGES = [
+  "/images/Young Master Challenge-11.jpg.jpeg",
+  "/images/Young Master Challenge-13.jpg.jpeg",
+  "/images/Young Master Challenge-16.jpg.jpeg",
+  "/images/Young Master Challenge-243.jpg.jpeg",
+  "/images/Young Master Challenge-357.jpg.jpeg",
+  "/images/Young Master Challenge-358.jpg.jpeg",
+  "/images/Young Master Challenge-359.jpg.jpeg",
+  "/images/Young Master Challenge-360.jpg.jpeg",
 ];
 
 // Duplicate the array to create a seamless loop
-const marqueeImages = [...images, ...images];
+const marqueeImages = [...MOMENT_IMAGES, ...MOMENT_IMAGES];
 
 export default function MomentsMarqueeSection() {
   return (

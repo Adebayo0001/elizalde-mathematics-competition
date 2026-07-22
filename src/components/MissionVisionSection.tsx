@@ -16,7 +16,7 @@ export default function MissionVisionSection() {
             <div className="rounded-none overflow-hidden shadow-xl relative z-[1]">
               <div className="aspect-[3/4] lg:aspect-[3/4]">
                 <img
-                  src="/images/about-us.jpeg"
+                  src="/images/IMG_20260720_114534_965.jpg.jpeg"
                   alt="Elizalde Mathematics Competition students"
                   className="w-full h-full object-cover"
                 />

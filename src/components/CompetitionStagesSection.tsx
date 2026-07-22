@@ -26,12 +26,8 @@ export default function CompetitionStagesSection() {
           <div className="lg:col-span-5 flex flex-col gap-8 lg:sticky lg:top-32">
             
             <ScrollReveal>
-              <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase tracking-[0.15em] flex items-center gap-2 mb-6">
-                <span className="text-brand-green font-bold">[ 01 ] STRUCTURE</span>
-              </span>
-              
               <h2 className="font-display font-semibold text-4xl lg:text-5xl text-slate-900 tracking-tight leading-[1.05] mb-6">
-                The Competitive <br className="hidden sm:block" /> Framework
+                The Competition <br className="hidden sm:block" /> Structure
               </h2>
               
               <p className="text-slate-600 font-sans text-sm sm:text-base leading-[1.6] max-w-sm mb-8">
@@ -56,11 +52,11 @@ export default function CompetitionStagesSection() {
           </div>
 
           {/* Right Column: Scrolling Stage Cards (lg:col-span-7) */}
-          <div className="lg:col-span-7 flex flex-col gap-8 lg:gap-12 mt-12 lg:mt-0">
-            <StaggerContainer className="flex flex-col gap-8 lg:gap-12">
+          <div className="lg:col-span-7 flex flex-col gap-6 lg:gap-8 mt-12 lg:mt-0">
+            <StaggerContainer className="flex flex-col gap-6 lg:gap-8">
             
               {/* Stage 1: National Round */}
-              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-8 lg:p-12 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-lime/50 transition-all">
+              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-lime/50 transition-all">
                 {/* Huge '1' in background */}
                 <div className="absolute -top-10 -right-6 lg:-top-14 lg:-right-8 text-[200px] lg:text-[280px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform group-hover:scale-105">
                   1
@@ -117,7 +113,7 @@ export default function CompetitionStagesSection() {
               </StaggerItem>
 
               {/* Stage 2: Global Round */}
-              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-8 lg:p-12 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
+              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
                 {/* Huge '2' in background */}
                 <div className="absolute -top-10 -right-6 lg:-top-14 lg:-right-8 text-[200px] lg:text-[280px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform group-hover:scale-105">
                   2
