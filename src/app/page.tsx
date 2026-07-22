@@ -30,6 +30,7 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import ParticipatingCountriesSection from "../components/ParticipatingCountriesSection";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import WhoCanParticipateSection from "../components/WhoCanParticipateSection";
+import NewsSection from "../components/NewsSection";
 
 export default function HomePage() {
 
@@ -38,7 +39,7 @@ export default function HomePage() {
       {/* ──────────────────────────────────────────────────────────────────
           1. NAVIGATION HEADER
           ────────────────────────────────────────────────────────────────── */}
-      <header className="absolute top-0 left-0 right-0 z-40">
+      <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
           {/* Brand/Logo */}
           <a href="#" className="flex items-center gap-3 group focus:outline-none">
@@ -54,7 +55,7 @@ export default function HomePage() {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden xl:flex items-center gap-7 text-[13px] font-semibold font-display tracking-wide text-brand-dark/80">
+          <nav className="hidden xl:flex items-center gap-7 text-[13px] font-semibold font-display tracking-wide text-slate-700">
             <a href="#about" className="hover:text-brand-blue transition-colors">
               About
             </a>
@@ -64,12 +65,15 @@ export default function HomePage() {
             <a href="#roadmap" className="hover:text-brand-blue transition-colors">
               Roadmap
             </a>
-            <a href="#world-of-mathematicians" className="hover:text-brand-blue transition-colors">
+            <a href="#wall-of-mathematicians" className="hover:text-brand-blue transition-colors">
               Spotlight
             </a>
             <a href="#winners" className="hover:text-brand-blue transition-colors">
               Medalists
             </a>
+            <Link href="/news" className="hover:text-brand-blue transition-colors">
+              News & Updates
+            </Link>
             <a href="#testimonials" className="hover:text-brand-blue transition-colors">
               Testimonials
             </a>
@@ -83,7 +87,7 @@ export default function HomePage() {
             <Link
               href="/register"
               id="nav-register-btn"
-              className="px-5 py-2.5 bg-brand-blue/10 backdrop-blur-sm hover:bg-brand-blue text-brand-blue hover:text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all border border-brand-blue/20 hover:border-brand-blue focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer"
+              className="px-6 py-2.5 bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer"
             >
               Register
             </Link>
@@ -95,7 +99,7 @@ export default function HomePage() {
         {/* ──────────────────────────────────────────────────────────────────
             2. HERO SECTION — Full-Width Video Background
             ────────────────────────────────────────────────────────────────── */}
-        <section id="hero" className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-brand-blue flex items-end text-white pt-32 lg:pt-40">
+        <section id="hero" className="relative min-h-[80vh] lg:min-h-[85vh] overflow-hidden bg-brand-blue flex items-end text-white pt-16 lg:pt-24">
           {/* Video Background */}
           <video
             autoPlay
@@ -165,12 +169,27 @@ export default function HomePage() {
               {/* Left Column — Image */}
               <div className="lg:col-span-5 w-full">
                 <ScrollReveal direction="right" delay={0.1}>
-                  <div className="relative overflow-hidden">
+                  <div className="relative shadow-xl mb-6 lg:mb-0">
                     <img 
                       src="/images/EMC-global-winner.jpeg" 
                       alt="EMC Global Winner" 
-                      className="w-full h-auto object-cover shadow-xl"
+                      className="w-full h-auto object-cover"
                     />
+
+                    {/* Floating High-Contrast White Glass Card */}
+                    <div className="absolute -bottom-5 left-4 sm:-left-5 bg-white/95 backdrop-blur-md text-brand-dark p-3.5 sm:p-4 border-l-4 border-brand-gold shadow-2xl border border-slate-200/80 flex items-center gap-3.5 z-20">
+                      <div className="h-10 w-10 bg-brand-blue text-white flex items-center justify-center shrink-0 shadow-md">
+                        <Trophy className="h-5 w-5 text-brand-gold" />
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-extrabold font-display text-brand-green uppercase tracking-widest block">
+                          Championship Spotlight
+                        </span>
+                        <span className="font-display font-extrabold text-xs sm:text-sm text-brand-dark tracking-tight block">
+                          EMC UK Global Winner 2026
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </ScrollReveal>
               </div>
@@ -259,6 +278,11 @@ export default function HomePage() {
             11. FAQ SECTION — Split Layout (Reference Pattern #7)
             ────────────────────────────────────────────────────────────────── */}
         <FAQSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            12. NEWS & UPDATES SECTION — Latest Announcements
+            ────────────────────────────────────────────────────────────────── */}
+        <NewsSection />
 
         {/* ──────────────────────────────────────────────────────────────────
             13. CLOSING CALL TO ACTION

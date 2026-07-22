@@ -16,10 +16,9 @@ export default function MissionVisionSection() {
             <div className="rounded-none overflow-hidden shadow-xl relative z-[1]">
               <div className="aspect-[3/4] lg:aspect-[3/4]">
                 <img
-                  src="https://scontent-los4-1.xx.fbcdn.net/v/t39.30808-6/482242974_945002121174723_6667028209231091350_n.jpg?stp=dst-jpg_tt6&cstp=mx1132x789&ctp=s1132x789&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGdTpCLKcSw1C1L99adgPJDXfvm_UmK5G5d--b9SYrkbqfJQb-92qjRvlVJeo4SUkhWeYDhq1zfiMUfhWb_OWTV&_nc_ohc=6icyO1sQIesQ7kNvwHN6VND&_nc_oc=AdqNkiHxj7eYW2wDF0ylnhOVUpX46F3Pr3fJxvRPjjjPHEraOJZoeCXJWYAxv143XZ7vokvvUk413x3V5Bc0Z1E4&_nc_zt=23&_nc_ht=scontent-los4-1.xx&_nc_gid=_Ii6u8mRtlTIICgNsAhu8g&_nc_ss=7d2a8&oh=00_AQAkxWdWDuQSQ1RWwofBD7vchnQi2Q_Ua-F7kWpv9q1lSA&oe=6A61B9BB"
-                  alt="Elizalde Mathematics Competition group"
+                  src="/images/about-us.jpeg"
+                  alt="Elizalde Mathematics Competition students"
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
