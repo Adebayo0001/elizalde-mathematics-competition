@@ -17,6 +17,16 @@ const marqueeImages = [...images, ...images];
 export default function MomentsMarqueeSection() {
   return (
     <section className="py-16 lg:py-24 bg-brand-blue overflow-hidden relative border-y border-brand-gold/20">
+      {/* Subtle Math Formula Texture Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-60 mix-blend-overlay"
+        style={{ 
+          backgroundImage: "url('/math-texture.svg')",
+          backgroundSize: "1600px 1600px",
+          backgroundRepeat: "repeat",
+          backgroundPosition: "center"
+        }}
+      />
       {/* Decorative Gradients for smooth fade out at edges */}
       <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-brand-blue to-transparent z-10 pointer-events-none" />
       <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-brand-blue to-transparent z-10 pointer-events-none" />
