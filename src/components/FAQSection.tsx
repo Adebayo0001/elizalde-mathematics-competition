@@ -12,11 +12,11 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     question: "How do schools register student teams?",
-    answer: "Schools can register their teams directly on our web portal. An official school math coach or teacher should coordinate the profile setup, specify participation brackets, and supply the student roster list. All candidates must compete under their official school representation.",
+    answer: "Schools can register their teams directly on our web portal. An official school math coach or teacher should coordinate the profile setup, specify participation categories, and supply the student roster list. All candidates must compete under their official school representation.",
   },
   {
     question: "What is the team size and composition?",
-    answer: "EMC challenges are designed around cohesive school team units. Each registered team must consist of 3 to 4 students belonging to the same academic bracket. Schools are encouraged to submit multiple team blocks per bracket.",
+    answer: "EMC challenges are designed around cohesive school team units. Each registered team must consist of 3 to 4 students belonging to the same academic category. Schools are encouraged to submit multiple team blocks per category.",
   },
   {
     question: "Are scientific calculators permitted during exams?",
@@ -140,7 +140,7 @@ export default function FAQSection() {
                   3
                 </span>
                 <span className="text-[10px] text-white/80 font-sans block mt-1">
-                  Academic brackets
+                  Academic categories
                 </span>
               </div>
             </div>

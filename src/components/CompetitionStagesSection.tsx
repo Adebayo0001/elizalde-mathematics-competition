@@ -60,21 +60,21 @@ export default function CompetitionStagesSection() {
             <StaggerContainer className="flex flex-col gap-6 lg:gap-8">
             
               {/* Stage 1: National Round */}
-              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-blue/50 transition-all">
+              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-5 lg:p-6 border border-slate-200 shadow-lg relative overflow-hidden group hover:border-brand-blue/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-blue/10 transition-all duration-300">
                 {/* Huge '1' in background */}
-                <div className="absolute -top-10 -right-6 lg:-top-14 lg:-right-8 text-[200px] lg:text-[280px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform group-hover:scale-105">
+                <div className="absolute -top-6 -right-4 lg:-top-8 lg:-right-6 text-[120px] lg:text-[160px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform duration-500 group-hover:scale-110">
                   1
                 </div>
                 
                 <div className="relative z-10 h-full flex flex-col justify-between">
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="flex items-center">
                       <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-blue/10 text-brand-blue px-3 py-1 rounded-none border border-brand-blue/20">
                         Local Level
                       </span>
                     </div>
 
-                    <h3 className="font-display font-semibold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-[1.1]">
+                    <h3 className="font-display font-semibold text-2xl sm:text-3xl text-slate-900 tracking-tight leading-[1.1]">
                       The National Round
                     </h3>
 
@@ -83,55 +83,55 @@ export default function CompetitionStagesSection() {
                     </p>
 
                     {/* Core Features */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 border-t border-slate-100">
-                      <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                          <FileText className="h-5 w-5" />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-6 border-t border-slate-100">
+                      <div className="space-y-2">
+                        <div className="h-9 w-9 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center">
+                          <FileText className="h-4 w-4" />
                         </div>
                         <div>
-                          <span className="block text-[15px] font-bold text-slate-900 mb-1">Paper-Based Exam</span>
-                          <span className="block text-[13px] text-slate-600 font-sans leading-snug">90 mins of structured logic, geometry, algebra.</span>
+                          <span className="block text-[14px] font-bold text-slate-900 mb-0.5">Paper-Based Exam</span>
+                          <span className="block text-xs text-slate-600 font-sans leading-snug">90 mins of structured logic, geometry, algebra.</span>
                         </div>
                       </div>
 
-                      <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                          <Landmark className="h-5 w-5" />
+                      <div className="space-y-2">
+                        <div className="h-9 w-9 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center">
+                          <Landmark className="h-4 w-4" />
                         </div>
                         <div>
-                          <span className="block text-[15px] font-bold text-slate-900 mb-1">Official Hubs</span>
-                          <span className="block text-[13px] text-slate-600 font-sans leading-snug">Coordinated locally with verified proctors.</span>
+                          <span className="block text-[14px] font-bold text-slate-900 mb-0.5">Official Hubs</span>
+                          <span className="block text-xs text-slate-600 font-sans leading-snug">Coordinated locally with verified proctors.</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-500 font-semibold font-sans">
+                  <div className="mt-8 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500 font-semibold font-sans">
                     <span className="text-slate-600">National Qualification Required</span>
                     <span className="text-brand-red flex items-center gap-1 font-display font-bold uppercase tracking-wider">
-                      Feb 22, 2026
-                      <ChevronRight className="h-4 w-4" />
+                      May 08, 2027
+                      <ChevronRight className="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
                   </div>
                 </div>
               </StaggerItem>
 
               {/* Stage 2: Global Round */}
-              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-red/50 transition-all">
+              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-5 lg:p-6 border border-slate-200 shadow-lg relative overflow-hidden group hover:border-brand-red/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-red/10 transition-all duration-300">
                 {/* Huge '2' in background */}
-                <div className="absolute -top-10 -right-6 lg:-top-14 lg:-right-8 text-[200px] lg:text-[280px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform group-hover:scale-105">
+                <div className="absolute -top-6 -right-4 lg:-top-8 lg:-right-6 text-[120px] lg:text-[160px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform duration-500 group-hover:scale-110">
                   2
                 </div>
 
                 <div className="relative z-10 h-full flex flex-col justify-between">
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="flex items-center">
                       <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-red/10 text-brand-red px-3 py-1 rounded-none border border-brand-red/20">
                         International
                       </span>
                     </div>
 
-                    <h3 className="font-display font-semibold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-[1.1]">
+                    <h3 className="font-display font-semibold text-2xl sm:text-3xl text-slate-900 tracking-tight leading-[1.1]">
                       The Global Round
                     </h3>
 
@@ -140,34 +140,34 @@ export default function CompetitionStagesSection() {
                     </p>
 
                     {/* Core Features */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 border-t border-slate-100">
-                      <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
-                          <Users className="h-5 w-5" />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-6 border-t border-slate-100">
+                      <div className="space-y-2">
+                        <div className="h-9 w-9 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
+                          <Users className="h-4 w-4" />
                         </div>
                         <div>
-                          <span className="block text-[15px] font-bold text-slate-900 mb-1">Math Projects</span>
-                          <span className="block text-[13px] text-slate-600 font-sans leading-snug">Teams present models of modern engineering.</span>
+                          <span className="block text-[14px] font-bold text-slate-900 mb-0.5">Math Projects</span>
+                          <span className="block text-xs text-slate-600 font-sans leading-snug">Teams present models of modern engineering.</span>
                         </div>
                       </div>
 
-                      <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
-                          <Globe className="h-5 w-5" />
+                      <div className="space-y-2">
+                        <div className="h-9 w-9 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
+                          <Globe className="h-4 w-4" />
                         </div>
                         <div>
-                          <span className="block text-[15px] font-bold text-slate-900 mb-1">World Stage</span>
-                          <span className="block text-[13px] text-slate-600 font-sans leading-snug">Uniting students from across the globe.</span>
+                          <span className="block text-[14px] font-bold text-slate-900 mb-0.5">World Stage</span>
+                          <span className="block text-xs text-slate-600 font-sans leading-snug">Uniting students from across the globe.</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-500 font-semibold font-sans">
+                  <div className="mt-8 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500 font-semibold font-sans">
                     <span className="text-slate-600">Invitational Placement only</span>
                     <span className="text-brand-red flex items-center gap-1 font-display font-bold uppercase tracking-wider">
-                      May 15-18, 2026
-                      <ChevronRight className="h-4 w-4" />
+                      Aug 2–9, 2027
+                      <ChevronRight className="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
                   </div>
                 </div>

@@ -52,7 +52,7 @@ export default function WinnersGrid() {
           </h2>
           <div className="h-1.5 w-12 bg-brand-gold mx-auto mt-4 rounded-none " />
           <p className="text-slate-500 font-sans mt-4 text-base">
-            Meet the students who proved what they could do. From team projects to complex exams, these young minds led the international bracket.
+            Meet the students who proved what they could do. From team projects to complex exams, these young minds led the international category.
           </p>
         </div>
 

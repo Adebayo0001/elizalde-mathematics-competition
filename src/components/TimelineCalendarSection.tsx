@@ -71,7 +71,7 @@ export default function TimelineCalendarSection() {
         {/* Section Header */}
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
           <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight leading-[1.12]">
-            The Olympiad Roadmap — EMC 2026
+            The Olympiad Roadmap — EMC 2027
           </h2>
           <div className="h-1.5 w-12 bg-brand-red mx-auto mt-6 rounded-none" />
           <p className="font-sans mt-6 text-sm sm:text-base leading-[1.6] text-slate-600">

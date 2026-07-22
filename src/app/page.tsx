@@ -310,7 +310,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-slate-100 font-sans text-sm sm:text-base leading-[1.6] max-w-xl mx-auto">
-              Registration for EMC 2026 is officially open. Coordinate teams of 3–4 students across Elementary, Middle, or High School brackets.
+              Registration for EMC 2026 is officially open. Coordinate teams of 3–4 students across Elementary, Middle, or High School categories.
             </p>
 
             <div className="pt-4">
@@ -362,7 +362,7 @@ export default function HomePage() {
               <div className="flex items-center gap-3 text-brand-dark">
                 <Logo className="h-10 w-10 text-brand-blue" />
                 <span className="font-display font-extrabold text-base text-brand-dark tracking-wide uppercase">
-                  EMC Tournament
+                  EMC OLYMPIAD
                 </span>
               </div>
               <p className="text-sm text-slate-500 leading-relaxed max-w-sm font-sans">
@@ -372,7 +372,7 @@ export default function HomePage() {
 
             <div className="md:col-span-2 space-y-4">
               <h5 className="text-sm lg:text-[15px] font-bold font-display tracking-[0.05em] text-brand-dark uppercase">
-                Brackets
+                Categories
               </h5>
               <ul className="text-sm space-y-3 font-sans text-slate-500">
                 <li className="whitespace-nowrap">Elementary (Years 4–6)</li>
