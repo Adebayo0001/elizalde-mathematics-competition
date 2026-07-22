@@ -4,13 +4,15 @@ import { motion } from "framer-motion";
 
 const MOMENT_IMAGES = [
   "/images/Young Master Challenge-11.jpg.jpeg",
-  "/images/Young Master Challenge-13.jpg.jpeg",
-  "/images/Young Master Challenge-16.jpg.jpeg",
-  "/images/Young Master Challenge-243.jpg.jpeg",
+  "/images/IMG_20260720_114422_425.jpg.jpeg",
   "/images/Young Master Challenge-357.jpg.jpeg",
+  "/images/IMG_20260720_114441_329.jpg.jpeg",
+  "/images/Young Master Challenge-16.jpg.jpeg",
+  "/images/IMG_20260720_114508_069.jpg.jpeg",
   "/images/Young Master Challenge-358.jpg.jpeg",
-  "/images/Young Master Challenge-359.jpg.jpeg",
-  "/images/Young Master Challenge-360.jpg.jpeg",
+  "/images/IMG_20260720_114530_719.jpg.jpeg",
+  "/images/Young Master Challenge-243.jpg.jpeg",
+  "/images/IMG_20260720_114552_862.jpg.jpeg",
 ];
 
 // Duplicate the array to create a seamless loop
