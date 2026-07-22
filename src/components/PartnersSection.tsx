@@ -11,26 +11,41 @@ export default function PartnersSection() {
           Meet Our Partners
         </span>
         
-        {/* Logos Grid */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-16 md:gap-32">
-          {/* Logo 1 */}
-          <div className="relative h-24 w-48 sm:h-32 sm:w-64">
-            <Image
-              src="/images/air-peace.webp"
-              alt="Air Peace"
-              fill
-              className="object-contain"
-            />
-          </div>
-
-          {/* Logo 2 */}
-          <div className="relative h-24 w-48 sm:h-32 sm:w-64">
-            <Image
-              src="/images/lgo-1-238x300.jpg"
-              alt="Partner Logo"
-              fill
-              className="object-contain"
-            />
+        {/* Logos Marquee */}
+        <div className="mt-12 overflow-hidden relative w-full flex items-center">
+          <div className="flex animate-marquee hover:[animation-play-state:paused] w-max items-center">
+            {/* 4 identical sets for seamless infinite scrolling loop (-50% translation) */}
+            {[...Array(4)].map((_, idx) => (
+              <div 
+                key={idx} 
+                className="flex items-center justify-center gap-16 md:gap-32 pr-16 md:pr-32"
+              >
+                <div className="relative h-24 w-48 sm:h-32 sm:w-64">
+                  <Image
+                    src="/images/air-peace.webp"
+                    alt="Air Peace"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative h-24 w-48 sm:h-32 sm:w-64">
+                  <Image
+                    src="/images/lgo-1-238x300.jpg"
+                    alt="Partner Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative h-24 w-48 sm:h-32 sm:w-64">
+                  <Image
+                    src="/images/partner-vista.jpeg"
+                    alt="Vista Partner"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
