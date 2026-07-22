@@ -41,8 +41,8 @@ export default function CompetitionStagesSection() {
 
             <ScrollReveal className="relative w-full h-[400px] lg:h-[500px] rounded-none overflow-hidden shadow-2xl border border-slate-200">
               <img
-                src="/images/about_us_students_collaborating.png"
-                alt="Students collaborating"
+                src="/images/EMC-global-winner_2.jpeg"
+                alt="EMC global winner"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent" />

@@ -295,6 +295,16 @@ export default function HomePage() {
             13. CLOSING CALL TO ACTION
             ────────────────────────────────────────────────────────────────── */}
         <section id="register-cta" className="relative py-14 lg:py-24 bg-brand-blue text-white overflow-hidden">
+          {/* Subtle Math Formula Texture Background */}
+          <div 
+            className="absolute inset-0 pointer-events-none opacity-20"
+            style={{ 
+              backgroundImage: "url('/math-texture.svg')",
+              backgroundSize: "800px 800px",
+              backgroundRepeat: "repeat",
+              backgroundPosition: "center"
+            }}
+          />
           {/* Visual Accents */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white rounded-none animate-pulse pointer-events-none" />
@@ -348,8 +358,18 @@ export default function HomePage() {
       </div>
 
       {/* Main CTA Footer */}
-      <footer className="bg-brand-blue border-t border-white/10 text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <footer className="relative bg-brand-blue border-t border-white/10 text-white py-16 lg:py-24 overflow-hidden">
+        {/* Subtle Math Formula Texture Background */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-20"
+          style={{ 
+            backgroundImage: "url('/math-texture.svg')",
+            backgroundSize: "800px 800px",
+            backgroundRepeat: "repeat",
+            backgroundPosition: "center"
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 z-10">
           {/* Large CTA Heading */}
           <div className="mb-16">
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight max-w-2xl">
