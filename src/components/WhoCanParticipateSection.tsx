@@ -5,7 +5,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 const categories = [
   {
     title: "Elementary School Category",
-    grades: "Grade 4 to 6",
+    grades: "Year 4 to 6",
     icon: <Backpack className="w-8 h-8" />,
     color: "text-blue-500",
     bg: "bg-blue-500/10",
@@ -13,15 +13,15 @@ const categories = [
   },
   {
     title: "Middle School Category",
-    grades: "Grade 7 to 9",
+    grades: "Year 7 to 9",
     icon: <BookOpen className="w-8 h-8" />,
-    color: "text-brand-green",
-    bg: "bg-brand-green/10",
-    border: "border-brand-green/20",
+    color: "text-brand-red",
+    bg: "bg-brand-red/10",
+    border: "border-brand-red/20",
   },
   {
     title: "High School Category",
-    grades: "Grade 10 to 12",
+    grades: "Year 10 to 12",
     icon: <GraduationCap className="w-8 h-8" />,
     color: "text-brand-gold",
     bg: "bg-brand-gold/10",

@@ -36,7 +36,7 @@ export const newsArticles: NewsItem[] = [
     imageUrl: "/images/IMG_20260720_114502_765.jpg.jpeg",
     author: {
       name: "Zack Elias",
-      role: "Regional Director, EMC Nigeria",
+      role: "The regional communications team",
     },
     readTime: "5 min read",
     featured: true,
@@ -71,7 +71,7 @@ export const newsArticles: NewsItem[] = [
     imageUrl: "/images/IMG_20260720_114508_069.jpg.jpeg",
     author: {
       name: "Zack Elias",
-      role: "Regional Director, EMC Nigeria",
+      role: "International management of EMC",
     },
     readTime: "4 min read",
     featured: false,

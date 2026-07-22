@@ -33,6 +33,7 @@ import ParticipatingCountriesSection from "../components/ParticipatingCountriesS
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import WhoCanParticipateSection from "../components/WhoCanParticipateSection";
 import NewsSection from "../components/NewsSection";
+import PartnersSection from "../components/PartnersSection";
 
 export default function HomePage() {
 
@@ -44,41 +45,27 @@ export default function HomePage() {
       <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
           {/* Brand/Logo */}
-          <a href="#" className="flex items-center gap-3 group focus:outline-none">
-            <Logo className="h-12 w-12 group-hover:rotate-6 transition-transform duration-300" />
-            <div className="leading-none">
-              <span className="font-display font-extrabold text-lg text-brand-dark tracking-tight block">
-                EMC 2026
-              </span>
-              <span className="text-[10px] font-bold font-display text-brand-blue uppercase tracking-widest block mt-0.5">
-                Mathematics Competition
-              </span>
-            </div>
+          <a href="#" className="flex items-center focus:outline-none">
+            <Logo className="h-14 w-48 sm:h-16 sm:w-56" />
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden xl:flex items-center gap-7 text-[13px] font-semibold font-display tracking-wide text-slate-700">
+          <nav className="hidden xl:flex items-center gap-8 text-[15px] font-semibold font-display tracking-wide text-slate-700">
             <a href="#about" className="hover:text-brand-blue transition-colors">
               About
             </a>
-            <a href="#competition-stages" className="hover:text-brand-blue transition-colors">
-              Stages
-            </a>
+
             <a href="#roadmap" className="hover:text-brand-blue transition-colors">
               Roadmap
             </a>
             <a href="#wall-of-mathematicians" className="hover:text-brand-blue transition-colors">
               Spotlight
             </a>
-            <a href="#winners" className="hover:text-brand-blue transition-colors">
-              Medalists
-            </a>
+
             <Link href="/news" className="hover:text-brand-blue transition-colors">
               News & Updates
             </Link>
-            <a href="#testimonials" className="hover:text-brand-blue transition-colors">
-              Testimonials
-            </a>
+
             <a href="#faq" className="hover:text-brand-blue transition-colors">
               FAQ
             </a>
@@ -128,7 +115,7 @@ export default function HomePage() {
 
               {/* Large Editorial Headline */}
               <h1 className="font-display font-semibold text-3xl sm:text-4xl lg:text-6xl text-white leading-[1.08] tracking-tight">
-                Every student has a <span className="text-brand-lime">moment</span> where they realize what they're capable of.
+                Every student has a <span className="text-brand-red">moment</span> where they realize what they're capable of.
               </h1>
 
               <p className="text-white/80 font-sans text-base sm:text-lg leading-[1.6] max-w-2xl">
@@ -155,7 +142,7 @@ export default function HomePage() {
               <span className="hidden sm:inline text-white/40">•</span>
               <span className="flex items-center gap-1.5">
                 <Trophy className="h-4 w-4 text-white" />
-                Global Championship Stage
+                Global Final Stage
               </span>
             </div>
           </div>
@@ -171,9 +158,9 @@ export default function HomePage() {
               {/* Left Column — Image */}
               <div className="lg:col-span-5 w-full">
                 <ScrollReveal direction="right" delay={0.1}>
-                  <div className="relative shadow-xl mb-6 lg:mb-0">
+                  <div className="relative aspect-[4/5] shadow-xl mb-6 lg:mb-0 w-full">
                     <Image 
-                      src="/images/IMG_20260720_114530_719.jpg.jpeg" 
+                      src="/images/EMC-global-winner.jpeg" 
                       alt="EMC Global Winner" 
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
@@ -186,7 +173,7 @@ export default function HomePage() {
                         <Trophy className="h-5 w-5 text-brand-gold" />
                       </div>
                       <div>
-                        <span className="text-[10px] font-extrabold font-display text-brand-green uppercase tracking-widest block">
+                        <span className="text-[10px] font-extrabold font-display text-brand-red uppercase tracking-widest block">
                           Championship Spotlight
                         </span>
                         <span className="font-display font-extrabold text-xs sm:text-sm text-brand-dark tracking-tight block">
@@ -202,7 +189,7 @@ export default function HomePage() {
               <div className="lg:col-span-7 flex flex-col lg:pl-6">
                 {/* Header */}
                 <ScrollReveal delay={0.2} className="text-left mb-12">
-                  <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-green uppercase">
+                  <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-red uppercase">
                     About Elizalde Mathematics Competition
                   </span>
                   <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark mt-3 tracking-tight leading-[1.12]">
@@ -285,6 +272,7 @@ export default function HomePage() {
         {/* ──────────────────────────────────────────────────────────────────
             11. FAQ SECTION — Split Layout (Reference Pattern #7)
             ────────────────────────────────────────────────────────────────── */}
+        <PartnersSection />
         <FAQSection />
 
         {/* ──────────────────────────────────────────────────────────────────
@@ -349,72 +337,55 @@ export default function HomePage() {
           14. FOOTER — Social Links Bar + CTA Footer (Reference Pattern #9, #10)
           ────────────────────────────────────────────────────────────────── */}
       {/* Social Links Strip */}
-      <div className="bg-brand-blue border-t border-white/10 py-5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold font-display uppercase tracking-wider text-white/70">
-          <a href="#" className="hover:text-white transition-colors">Facebook</a>
-          <a href="#" className="hover:text-white transition-colors">Twitter</a>
-          <a href="#" className="hover:text-white transition-colors">Instagram</a>
-          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+      <div className="bg-white border-t border-slate-200 py-5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold font-display uppercase tracking-wider text-slate-500">
+          <a href="#" className="hover:text-brand-blue transition-colors">Facebook</a>
+          <a href="#" className="hover:text-brand-blue transition-colors">Twitter</a>
+          <a href="#" className="hover:text-brand-blue transition-colors">Instagram</a>
+          <a href="#" className="hover:text-brand-blue transition-colors">LinkedIn</a>
         </div>
       </div>
 
       {/* Main CTA Footer */}
-      <footer className="relative bg-brand-blue border-t border-white/10 text-white py-16 lg:py-24 overflow-hidden">
-        {/* Subtle Math Formula Texture Background */}
-        <div 
-          className="absolute inset-0 pointer-events-none opacity-20"
-          style={{ 
-            backgroundImage: "url('/math-texture.svg')",
-            backgroundSize: "800px 800px",
-            backgroundRepeat: "repeat",
-            backgroundPosition: "center"
-          }}
-        />
+      <footer className="relative bg-white border-t border-slate-200 text-slate-800 py-16 lg:py-24 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 z-10">
           {/* Large CTA Heading */}
           <div className="mb-16">
-            <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight max-w-2xl">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-dark leading-[1.1] tracking-tight max-w-2xl">
               Together, We Solve.
-              <br />
-              <span className="text-white/70">
-                Just drop us a line —{" "}
-                <a href="mailto:support@emcompetition.org" className="text-brand-lime hover:text-brand-gold transition-colors underline underline-offset-4 decoration-brand-lime/40">
-                  support@emcompetition.org
-                </a>
-              </span>
             </h2>
           </div>
 
           {/* Footer Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start mb-12">
             <div className="md:col-span-4 space-y-4">
-              <div className="flex items-center gap-2.5 text-white">
-                <Logo className="h-8 w-8 text-white" />
-                <span className="font-display font-extrabold text-sm text-white tracking-wide uppercase">
+              <div className="flex items-center gap-3 text-brand-dark">
+                <Logo className="h-10 w-10 text-brand-blue" />
+                <span className="font-display font-extrabold text-base text-brand-dark tracking-wide uppercase">
                   EMC Tournament
                 </span>
               </div>
-              <p className="text-xs text-white/70 leading-relaxed max-w-xs font-sans">
+              <p className="text-sm text-slate-500 leading-relaxed max-w-sm font-sans">
                 The Elizalde Mathematics Competition inspires young thinkers around the world to unlock their scientific and logical potential through real-world team challenges.
               </p>
             </div>
 
-            <div className="md:col-span-2 space-y-3">
-              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-white uppercase">
+            <div className="md:col-span-2 space-y-4">
+              <h5 className="text-sm lg:text-[15px] font-bold font-display tracking-[0.05em] text-brand-dark uppercase">
                 Brackets
               </h5>
-              <ul className="text-xs space-y-2 font-sans text-white/70">
-                <li>Elementary (Grades 4–6)</li>
-                <li>Middle School (Grades 7–9)</li>
-                <li>High School (Grades 10–12)</li>
+              <ul className="text-sm space-y-3 font-sans text-slate-500">
+                <li className="whitespace-nowrap">Elementary (Years 4–6)</li>
+                <li className="whitespace-nowrap">Middle School (Years 7–9)</li>
+                <li className="whitespace-nowrap">High School (Years 10–12)</li>
               </ul>
             </div>
 
-            <div className="md:col-span-2 space-y-3">
-              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-white uppercase">
+            <div className="md:col-span-2 space-y-4">
+              <h5 className="text-sm lg:text-[15px] font-bold font-display tracking-[0.05em] text-brand-dark uppercase">
                 Competitions
               </h5>
-              <ul className="text-xs space-y-2 font-sans text-white/70">
+              <ul className="text-sm space-y-3 font-sans text-slate-500">
                 <li>Pre-Olympiad Conference</li>
                 <li>Math Projects</li>
                 <li>National Round</li>
@@ -422,25 +393,25 @@ export default function HomePage() {
               </ul>
             </div>
 
-            <div className="md:col-span-4 space-y-3">
-              <h5 className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-white uppercase">
+            <div className="md:col-span-4 space-y-4">
+              <h5 className="text-sm lg:text-[15px] font-bold font-display tracking-[0.05em] text-brand-dark uppercase">
                 Registration Help
               </h5>
-              <p className="text-xs text-white/70 leading-relaxed font-sans">
+              <p className="text-sm text-slate-500 leading-relaxed font-sans">
                 Have questions regarding standard paper rosters, exam centers, or timeline extensions?
               </p>
-              <div className="text-xs font-bold text-brand-lime font-sans">
+              <div className="text-sm font-bold text-brand-red font-sans">
                 support@emcompetition.org
               </div>
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-white/10 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+          <div className="pt-8 border-t border-slate-200 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
             <p className="font-sans">© 2026 Elizalde Mathematics Competition. All rights reserved. Together, We Solve.</p>
             <div className="flex gap-6 font-sans">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+              <a href="#" className="hover:text-brand-blue transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-brand-blue transition-colors">Terms of Use</a>
             </div>
           </div>
         </div>

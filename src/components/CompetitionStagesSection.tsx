@@ -60,7 +60,7 @@ export default function CompetitionStagesSection() {
             <StaggerContainer className="flex flex-col gap-6 lg:gap-8">
             
               {/* Stage 1: National Round */}
-              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-lime/50 transition-all">
+              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-blue/50 transition-all">
                 {/* Huge '1' in background */}
                 <div className="absolute -top-10 -right-6 lg:-top-14 lg:-right-8 text-[200px] lg:text-[280px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform group-hover:scale-105">
                   1
@@ -69,7 +69,7 @@ export default function CompetitionStagesSection() {
                 <div className="relative z-10 h-full flex flex-col justify-between">
                   <div className="space-y-6">
                     <div className="flex items-center">
-                      <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-lime/10 text-brand-green px-3 py-1 rounded-none border border-brand-lime/20">
+                      <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-blue/10 text-brand-blue px-3 py-1 rounded-none border border-brand-blue/20">
                         Local Level
                       </span>
                     </div>
@@ -85,7 +85,7 @@ export default function CompetitionStagesSection() {
                     {/* Core Features */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 border-t border-slate-100">
                       <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-lime/10 text-brand-green flex items-center justify-center">
+                        <div className="h-10 w-10 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center">
                           <FileText className="h-5 w-5" />
                         </div>
                         <div>
@@ -95,7 +95,7 @@ export default function CompetitionStagesSection() {
                       </div>
 
                       <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-lime/10 text-brand-green flex items-center justify-center">
+                        <div className="h-10 w-10 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center">
                           <Landmark className="h-5 w-5" />
                         </div>
                         <div>
@@ -108,7 +108,7 @@ export default function CompetitionStagesSection() {
 
                   <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-500 font-semibold font-sans">
                     <span className="text-slate-600">National Qualification Required</span>
-                    <span className="text-brand-green flex items-center gap-1 font-display font-bold uppercase tracking-wider">
+                    <span className="text-brand-red flex items-center gap-1 font-display font-bold uppercase tracking-wider">
                       Feb 22, 2026
                       <ChevronRight className="h-4 w-4" />
                     </span>
@@ -117,7 +117,7 @@ export default function CompetitionStagesSection() {
               </StaggerItem>
 
               {/* Stage 2: Global Round */}
-              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-green/50 transition-all">
+              <StaggerItem className="bg-white/95 backdrop-blur-md rounded-none p-6 lg:p-8 border border-slate-200 shadow-xl relative overflow-hidden group hover:border-brand-red/50 transition-all">
                 {/* Huge '2' in background */}
                 <div className="absolute -top-10 -right-6 lg:-top-14 lg:-right-8 text-[200px] lg:text-[280px] font-display font-bold text-slate-900/[0.03] leading-none pointer-events-none transition-transform group-hover:scale-105">
                   2
@@ -126,7 +126,7 @@ export default function CompetitionStagesSection() {
                 <div className="relative z-10 h-full flex flex-col justify-between">
                   <div className="space-y-6">
                     <div className="flex items-center">
-                      <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-green/10 text-brand-green px-3 py-1 rounded-none border border-brand-green/20">
+                      <span className="text-[10px] lg:text-[11px] font-bold font-display uppercase bg-brand-red/10 text-brand-red px-3 py-1 rounded-none border border-brand-red/20">
                         International
                       </span>
                     </div>
@@ -142,7 +142,7 @@ export default function CompetitionStagesSection() {
                     {/* Core Features */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 border-t border-slate-100">
                       <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-green/10 text-brand-green flex items-center justify-center">
+                        <div className="h-10 w-10 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
                           <Users className="h-5 w-5" />
                         </div>
                         <div>
@@ -152,7 +152,7 @@ export default function CompetitionStagesSection() {
                       </div>
 
                       <div className="space-y-3">
-                        <div className="h-10 w-10 rounded-none bg-brand-green/10 text-brand-green flex items-center justify-center">
+                        <div className="h-10 w-10 rounded-none bg-brand-red/10 text-brand-red flex items-center justify-center">
                           <Globe className="h-5 w-5" />
                         </div>
                         <div>
@@ -165,7 +165,7 @@ export default function CompetitionStagesSection() {
 
                   <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-500 font-semibold font-sans">
                     <span className="text-slate-600">Invitational Placement only</span>
-                    <span className="text-brand-green flex items-center gap-1 font-display font-bold uppercase tracking-wider">
+                    <span className="text-brand-red flex items-center gap-1 font-display font-bold uppercase tracking-wider">
                       May 15-18, 2026
                       <ChevronRight className="h-4 w-4" />
                     </span>

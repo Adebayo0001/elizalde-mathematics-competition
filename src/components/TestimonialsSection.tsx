@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface Testimonial {
@@ -63,7 +64,7 @@ export default function TestimonialsSection() {
         
         {/* Centered Header (Reference Pattern #4) */}
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
-          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-green uppercase">
+          <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-red uppercase">
             Testimonials
           </span>
           <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
@@ -88,64 +89,41 @@ export default function TestimonialsSection() {
 
         {/* Carousel Cards Container */}
         <div className="relative max-w-4xl mx-auto px-4 md:px-12">
-          {/* Single Card Carousel for both Desktop and Mobile */}
-          <ScrollReveal className="rounded-none p-8 md:p-12 bg-white border border-brand-green/30 shadow-xl flex flex-col justify-between text-center min-h-[300px]">
-            <div className="space-y-6 flex-grow flex flex-col justify-center">
-              <div className="flex justify-center gap-1">
-                {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-brand-gold text-brand-gold" />
-                ))}
-              </div>
-              <p className="font-sans text-[16px] md:text-[18px] leading-[1.75] text-slate-700 italic max-w-2xl mx-auto">
-                "{testimonials[activeIndex].quote}"
-              </p>
-            </div>
-            <div className="pt-8 border-t border-slate-100 mt-8 space-y-1">
-              <h4 className="font-display font-semibold text-[16px] md:text-[18px] text-brand-dark">
-                {testimonials[activeIndex].author}
-              </h4>
-              <p className="text-sm font-sans font-medium text-slate-500">
-                {testimonials[activeIndex].role}
-              </p>
-              <p className="text-[11px] font-bold font-display uppercase tracking-wider text-brand-green mt-2">
-                {testimonials[activeIndex].location}
-              </p>
-            </div>
+          {/* Sliding Carousel */}
+          <ScrollReveal className="relative overflow-hidden min-h-[300px]">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={activeIndex}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="w-full flex flex-col justify-between text-center px-4"
+              >
+                <div className="space-y-6 flex-grow flex flex-col justify-center">
+                  <div className="flex justify-center gap-1">
+                    {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-brand-gold text-brand-gold" />
+                    ))}
+                  </div>
+                  <p className="font-sans text-[16px] md:text-[18px] leading-[1.75] text-slate-700 italic max-w-2xl mx-auto">
+                    "{testimonials[activeIndex].quote}"
+                  </p>
+                </div>
+                <div className="pt-8 mt-8 space-y-1">
+                  <h4 className="font-display font-semibold text-[16px] md:text-[18px] text-brand-dark uppercase">
+                    {testimonials[activeIndex].author}
+                  </h4>
+                  <p className="text-sm font-sans font-medium text-slate-500">
+                    {testimonials[activeIndex].role}
+                  </p>
+                  <p className="text-[11px] font-bold font-display uppercase tracking-wider text-brand-red mt-2">
+                    {testimonials[activeIndex].location}
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </ScrollReveal>
-
-          {/* Navigation Arrows */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 md:left-4 z-10 hidden md:block">
-            <button
-              onClick={goPrev}
-              className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-md"
-            >
-              <ChevronLeft className="h-5 w-5 md:h-6 md:w-6 text-slate-600" />
-            </button>
-          </div>
-          <div className="absolute top-1/2 -translate-y-1/2 right-0 md:right-4 z-10 hidden md:block">
-            <button
-              onClick={goNext}
-              className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-md"
-            >
-              <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-slate-600" />
-            </button>
-          </div>
-          
-          {/* Mobile Arrows positioned below the card */}
-          <div className="md:hidden flex items-center justify-center gap-6 mt-6">
-            <button
-              onClick={goPrev}
-              className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-sm"
-            >
-              <ChevronLeft className="h-5 w-5 text-slate-600" />
-            </button>
-            <button
-              onClick={goNext}
-              className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-green/10 hover:border-brand-green/30 transition-all cursor-pointer shadow-sm"
-            >
-              <ChevronRight className="h-5 w-5 text-slate-600" />
-            </button>
-          </div>
         </div>
 
         {/* Dot Pagination (Reference Pattern) */}
@@ -156,7 +134,7 @@ export default function TestimonialsSection() {
               onClick={() => goTo(idx)}
               className={`rounded-none transition-all duration-300 cursor-pointer ${
                 activeIndex === idx
-                  ? "h-3 w-3 bg-brand-green dot-active"
+                  ? "h-3 w-3 bg-brand-red dot-active"
                   : "h-2.5 w-2.5 bg-slate-300 hover:bg-slate-400"
               }`}
               aria-label={`Go to testimonial ${idx + 1}`}

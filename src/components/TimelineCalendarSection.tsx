@@ -49,7 +49,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Global Finalists",
     icon: <Trophy className="h-5 w-5" />,
     badge: "Tentative Date",
-    imageAccent: "/images/IMG_20260720_114456_569.jpg.jpeg"
+    imageAccent: "/images/Young Master Challenge-13.jpg.jpeg"
   },
 ];
 
@@ -73,7 +73,7 @@ export default function TimelineCalendarSection() {
           <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight leading-[1.12]">
             The Olympiad Roadmap — EMC 2026
           </h2>
-          <div className="h-1.5 w-12 bg-brand-lime mx-auto mt-6 rounded-none" />
+          <div className="h-1.5 w-12 bg-brand-red mx-auto mt-6 rounded-none" />
           <p className="font-sans mt-6 text-sm sm:text-base leading-[1.6] text-slate-600">
             A comprehensive milestone tracker for both teachers coordinating groups and students training for their moment on the world stage.
           </p>
@@ -82,7 +82,7 @@ export default function TimelineCalendarSection() {
         {/* Timeline Container */}
         <div className="relative max-w-5xl mx-auto">
           {/* The Center Line (hidden on mobile, centered on md+) */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-brand-lime/30 -ml-px" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-brand-red/30 -ml-px" />
 
           <StaggerContainer className="space-y-16 lg:space-y-24">
             {timelineEvents.map((event, index) => {
@@ -90,17 +90,17 @@ export default function TimelineCalendarSection() {
                 <StaggerItem key={index} className="relative flex flex-col md:flex-row items-stretch justify-between w-full group">
                   
                   {/* The Timeline Node (Center dot) */}
-                  <div className="absolute left-6 md:left-1/2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-none bg-white border-2 border-brand-lime shadow-md shadow-brand-lime/20 -translate-x-1/2 flex items-center justify-center z-20 group-hover:scale-125 transition-transform duration-500">
-                    <div className="w-2.5 h-2.5 rounded-none bg-brand-lime animate-pulse" />
+                  <div className="absolute left-6 md:left-1/2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-none bg-white border-2 border-brand-red shadow-md shadow-brand-red/20 -translate-x-1/2 flex items-center justify-center z-20 group-hover:scale-125 transition-transform duration-500">
+                    <div className="w-2.5 h-2.5 rounded-none bg-brand-red animate-pulse" />
                   </div>
 
                   {/* Left Side: Event Cards Aligned */}
                   <div className="w-full pl-16 md:pl-0 md:w-[45%] md:pr-12 md:text-right flex flex-col items-start md:items-end">
-                    <div className="bg-white rounded-none p-6 sm:p-8 border border-slate-200 shadow-xl hover:shadow-2xl hover:border-brand-lime/50 transition-all duration-300 w-full h-full relative overflow-hidden text-left flex flex-col justify-center">
-                      <div className="absolute top-0 right-0 w-24 h-24 bg-brand-lime/5 rounded-none -mr-4 -mt-4 transform rotate-12 pointer-events-none" />
+                    <div className="bg-white rounded-none p-6 sm:p-8 border border-slate-200 shadow-xl hover:shadow-2xl hover:border-brand-blue/50 transition-all duration-300 w-full h-full relative overflow-hidden text-left flex flex-col justify-center">
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-brand-red/5 rounded-none -mr-4 -mt-4 transform rotate-12 pointer-events-none" />
                       
                       <div className="space-y-3 relative z-10">
-                        <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-lime/10 text-brand-green px-2.5 py-1 rounded-none border border-brand-lime/20 mb-1">
+                        <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-blue/10 text-brand-blue px-2.5 py-1 rounded-none border border-brand-blue/20 mb-1">
                           {event.badge}
                         </span>
                         <div className="text-slate-900 font-display font-bold text-xl sm:text-2xl tracking-tight">
@@ -108,10 +108,10 @@ export default function TimelineCalendarSection() {
                         </div>
                         
                         <div className="flex items-center gap-3 pt-2">
-                          <div className="text-brand-green bg-brand-lime/10 p-2 rounded-none border border-brand-lime/20">
+                          <div className="text-brand-blue bg-brand-blue/10 p-2 rounded-none border border-brand-blue/20">
                             {event.icon}
                           </div>
-                          <h3 className="font-display font-semibold text-lg sm:text-xl text-brand-dark group-hover:text-brand-green transition-colors tracking-tight leading-[1.2]">
+                          <h3 className="font-display font-semibold text-lg sm:text-xl text-brand-dark group-hover:text-brand-blue transition-colors tracking-tight leading-[1.2]">
                             {event.title}
                           </h3>
                         </div>
@@ -121,7 +121,7 @@ export default function TimelineCalendarSection() {
                         </p>
 
                         <div className="pt-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold text-slate-500 font-sans">
-                          <span className="text-brand-green">Target Audience:</span>
+                          <span className="text-brand-red">Target Audience:</span>
                           <span className="bg-slate-50 px-2 py-0.5 rounded-none text-slate-600 border border-slate-200">{event.audience}</span>
                         </div>
                       </div>

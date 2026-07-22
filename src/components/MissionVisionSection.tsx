@@ -17,7 +17,7 @@ export default function MissionVisionSection() {
             <div className="rounded-none overflow-hidden shadow-xl relative z-[1]">
               <div className="aspect-[3/4] lg:aspect-[3/4]">
                 <Image
-                  src="/images/IMG_20260720_114534_965.jpg.jpeg"
+                  src="/images/about-section.jpeg"
                   alt="Elizalde Mathematics Competition students"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -81,7 +81,7 @@ export default function MissionVisionSection() {
             {/* Vision Text */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-none bg-brand-gold/10 text-brand-gold flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 rounded-none bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0">
                   <Eye className="h-5 w-5" />
                 </div>
                 <h3 className="font-display font-semibold text-[17px] lg:text-[18px] text-brand-dark tracking-tight">
@@ -99,8 +99,8 @@ export default function MissionVisionSection() {
                 <Award className="h-4 w-4 text-brand-blue" />
                 <span>Inspiring Logical Excellence</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-display font-bold uppercase tracking-wider text-brand-gold">
-                <Award className="h-4 w-4 text-brand-gold" />
+              <div className="flex items-center gap-2 text-xs font-display font-bold uppercase tracking-wider text-brand-red">
+                <Award className="h-4 w-4 text-brand-red" />
                 <span>A Borderless Academic Network</span>
               </div>
             </div>

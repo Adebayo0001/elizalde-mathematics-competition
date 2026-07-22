@@ -146,7 +146,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-6"
                 >
-                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-none bg-brand-green/10 text-brand-green mb-4 ring-8 ring-brand-green/5">
+                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-none bg-brand-red/10 text-brand-red mb-4 ring-8 ring-brand-red/5">
                     <CheckCircle2 className="h-10 w-10" />
                   </div>
                   <h4 className="font-display font-bold text-2xl text-brand-dark mb-2">

@@ -51,21 +51,13 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
       {/* Navbar */}
       <header className="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Logo className="h-12 w-12" />
-            <div className="leading-none">
-              <span className="font-display font-extrabold text-lg text-brand-dark tracking-tight block">
-                EMC 2026
-              </span>
-              <span className="text-[10px] font-bold font-display text-brand-blue uppercase tracking-widest block mt-0.5">
-                Mathematics Competition
-              </span>
-            </div>
+          <Link href="/" className="flex items-center focus:outline-none">
+            <Logo className="h-14 w-48 sm:h-16 sm:w-56" />
           </Link>
 
           <Link
             href="/news"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-brand-blue font-display transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 font-display"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Newsroom</span>
@@ -76,7 +68,7 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-12 lg:py-20 space-y-8">
         {/* Category Tag */}
-        <div className="inline-flex items-center gap-2 text-xs font-semibold text-brand-green uppercase tracking-wider font-display">
+        <div className="inline-flex items-center gap-2 text-xs font-semibold text-brand-red uppercase tracking-wider font-display">
           <Tag className="w-3.5 h-3.5" />
           <span>{article.tag}</span>
         </div>
@@ -97,7 +89,7 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
             <span>{article.readTime}</span>
           </div>
           <div className="flex items-center gap-1.5 font-medium text-slate-700">
-            <User className="w-4 h-4 text-brand-green" />
+            <User className="w-4 h-4 text-brand-red" />
             <span>
               {article.author.name} — <span className="text-slate-400">{article.author.role}</span>
             </span>
@@ -117,15 +109,15 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
 
         {/* Key Takeaways */}
         {article.keyTakeaways && article.keyTakeaways.length > 0 && (
-          <div className="p-6 bg-white border-l-4 border-brand-green shadow-sm space-y-3">
+          <div className="p-6 bg-white border-l-4 border-brand-red shadow-sm space-y-3">
             <h4 className="font-display font-bold text-xs uppercase tracking-wider text-brand-dark flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-brand-green" />
+              <CheckCircle className="w-4 h-4 text-brand-red" />
               Key Takeaways
             </h4>
             <ul className="space-y-2 text-sm text-slate-700 font-sans">
               {article.keyTakeaways.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-brand-green mt-2 shrink-0" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-red mt-2 shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}

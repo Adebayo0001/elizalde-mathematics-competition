@@ -46,16 +46,8 @@ export default function NewsPage() {
           ────────────────────────────────────────────────────────────────── */}
       <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-            <Logo className="h-12 w-12 group-hover:rotate-6 transition-transform duration-300" />
-            <div className="leading-none">
-              <span className="font-display font-extrabold text-lg text-brand-dark tracking-tight block">
-                EMC 2026
-              </span>
-              <span className="text-[10px] font-bold font-display text-brand-blue uppercase tracking-widest block mt-0.5">
-                Mathematics Competition
-              </span>
-            </div>
+          <Link href="/" className="flex items-center focus:outline-none">
+            <Logo className="h-14 w-48 sm:h-16 sm:w-56" />
           </Link>
 
           <div className="flex items-center gap-6">
@@ -89,7 +81,7 @@ export default function NewsPage() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-lime uppercase">
+            <div className="inline-flex items-center gap-2 text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-red uppercase">
               <Newspaper className="w-4 h-4" />
               <span>Official Newsroom & Publications</span>
             </div>
@@ -127,7 +119,7 @@ export default function NewsPage() {
                   sizes="(max-width: 1024px) 100vw, 60vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-4 left-4 bg-brand-green text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 shadow-md">
+                <span className="absolute top-4 left-4 bg-brand-red text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 shadow-md">
                   {featuredArticle.tag}
                 </span>
               </div>
@@ -146,7 +138,7 @@ export default function NewsPage() {
                     </div>
                   </div>
 
-                  <h2 className="font-display font-bold text-2xl lg:text-3xl text-brand-dark group-hover:text-brand-green transition-colors leading-[1.2]">
+                  <h2 className="font-display font-bold text-2xl lg:text-3xl text-brand-dark group-hover:text-brand-blue transition-colors leading-[1.2]">
                     {featuredArticle.title}
                   </h2>
 
@@ -155,7 +147,7 @@ export default function NewsPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-bold text-brand-blue group-hover:text-brand-green uppercase tracking-wider font-display">
+                <div className="pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-bold text-brand-blue group-hover:text-brand-blue uppercase tracking-wider font-display">
                   <span>Read Full Featured Story</span>
                   <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -228,7 +220,7 @@ export default function NewsPage() {
               <article
                 key={article.id}
                 onClick={() => setActiveArticle(article)}
-                className="group bg-white border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-green/40 transition-all duration-300 flex flex-col h-full cursor-pointer"
+                className="group bg-white border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-red/40 transition-all duration-300 flex flex-col h-full cursor-pointer"
               >
                 {/* Image Container with Fixed Height & Cover */}
                 <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100 shrink-0">
@@ -239,7 +231,7 @@ export default function NewsPage() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-4 left-4 bg-brand-green text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 shadow-md">
+                  <span className="absolute top-4 left-4 bg-brand-red text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 shadow-md">
                     {article.tag}
                   </span>
                 </div>
@@ -258,7 +250,7 @@ export default function NewsPage() {
                       </div>
                     </div>
 
-                    <h3 className="font-display font-semibold text-lg lg:text-xl text-brand-dark group-hover:text-brand-green transition-colors line-clamp-2 leading-[1.25]">
+                    <h3 className="font-display font-semibold text-lg lg:text-xl text-brand-dark group-hover:text-brand-blue transition-colors line-clamp-2 leading-[1.25]">
                       {article.title}
                     </h3>
 
@@ -267,7 +259,7 @@ export default function NewsPage() {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-dark group-hover:text-brand-green transition-colors font-display mt-6">
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-dark group-hover:text-brand-blue transition-colors font-display mt-6">
                     <span>Read Article</span>
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </div>
