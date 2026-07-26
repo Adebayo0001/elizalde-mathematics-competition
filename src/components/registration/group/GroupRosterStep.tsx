@@ -13,8 +13,8 @@ type Props = {
 };
 
 const inputClass =
-  "w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all text-sm";
-const labelClass = "text-[10px] font-bold font-display uppercase tracking-widest text-brand-dark block mb-1";
+  "w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all text-sm placeholder:text-slate-400 placeholder:font-light text-slate-700";
+const labelClass = "text-[10px] font-medium font-sans uppercase tracking-wider text-slate-500 block mb-1";
 
 function PassportUpload({
   file,
@@ -139,7 +139,7 @@ export default function GroupRosterStep({ students, category, updateStudents, on
             {/* Card header */}
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 bg-brand-dark text-white flex items-center justify-center text-xs font-bold font-display">
+                <div className="w-6 h-6 bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display">
                   {idx + 1}
                 </div>
                 <span className="text-sm font-bold font-display uppercase tracking-widest text-brand-dark">
