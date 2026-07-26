@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { RegistrationData } from "../../app/register/page";
+import { RegistrationData } from "./types";
 import { PaystackButton } from "react-paystack";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -12,8 +12,8 @@ type Props = {
 export default function PaymentStep({ formData, onBack }: Props) {
   const [paymentStatus, setPaymentStatus] = useState<"pending" | "success" | "error">("pending");
 
-  // Registration fee placeholder (e.g. 50,000 NGN)
-  const registrationFee = 50000;
+  // Registration fee: ₦7,000 per student
+  const registrationFee = 7000;
   
   // Paystack config
   // Replace with actual public key from environment variables in production
@@ -53,7 +53,7 @@ export default function PaymentStep({ formData, onBack }: Props) {
     return (
       <div className="text-center py-12 animate-in zoom-in duration-500">
         <div className="w-24 h-24 bg-brand-red/10 text-brand-red rounded-none flex items-center justify-center mx-auto mb-6">
-          <CheckCircle2 className="w-12 h-12" />
+          <CheckCircle2 className="w-12 h-12 text-brand-red" />
         </div>
         <h2 className="text-3xl font-display font-bold text-brand-dark mb-4">Registration Complete!</h2>
         <p className="text-slate-600 font-sans max-w-md mx-auto mb-8 leading-relaxed">

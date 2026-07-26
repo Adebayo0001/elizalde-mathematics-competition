@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { RegistrationData } from "../../app/register/page";
+import { RegistrationData } from "./types";
 import { Upload } from "lucide-react";
 
 type Props = {

@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   ArrowRight,
   CheckCircle2,
@@ -15,6 +16,7 @@ import {
   Brain,
   Target,
   Play,
+  Loader2,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -36,6 +38,14 @@ import NewsSection from "../components/NewsSection";
 import PartnersSection from "../components/PartnersSection";
 
 export default function HomePage() {
+  const router = useRouter();
+  const [isRegisterLoading, setIsRegisterLoading] = useState(false);
+
+  const handleRegisterClick = () => {
+    if (isRegisterLoading) return;
+    setIsRegisterLoading(true);
+    router.push("/register");
+  };
 
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-brand-dark antialiased selection:bg-brand-blue/10 selection:text-brand-blue scroll-smooth">
@@ -73,13 +83,22 @@ export default function HomePage() {
 
           {/* Header CTA Button */}
           <div>
-            <Link
-              href="/register"
+            <button
+              type="button"
+              onClick={handleRegisterClick}
+              disabled={isRegisterLoading}
               id="nav-register-btn"
-              className="px-6 py-2.5 bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer"
+              className="px-6 py-2.5 bg-brand-blue hover:bg-brand-blue/90 disabled:opacity-80 disabled:cursor-wait text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer inline-flex items-center justify-center gap-2 min-w-[7.5rem]"
             >
-              Register
-            </Link>
+              {isRegisterLoading ? (
+                <>
+                  <Loader2 className="h-4 w-4 animate-spin text-white" />
+                  Loading...
+                </>
+              ) : (
+                "Register"
+              )}
+            </button>
           </div>
         </div>
       </header>
@@ -314,14 +333,25 @@ export default function HomePage() {
             </p>
 
             <div className="pt-4">
-              <Link
-                href="/register"
+              <button
+                type="button"
+                onClick={handleRegisterClick}
+                disabled={isRegisterLoading}
                 id="cta-register-school-btn"
-                className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-brand-blue font-bold rounded-none text-base transition-all shadow-lg shadow-black/10 inline-flex items-center justify-center gap-2 group focus:ring-4 focus:ring-white/30 cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 disabled:opacity-80 disabled:cursor-wait text-brand-blue font-bold rounded-none text-base transition-all shadow-lg shadow-black/10 inline-flex items-center justify-center gap-2 group focus:ring-4 focus:ring-white/30 cursor-pointer min-w-[10rem]"
               >
-                Register
-                <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
+                {isRegisterLoading ? (
+                  <>
+                    <Loader2 className="h-5 w-5 animate-spin text-brand-blue" />
+                    Loading...
+                  </>
+                ) : (
+                  <>
+                    Register
+                    <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform text-brand-blue" />
+                  </>
+                )}
+              </button>
             </div>
 
             {/* Verification Tag */}
