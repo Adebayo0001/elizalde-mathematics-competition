@@ -70,3 +70,29 @@
 
 **Key decisions made:**
 - Opted to use standard `react-router-dom` over a framework like Next.js since the app was already built with Vite. Centralized form state in the parent `RegistrationPage.tsx` component to make it easy to persist later.
+
+**Date/Time:** 2026-07-26T09:45:00+01:00
+**Phase ID:** Unplanned Change - Registration Icon Branding & Homepage Register Loading
+**State:** `c:\Users\user\Desktop\3-elizalde-mathematics-competition - Copy` (branch: `feature/ui-updates`, commit: `d9c7dd3`)
+
+**What was completed:**
+- Set a global default Lucide icon color to brand blue in `src/index.css` so icons no longer inherit black/dark text by default.
+- Updated the Individual registration card icon container on `/register` from `bg-brand-dark` to `bg-brand-blue`, with explicit white icon styling.
+- Removed black hover state on the Group registration card icon (`group-hover:bg-brand-dark` → `group-hover:bg-brand-red/90`).
+- Added explicit `text-white` / `text-inherit` / `text-brand-red` overrides on registration flow icons (progress steps, back arrows, success states).
+- Added a loading state to both homepage Register CTAs (nav header + closing CTA): spinner, disabled button, and `router.push('/register')` via shared handler.
+
+**How this aligns with the general plan:**
+- Improves registration UX polish and brand consistency ahead of the full Paystack/backend integration phase.
+- Aligns iconography with EMC brand guidelines (blue primary, no default black icons).
+
+**Pending items:**
+- Paystack public key still uses test placeholder in `PaymentStep.tsx`.
+- Backend/database persistence for registration submissions remains outstanding.
+
+**Environment changes:**
+- None
+
+**Key decisions made:**
+- Used a global `.lucide { color: var(--color-brand-blue) }` rule with Tailwind `text-*` overrides on icons that must remain white, red, gold, or inherit from parent links — avoids per-file black-icon fixes across the entire app.
+- Shared a single `isRegisterLoading` state between both homepage Register buttons so either click shows consistent loading feedback during navigation.

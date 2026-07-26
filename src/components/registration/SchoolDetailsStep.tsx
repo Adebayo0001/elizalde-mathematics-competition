@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { RegistrationData } from "../../app/register/page";
+import { RegistrationData } from "./types";
 
 type Props = {
   data: RegistrationData["school"];

@@ -31,7 +31,7 @@ const timelineEvents: CalendarEvent[] = [
     audience: "Teachers & Coordinators",
     icon: <ShieldAlert className="h-5 w-5" />,
     badge: "Critical Deadline",
-    imageAccent: "/images/IMG_20260720_114426_250.jpg.jpeg"
+    imageAccent: "/images/IMG_20260720_114502_765.jpg.jpeg"
   },
   {
     date: "May 08, 2027",

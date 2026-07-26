@@ -60,6 +60,11 @@
   animation: dot-pulse 1.8s ease-in-out infinite;
 }
 
+/* Lucide icons default to brand blue — override with text-* utilities where needed */
+.lucide {
+  color: var(--color-brand-blue);
+}
+
 /* Smooth scroll for the whole page */
 html {
   scroll-behavior: smooth;
