@@ -21,14 +21,6 @@ const faqData: FAQItem[] = [
   {
     question: "Are scientific calculators permitted during exams?",
     answer: "No. Calculators are prohibited during the National Written Round to evaluate fundamental deductive arithmetic and pure geometric calculations. However, in the Global Finals Stage, computer-aided mathematical modeling software is authorized during Team Project presentations.",
-  },
-  {
-    question: "How are the paper exam packets securely delivered?",
-    answer: "Upon full school registration and roster locking, standard physical paper exam packets are shipped internationally via registered courier. These packets arrive sealed and must only be opened on exam day under direct proctor supervision.",
-  },
-  {
-    question: "What international awards and credentials do qualifiers earn?",
-    answer: "Outstanding National Round achievers receive regional certification badges, certificates of honor, and direct invitation credentials. Global Finalists compete for world-recognized gold, silver, and bronze championship medals, team trophies, and STEM scholarship access.",
   }
 ];
 
