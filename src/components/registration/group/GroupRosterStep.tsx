@@ -122,20 +122,11 @@ export default function GroupRosterStep({ students, category, updateStudents, on
     <form onSubmit={handleSubmit} className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-display font-bold text-brand-dark mb-1">Student Roster</h2>
+          <h2 className="text-2xl font-display font-bold text-brand-dark mb-1">Group Registration</h2>
           <p className="text-sm text-slate-500 font-sans">
             Add each student&apos;s details. All students compete in the{" "}
             <span className="font-semibold text-brand-dark">{category}</span> category.
           </p>
-        </div>
-        <div className="flex-shrink-0 text-right">
-          <div className="text-xs font-bold font-display uppercase tracking-widest text-slate-400">Total</div>
-          <div className="text-2xl font-display font-extrabold text-brand-blue">
-            ₦{total.toLocaleString()}
-          </div>
-          <div className="text-[10px] text-slate-400">
-            {students.length} student{students.length !== 1 ? "s" : ""} × ₦{REGISTRATION_FEE.toLocaleString()}
-          </div>
         </div>
       </div>
 

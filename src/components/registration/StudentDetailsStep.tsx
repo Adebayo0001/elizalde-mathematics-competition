@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Camera, Upload, Check, AlertCircle, User } from 'lucide-react';
 import { RegistrationData } from "./types";
 import DobSelector from "./DobSelector";
 
@@ -17,9 +18,12 @@ export default function StudentDetailsStep({ data, updateData, onNext }: Props) 
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div>
-        <h2 className="text-2xl font-display font-bold text-brand-dark mb-2">Student Details</h2>
-        <p className="text-sm text-slate-500 font-sans">Please provide the candidate's personal information.</p>
+      <div className="bg-brand-blue/5 border-l-4 border-brand-blue p-6 mb-8">
+        <h2 className="text-2xl font-display font-bold text-brand-dark mb-2 flex items-center gap-2">
+          <User className="w-6 h-6 text-brand-blue" />
+          Student Details
+        </h2>
+        <p className="text-sm text-slate-600 font-sans">Please provide the candidate's personal information accurately. This will be used for all official competition correspondence and certificates.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

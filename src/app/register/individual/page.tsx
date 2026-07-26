@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Check } from "lucide-react";
 
 import StudentDetailsStep from "../../../components/registration/StudentDetailsStep";
 import SchoolDetailsStep from "../../../components/registration/SchoolDetailsStep";
@@ -98,7 +98,7 @@ export default function IndividualRegistrationPage() {
                       step >= s.id ? "bg-brand-blue text-white" : "bg-slate-200 text-slate-400"
                     }`}
                   >
-                    {step > s.id ? <CheckCircle2 className="w-5 h-5 text-white" /> : s.id}
+                    {step > s.id ? <Check className="w-5 h-5 text-white" strokeWidth={3} /> : s.id}
                   </div>
                   <span
                     className={`text-[10px] font-bold font-display uppercase tracking-widest absolute -bottom-6 w-24 text-center ${
