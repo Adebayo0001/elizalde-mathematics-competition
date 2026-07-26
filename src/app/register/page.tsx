@@ -43,21 +43,14 @@ export default function RegistrationTypePage() {
                 <User className="w-7 h-7 !text-white" />
               </div>
               <h2 className="text-xl font-display font-bold text-brand-dark mb-2 tracking-tight">
-                Individual Student
+                Individual Registration
               </h2>
               <p className="text-sm text-slate-500 font-sans leading-relaxed mb-6">
                 Register one student. Complete their personal details, school
                 information, and competition category before proceeding to
                 payment.
               </p>
-              <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                <span className="text-xs font-bold font-display uppercase tracking-widest text-slate-400">
-                  Registration Fee
-                </span>
-                <span className="text-lg font-display font-extrabold text-brand-blue">
-                  ₦7,000
-                </span>
-              </div>
+
             </Link>
 
             {/* Group */}
@@ -72,17 +65,10 @@ export default function RegistrationTypePage() {
                 Group Registration
               </h2>
               <p className="text-sm text-slate-500 font-sans leading-relaxed mb-6">
-                Register 2 or more students from the same school in one
+                Register 2 to 4 students from the same school in one
                 submission. One payment covers the entire group.
               </p>
-              <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                <span className="text-xs font-bold font-display uppercase tracking-widest text-slate-400">
-                  Per Student
-                </span>
-                <span className="text-lg font-display font-extrabold text-brand-red">
-                  ₦7,000 / student
-                </span>
-              </div>
+
             </Link>
           </div>
         </div>

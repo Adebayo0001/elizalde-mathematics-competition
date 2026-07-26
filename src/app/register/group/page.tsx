@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Check } from "lucide-react";
 import dynamic from "next/dynamic";
 
 import GroupSchoolStep from "../../../components/registration/group/GroupSchoolStep";
@@ -21,7 +21,6 @@ const initialData: GroupRegistrationData = {
     phone: "",
     email: "",
     altEmail: "",
-    residentialAddress: "",
   },
   competition: {
     category: "",
@@ -93,7 +92,7 @@ export default function GroupRegistrationPage() {
                       step >= s.id ? "bg-brand-red text-white" : "bg-slate-200 text-slate-400"
                     }`}
                   >
-                    {step > s.id ? <CheckCircle2 className="w-5 h-5 text-white" /> : s.id}
+                    {step > s.id ? <Check className="w-5 h-5 text-white" strokeWidth={3} /> : s.id}
                   </div>
                   <span
                     className={`text-[10px] font-bold font-display uppercase tracking-widest absolute -bottom-6 w-24 text-center ${

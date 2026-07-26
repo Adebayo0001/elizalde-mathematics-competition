@@ -18,7 +18,6 @@ export type GroupRegistrationData = {
     phone: string;
     email: string;
     altEmail: string;
-    residentialAddress: string;
   };
   competition: {
     category: string;
