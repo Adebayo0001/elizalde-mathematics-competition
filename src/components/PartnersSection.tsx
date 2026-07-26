@@ -44,6 +44,14 @@ export default function PartnersSection() {
                     className="object-contain"
                   />
                 </div>
+                <div className="relative h-24 w-48 sm:h-32 sm:w-64">
+                  <Image
+                    src="/images/partner.jpeg"
+                    alt="New Partner"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
             ))}
           </div>
