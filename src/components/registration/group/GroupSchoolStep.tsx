@@ -65,12 +65,7 @@ export default function GroupSchoolStep({ data, updateData, onNext, onBack }: Pr
             placeholder="admin@school.edu" />
         </div>
 
-        <div className="space-y-2">
-          <label className={labelClass}>Coordinator&apos;s Residential Address</label>
-          <input required type="text" className={inputClass} value={data.residentialAddress}
-            onChange={(e) => updateData({ residentialAddress: e.target.value })}
-            placeholder="Coordinator's home address" />
-        </div>
+
       </div>
 
       <div className="pt-6 flex justify-between items-center">

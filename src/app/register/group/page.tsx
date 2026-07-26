@@ -21,7 +21,6 @@ const initialData: GroupRegistrationData = {
     phone: "",
     email: "",
     altEmail: "",
-    residentialAddress: "",
   },
   competition: {
     category: "",
