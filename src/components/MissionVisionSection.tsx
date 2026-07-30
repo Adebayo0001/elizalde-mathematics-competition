@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Compass, Eye, Award } from "lucide-react";
+import { Compass, Eye, Award, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "./ui/ScrollReveal";
 
@@ -17,7 +17,7 @@ export default function MissionVisionSection() {
             <div className="rounded-none overflow-hidden shadow-xl relative z-[1]">
               <div className="aspect-[3/4] lg:aspect-[3/4]">
                 <Image
-                  src="/images/about-section.jpeg"
+                  src="/images/EMC-global-winner.jpeg"
                   alt="Elizalde Mathematics Competition students"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -26,21 +26,20 @@ export default function MissionVisionSection() {
               </div>
             </div>
 
-            {/* Smaller overlapping image (Logo) — bottom-right offset */}
-            <motion.div 
-              animate={{ y: [0, -15, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -bottom-6 -right-4 lg:-bottom-8 lg:-right-8 w-[40%] sm:w-[35%] lg:w-[30%] rounded-full bg-white overflow-hidden shadow-2xl border-4 border-white z-[2] aspect-square flex items-center justify-center"
-            >
-              <Image
-                src="https://scontent-lis1-1.xx.fbcdn.net/v/t39.30808-6/457328701_809259274749009_6911267050332238021_n.jpg?stp=dst-jpg_tt6&cstp=mx800x600&ctp=s800x600&_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF0hH4pGY0TKz-AgHnaBc5NUfjhA2ens89R-OEDZ6ezz9WI0wQ8O-R6-U_qmt87jkpX3S-OgoKZj_lDTms187fs&_nc_ohc=wGqlvuWqL3IQ7kNvwFb-WKz&_nc_oc=AdrMBVZbKNQ15d7VxgE9K4gkHYovynwkl_d-6Jr5nWngNhP6xZBIvdujzyZ6a7fxqKGlij3Y6OoMWJIb79ekSdHm&_nc_zt=23&_nc_ht=scontent-lis1-1.xx&_nc_gid=gLnLqLsgubnM2qEEP-owZQ&_nc_ss=7d2a8&oh=00_AQAmeys63sLzx_DIp2b6qf0TKaiCCXHIQ0eT3QKuCbaHzg&oe=6A61D051"
-                alt="Elizalde Mathematics Competition Logo"
-                fill
-                sizes="(max-width: 1024px) 40vw, 30vw"
-                className="object-contain"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
+            {/* Floating High-Contrast White Glass Card */}
+            <div className="absolute -bottom-5 -right-2 sm:-right-4 bg-white/95 backdrop-blur-md text-brand-dark p-3.5 sm:p-4 border-l-4 border-brand-gold shadow-2xl border border-slate-200/80 flex items-center gap-3.5 z-20">
+              <div className="h-10 w-10 bg-brand-blue text-white flex items-center justify-center shrink-0 shadow-md">
+                <Trophy className="h-5 w-5 text-brand-gold" />
+              </div>
+              <div>
+                <span className="text-[10px] font-extrabold font-display text-brand-red uppercase tracking-widest block">
+                  Championship Spotlight
+                </span>
+                <span className="font-display font-extrabold text-xs sm:text-sm text-brand-dark tracking-tight block">
+                  EMC UK Global Winners 2026
+                </span>
+              </div>
+            </div>
 
             {/* Brand badge floating on images */}
             <div className="absolute bottom-4 left-4 lg:bottom-8 lg:left-6 h-14 w-14 rounded-none bg-brand-blue text-white flex items-center justify-center shadow-xl z-[3]">

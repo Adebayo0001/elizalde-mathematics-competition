@@ -14,8 +14,8 @@ const participatingCountries: CountryItem[] = [
   { name: "Singapore", region: "Asia-Pacific", code: "sg" },
   { name: "Japan", region: "Asia-Pacific", code: "jp" },
   { name: "South Korea", region: "Asia-Pacific", code: "kr" },
-  { name: "United Kingdom", region: "Europe", code: "gb" },
-  { name: "United States", region: "North America", code: "us" },
+  { name: "UK", region: "Europe", code: "gb" },
+  { name: "US", region: "North America", code: "us" },
   { name: "Canada", region: "North America", code: "ca" },
   { name: "Germany", region: "Europe", code: "de" },
   { name: "Ukraine", region: "Europe", code: "ua" },
@@ -57,13 +57,13 @@ export default function ParticipatingCountriesSection() {
             {participatingCountries.map((country, idx) => (
               <div
                 key={idx}
-                className="bg-brand-bg rounded-none p-4 border border-slate-200/50 hover:border-brand-blue/30 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between group h-24"
+                className="bg-brand-bg rounded-none p-4 border border-slate-200/50 hover:border-brand-blue/30 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col items-start text-left justify-between group h-24 w-full"
               >
                 <img 
                   src={`https://flagcdn.com/w40/${country.code}.png`} 
                   srcSet={`https://flagcdn.com/w80/${country.code}.png 2x`}
                   alt={`${country.name} flag`}
-                  className="h-4 w-auto rounded-none -[2px] shadow-sm group-hover:scale-110 transition-all duration-300" 
+                  className="h-5 w-auto object-contain self-start rounded-[2px] shadow-sm group-hover:scale-110 transition-all duration-300" 
                 />
                 <div>
                   <h4 className="font-display font-semibold text-[13px] lg:text-[14px] text-brand-dark leading-tight">

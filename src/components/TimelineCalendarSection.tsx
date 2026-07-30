@@ -5,13 +5,17 @@ import { Calendar, Users, Award, ShieldAlert, Sparkles, Trophy, BookOpen, Lightb
 import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface CalendarEvent {
-  date: string;
+  date: React.ReactNode;
   title: string;
   description: string;
   audience: string;
   icon: React.ReactNode;
-  badge: string;
+  badge?: string;
   imageAccent?: string;
+  link?: {
+    text: string;
+    url: string;
+  };
 }
 
 const timelineEvents: CalendarEvent[] = [
@@ -43,13 +47,21 @@ const timelineEvents: CalendarEvent[] = [
     imageAccent: "/images/IMG_20260720_114441_329.jpg.jpeg"
   },
   {
-    date: "Aug 2–9, 2027 (Tentative)",
-    title: "London Final",
+    date: (
+      <span className="block leading-[1.3]">
+        17-24 July, 2027 <span className="text-[14px] font-sans font-medium text-slate-500 lowercase">or</span><br />
+        2-9 August, 2027
+      </span>
+    ),
+    title: "London Global Finals",
     description: "The main international stage. Finalists gather in London for the written championship, cooperative math defense projects, and world medals.",
     audience: "Global Finalists",
     icon: <Trophy className="h-5 w-5" />,
-    badge: "Tentative Date",
-    imageAccent: "/images/Young Master Challenge-13.jpg.jpeg"
+    imageAccent: "/images/Young Master Challenge-13.jpg.jpeg",
+    link: {
+      text: "Register for London Global Finals",
+      url: "https://www.youngmaster.org/register/global-final-registration-london/"
+    }
   },
 ];
 
@@ -100,9 +112,11 @@ export default function TimelineCalendarSection() {
                       <div className="absolute top-0 right-0 w-24 h-24 bg-brand-red/5 rounded-none -mr-4 -mt-4 transform rotate-12 pointer-events-none" />
                       
                       <div className="space-y-3 relative z-10">
-                        <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-blue/10 text-brand-blue px-2.5 py-1 rounded-none border border-brand-blue/20 mb-1">
-                          {event.badge}
-                        </span>
+                        {event.badge && (
+                          <span className="inline-block text-[10px] font-bold font-display uppercase bg-brand-blue/10 text-brand-blue px-2.5 py-1 rounded-none border border-brand-blue/20 mb-1">
+                            {event.badge}
+                          </span>
+                        )}
                         <div className="text-slate-900 font-display font-bold text-xl sm:text-2xl tracking-tight">
                           {event.date}
                         </div>
@@ -124,6 +138,22 @@ export default function TimelineCalendarSection() {
                           <span className="text-brand-red">Target Audience:</span>
                           <span className="bg-slate-50 px-2 py-0.5 rounded-none text-slate-600 border border-slate-200">{event.audience}</span>
                         </div>
+
+                        {event.link && (
+                          <div className="pt-4 mt-2 border-t border-slate-100">
+                            <a 
+                              href={event.link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 bg-brand-red text-white px-5 py-2.5 rounded text-sm font-semibold hover:bg-brand-red/90 transition-all hover:-translate-y-0.5 shadow-md shadow-brand-red/20"
+                            >
+                              {event.link.text}
+                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                              </svg>
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

@@ -127,4 +127,82 @@ export const newsArticles: NewsItem[] = [
       conclusion: "Congratulations to all qualifying schools and students advancing to the London Global Finals!",
     },
   },
+  {
+    id: "national-awards-ceremony-nigeria",
+    slug: "national-awards-ceremony-nigeria",
+    title: "National Awards Ceremony – Nigeria",
+    excerpt: "The ceremony celebrated the hard work and success of the participants alongside official airline partners Air Peace Limited.",
+    date: "August 10, 2025",
+    tag: "Announcements",
+    imageUrl: "/images/update_3_1.jpeg",
+    author: {
+      name: "EMC Team",
+      role: "Global Operations",
+    },
+    readTime: "2 min read",
+    featured: false,
+    content: {
+      intro: "The National Awards Ceremony for Nigeria participants brought together qualifiers from the National Rounds, their teachers, school directors, and our official airline partners – Air Peace Limited.",
+      sections: [
+        {
+          heading: "Celebrating Success",
+          body: "The ceremony celebrated the hard work and success of the participants, recognizing their journey from the National Rounds to the prestigious London Global Finals.",
+        },
+      ],
+    },
+  },
+  {
+    id: "london-finals-2025",
+    slug: "london-finals-2025",
+    title: "London Finals 2025",
+    excerpt: "The EMC London Finals are organized in partnership with our Global Affiliate Partner, Young Masters Challenge (YMC).",
+    date: "July 15, 2025",
+    tag: "Global Finals",
+    imageUrl: "/images/update_2.jpeg",
+    author: {
+      name: "EMC Team",
+      role: "Global Operations",
+    },
+    readTime: "2 min read",
+    featured: false,
+    content: {
+      intro: "The EMC London Finals are organized in partnership with our Global Affiliate Partner, Young Masters Challenge (YMC). YMC serves as the Head Organizer of the London Finals, bringing together top talents from across the globe.",
+      sections: [
+        {
+          heading: "Showcasing Mathematical Excellence",
+          body: "Qualifiers from the EMC National Rounds proudly participated in the YMC London Finals, competing on an international stage and showcasing their mathematical excellence.",
+        },
+      ],
+    },
+  },
+  {
+    id: "emc-2025-national-round-london-finals",
+    slug: "emc-2025-national-round-london-finals",
+    title: "EMC 2025 National Round, the road to the LONDON Global Finals",
+    excerpt: "On May 3rd, 2025, Nigeria proudly hosted its 5th National Rounds (Written Questions) with over 300 students in attendance.",
+    date: "May 3, 2025",
+    tag: "Announcements",
+    imageUrl: "/images/update_1.jpeg",
+    author: {
+      name: "EMC Team",
+      role: "Global Operations",
+    },
+    readTime: "3 min read",
+    featured: false,
+    keyTakeaways: [
+      "Nigeria hosted its 5th National Rounds with over 300 students.",
+      "The event took place at Bright Sun College, Ikeja, Lagos.",
+      "Successful participants earned their spot at the prestigious EMC Global Finals in London."
+    ],
+    content: {
+      intro: "The Elizalde Mathematics Competition National Rounds are held annually across all participating countries. On May 3rd, 2025, Nigeria proudly hosted its 5th National Rounds (Written Questions) with over 300 students in attendance.",
+      sections: [
+        {
+          heading: "Official Qualification Round",
+          body: "The event took place at Bright Sun College, Ikeja, Lagos, where students competed in challenging written questions that served as the official qualification round for the EMC Olympiad.",
+        },
+      ],
+      conclusion: "Successful participants from this round earned their spot at the prestigious EMC Global Finals in London, where they will compete with top qualifiers from around the world.",
+    },
+  }
 ];

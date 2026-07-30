@@ -71,11 +71,11 @@ const medalistsData: Medalist[] = [
   { name: "Munachimso Chukwurah", award: "Bronze Medalist", category: "Honey Bee", country: "Nigeria" },
   { name: "Omowonuola Olaleye", award: "Bronze Medalist", category: "Honey Bee", country: "Nigeria" },
 
-  // Bloom Bee
-  { name: "Oluwadamilare Olakunde", award: "Silver Medalist", category: "Bloom Bee", country: "Nigeria" },
-  { name: "Ibukunoluwa Mimiko", award: "Bronze Medalist", category: "Bloom Bee", country: "Nigeria" },
-  { name: "Daniel Fasehun", award: "Bronze Medalist", category: "Bloom Bee", country: "Nigeria" },
-  { name: "Marzooq Oladipo", award: "London Medalist", category: "Bloom Bee", country: "Nigeria" },
+  // Bumblebee
+  { name: "Oluwadamilare Olakunde", award: "Silver Medalist", category: "Bumblebee", country: "Nigeria" },
+  { name: "Ibukunoluwa Mimiko", award: "Bronze Medalist", category: "Bumblebee", country: "Nigeria" },
+  { name: "Daniel Fasehun", award: "Bronze Medalist", category: "Bumblebee", country: "Nigeria" },
+  { name: "Marzooq Oladipo", award: "London Medalist", category: "Bumblebee", country: "Nigeria" },
 ];
 
 export default function MedalistsSection() {
@@ -104,7 +104,7 @@ export default function MedalistsSection() {
 
         {/* Category Filters */}
         <ScrollReveal className="flex flex-wrap items-center justify-center gap-3 border-b border-slate-100 pb-8 mb-10">
-          {["Little Bee", "Honey Bee", "Bloom Bee"].map((category) => (
+          {["Little Bee", "Honey Bee", "Bumblebee"].map((category) => (
             <button
               key={category}
               onClick={() => {

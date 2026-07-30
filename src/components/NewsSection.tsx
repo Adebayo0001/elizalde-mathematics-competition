@@ -19,23 +19,12 @@ export default function NewsSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-red uppercase mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
               <span>News & Updates</span>
             </div>
             <h2 className="font-display font-bold text-2xl lg:text-4xl text-brand-dark tracking-tight leading-[1.15]">
               Latest News & Competition Announcements
             </h2>
             <div className="h-1.5 w-12 bg-brand-red mt-4 rounded-none" />
-          </div>
-
-          <div>
-            <Link
-              href="/news"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-brand-blue hover:bg-brand-dark text-white text-xs font-semibold uppercase tracking-widest transition-colors font-display group shadow-sm"
-            >
-              <span>View All News & Updates</span>
-              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform text-white" />
-            </Link>
           </div>
         </div>
 
@@ -96,6 +85,17 @@ export default function NewsSection() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* View All Link (placed after the 3rd update) */}
+        <div className="mt-8 flex justify-end">
+          <Link
+            href="/news"
+            className="group inline-flex items-center gap-2 text-[13px] font-semibold font-display tracking-[0.08em] text-brand-dark hover:text-brand-blue uppercase transition-colors"
+          >
+            <span>View All News & Updates</span>
+            <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
 
