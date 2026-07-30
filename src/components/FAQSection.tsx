@@ -46,7 +46,7 @@ export default function FAQSection() {
 
             {/* Section Header — left-aligned */}
             <ScrollReveal className="space-y-3">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-brand-dark tracking-tight leading-[1.12]">
+              <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
                 Frequently Asked Questions
               </h2>
             </ScrollReveal>

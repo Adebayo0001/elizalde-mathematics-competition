@@ -21,7 +21,7 @@ export default function NewsSection() {
             <div className="inline-flex items-center gap-2 text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-red uppercase mb-2">
               <span>News & Updates</span>
             </div>
-            <h2 className="font-display font-bold text-2xl lg:text-4xl text-brand-dark tracking-tight leading-[1.15]">
+            <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
               Latest News & Competition Announcements
             </h2>
             <div className="h-1.5 w-12 bg-brand-red mt-4 rounded-none" />

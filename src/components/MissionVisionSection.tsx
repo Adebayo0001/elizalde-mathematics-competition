@@ -53,7 +53,7 @@ export default function MissionVisionSection() {
               <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-blue uppercase block">
                 Vision & Mission
               </span>
-              <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark tracking-tight leading-[1.12]">
+              <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
                 Beyond Exams
               </h2>
             </div>

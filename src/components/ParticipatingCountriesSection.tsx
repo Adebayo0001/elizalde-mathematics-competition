@@ -39,7 +39,7 @@ export default function ParticipatingCountriesSection() {
               <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-blue uppercase block">
                 Global Scale
               </span>
-              <h2 className="font-display font-semibold text-[26px] lg:text-[36px] text-brand-dark tracking-tight leading-[1.15]">
+              <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
                 EMC Participating Countries Around the Globe
               </h2>
               <div className="h-1.5 w-12 bg-brand-blue rounded-none " />

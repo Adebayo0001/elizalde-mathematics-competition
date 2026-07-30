@@ -121,7 +121,7 @@ const SamplePapersSection = () => {
           <span className="inline-block px-3 py-1 bg-brand-red/10 text-brand-red font-display font-bold uppercase tracking-wider text-[10px] sm:text-xs mb-4 rounded-none">
             Practice Materials
           </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight mb-5 leading-[1.1]">
+          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
             Download Sample Papers
           </h2>
           <p className="text-slate-600 font-sans text-base sm:text-lg leading-[1.7] max-w-2xl mx-auto">
@@ -129,9 +129,9 @@ const SamplePapersSection = () => {
           </p>
         </ScrollReveal>
 
-        {/* 3-Column Tabs on a single line */}
+        {/* Category Filters */}
         <ScrollReveal direction="up" delay={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10 max-w-4xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-3 border-b border-slate-100 pb-8 mb-10 max-w-4xl mx-auto">
             {paperCategories.map((category) => {
               const isActive = activeTab === category.id;
               return (
@@ -141,18 +141,13 @@ const SamplePapersSection = () => {
                     setActiveTab(category.id);
                     setActiveYear(null);
                   }}
-                  className={`flex flex-col items-center justify-center p-4 border rounded-none transition-all duration-300 ${
-                    isActive 
-                      ? 'bg-brand-blue border-brand-blue text-white shadow-md transform -translate-y-1' 
-                      : 'bg-white border-slate-200 text-slate-600 hover:border-brand-blue/30 hover:bg-slate-50'
+                  className={`px-6 py-2.5 rounded-none text-xs sm:text-sm font-bold font-display tracking-widest transition-all cursor-pointer uppercase ${
+                    isActive
+                      ? "bg-brand-blue text-white shadow-md border border-brand-blue"
+                      : "bg-white text-slate-500 border border-slate-200 hover:border-brand-blue/50 hover:text-brand-dark"
                   }`}
                 >
-                  <span className={`font-display font-bold text-lg mb-1 ${isActive ? 'text-white' : 'text-brand-dark'}`}>
-                    {category.name}
-                  </span>
-                  <span className={`font-sans text-xs tracking-wide font-medium ${isActive ? 'text-blue-100' : 'text-slate-500'}`}>
-                    {category.range}
-                  </span>
+                  {category.name} <span className="opacity-75 tracking-normal ml-1 text-[10px] sm:text-[11px] font-medium font-sans normal-case">{category.range}</span>
                 </button>
               );
             })}
@@ -170,17 +165,17 @@ const SamplePapersSection = () => {
                 <div key={yearGroup.year} className="bg-white">
                   <button
                     onClick={() => setActiveYear(isExpanded ? null : yearGroup.year)}
-                    className="w-full flex items-center justify-between p-5 sm:p-6 hover:bg-slate-50 transition-colors focus:outline-none"
+                    className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-slate-50 transition-colors focus:outline-none"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className={`w-10 h-10 rounded-none flex items-center justify-center transition-colors ${isExpanded ? 'bg-brand-blue text-white' : 'bg-brand-blue/10 text-brand-blue'}`}>
-                        <Folder className="w-5 h-5" />
+                    <div className="flex items-center gap-3">
+                      <div className={`w-8 h-8 rounded-none flex items-center justify-center transition-colors ${isExpanded ? 'bg-brand-blue text-white' : 'bg-brand-blue/10 text-brand-blue'}`}>
+                        <Folder className="w-4 h-4" />
                       </div>
                       <div className="text-left">
-                        <h3 className="font-display font-bold text-lg sm:text-xl text-slate-800">
+                        <h3 className="font-display font-bold text-base sm:text-lg text-slate-800 leading-tight">
                           {yearGroup.year}
                         </h3>
-                        <span className="text-xs text-slate-500 font-sans mt-0.5 block">
+                        <span className="text-[11px] sm:text-xs text-slate-500 font-sans mt-0.5 block leading-tight">
                           {yearGroup.files.length} {yearGroup.files.length === 1 ? 'Paper' : 'Papers'}
                         </span>
                       </div>

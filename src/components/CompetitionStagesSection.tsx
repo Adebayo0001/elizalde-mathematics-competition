@@ -22,7 +22,7 @@ export default function CompetitionStagesSection() {
         
         {/* Header Section */}
         <ScrollReveal className="mb-12 lg:mb-16 text-center lg:text-left max-w-2xl">
-          <h2 className="font-display font-semibold text-4xl lg:text-5xl text-slate-900 tracking-tight leading-[1.05] mb-6">
+          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-slate-900 mt-3 tracking-tight leading-[1.12] mb-6">
             The Competition Structure
           </h2>
           <p className="text-slate-600 font-sans text-sm sm:text-base leading-[1.6]">

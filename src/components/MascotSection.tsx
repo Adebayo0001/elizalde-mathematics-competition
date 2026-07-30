@@ -59,7 +59,7 @@ const MascotSection = () => {
                 <span>The Spirit of EMC</span>
               </div>
               
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark mb-5 leading-tight tracking-tight">
+              <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mb-5 tracking-tight leading-[1.12]">
                 Meet <span className="text-brand-blue">Owlbert</span> – <br className="hidden sm:block" />
                 The EMC Mascot!
               </h2>
