@@ -65,11 +65,13 @@
   color: var(--color-brand-blue);
 }
 
-/* Ensure icons on blue backgrounds are white */
+/* Ensure icons on blue or red backgrounds are white */
 .bg-brand-blue .lucide,
 .hover\:bg-brand-blue:hover .lucide,
 .group:hover .group-hover\:bg-brand-blue .lucide,
-.group\/link:hover .group-hover\/link\:bg-brand-blue .lucide {
+.group\/link:hover .group-hover\/link\:bg-brand-blue .lucide,
+.bg-brand-red .lucide,
+.hover\:bg-brand-red:hover .lucide {
   color: white !important;
 }
 

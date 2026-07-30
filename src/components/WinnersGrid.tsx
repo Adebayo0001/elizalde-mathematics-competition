@@ -47,7 +47,7 @@ export default function WinnersGrid() {
           <span className="text-xs font-bold font-display tracking-widest text-brand-gold uppercase">
             Global Elite
           </span>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-dark mt-2 tracking-tight">
+          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
             Global Finals Winners
           </h2>
           <div className="h-1.5 w-12 bg-brand-gold mx-auto mt-4 rounded-none " />

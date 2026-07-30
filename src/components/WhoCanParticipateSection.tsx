@@ -37,7 +37,7 @@ export default function WhoCanParticipateSection() {
           <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-blue uppercase">
             Eligibility
           </span>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-brand-dark mt-3 tracking-tight leading-[1.12]">
+          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
             Who Can Participate
           </h2>
           <div className="h-1.5 w-12 bg-brand-blue mx-auto mt-4 rounded-none" />

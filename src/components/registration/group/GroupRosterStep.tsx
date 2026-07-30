@@ -180,8 +180,8 @@ export default function GroupRosterStep({ students, category, updateStudents, on
             </div>
 
             {/* Details row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-              <div className="col-span-2 md:col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
                 <label className={labelClass}>Date of Birth</label>
                 <DobSelector 
                   value={student.dob}

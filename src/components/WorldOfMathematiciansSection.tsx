@@ -182,7 +182,7 @@ export default function WorldOfMathematiciansSection() {
           <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.15em] text-brand-blue uppercase">
             Official Honor Roll
           </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-dark mt-3 tracking-tight leading-[1.12]">
+          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
             Wall of Mathematicians
           </h2>
           <div className="h-1.5 w-12 bg-brand-blue mx-auto mt-4 rounded-none" />

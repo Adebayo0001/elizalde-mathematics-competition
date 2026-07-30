@@ -11,7 +11,7 @@ export default function StudentStorySection() {
           <span className="text-[11px] lg:text-[12px] font-semibold font-display tracking-[0.08em] text-brand-red uppercase">
             A Student's Story
           </span>
-          <h2 className="font-display font-semibold text-[26px] lg:text-[36px] text-brand-dark mt-2 tracking-tight leading-[1.15]">
+          <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mt-3 tracking-tight leading-[1.12]">
             "I didn't know I was good at this until EMC."
           </h2>
         </div>
