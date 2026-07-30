@@ -21,6 +21,7 @@ import {
 import { motion } from "framer-motion";
 
 import Logo from "../components/Logo";
+import MascotSection from "../components/MascotSection";
 import MissionVisionSection from "../components/MissionVisionSection";
 import ImpactSection from "../components/ImpactSection";
 import CompetitionStagesSection from "../components/CompetitionStagesSection";
@@ -36,6 +37,8 @@ import { ScrollReveal } from "../components/ui/ScrollReveal";
 import WhoCanParticipateSection from "../components/WhoCanParticipateSection";
 import NewsSection from "../components/NewsSection";
 import PartnersSection from "../components/PartnersSection";
+import SamplePapersSection from "../components/SamplePapersSection";
+import GlobalHeader from "../components/GlobalHeader";
 
 export default function HomePage() {
   const router = useRouter();
@@ -52,56 +55,7 @@ export default function HomePage() {
       {/* ──────────────────────────────────────────────────────────────────
           1. NAVIGATION HEADER
           ────────────────────────────────────────────────────────────────── */}
-      <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          {/* Brand/Logo */}
-          <a href="#" className="flex items-center focus:outline-none">
-            <Logo className="h-14 w-48 sm:h-16 sm:w-56" />
-          </a>
-
-          {/* Desktop Nav Links */}
-          <nav className="hidden xl:flex items-center gap-8 text-[15px] font-semibold font-display tracking-wide text-slate-700">
-            <a href="#about" className="hover:text-brand-blue transition-colors">
-              About
-            </a>
-
-            <a href="#roadmap" className="hover:text-brand-blue transition-colors">
-              Roadmap
-            </a>
-            <a href="#wall-of-mathematicians" className="hover:text-brand-blue transition-colors">
-              Spotlight
-            </a>
-
-            <Link href="/news" className="hover:text-brand-blue transition-colors">
-              News & Updates
-            </Link>
-
-            <a href="#faq" className="hover:text-brand-blue transition-colors">
-              FAQ
-            </a>
-          </nav>
-
-          {/* Header CTA Button */}
-          <div>
-            <button
-              type="button"
-              onClick={handleRegisterClick}
-              disabled={isRegisterLoading}
-              id="nav-register-btn"
-              className="px-6 py-2.5 bg-brand-blue hover:bg-brand-blue/90 disabled:opacity-80 disabled:cursor-wait text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer inline-flex items-center justify-center gap-2 min-w-[7.5rem]"
-            >
-              {isRegisterLoading ? (
-                <>
-                  <Loader2 className="h-4 w-4 animate-spin text-white" />
-                  Loading...
-                </>
-              ) : (
-                "Register"
-              )}
-            </button>
-          </div>
-        </div>
-      </header>
+      <GlobalHeader />
 
       <main>
         {/* ──────────────────────────────────────────────────────────────────
@@ -177,29 +131,14 @@ export default function HomePage() {
               {/* Left Column — Image */}
               <div className="lg:col-span-5 w-full">
                 <ScrollReveal direction="right" delay={0.1}>
-                  <div className="relative aspect-[4/5] shadow-xl mb-6 lg:mb-0 w-full">
+                  <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-slate-50 flex items-center justify-center p-8 mb-6 lg:mb-0 w-full shadow-lg rounded-none">
                     <Image 
-                      src="/images/EMC-global-winner.jpeg" 
-                      alt="EMC Global Winner" 
+                      src="/images/Elizade-logo.png" 
+                      alt="Elizalde Mathematics Competition Logo" 
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
+                      className="object-contain p-12"
                     />
-
-                    {/* Floating High-Contrast White Glass Card */}
-                    <div className="absolute -bottom-5 left-4 sm:-left-5 bg-white/95 backdrop-blur-md text-brand-dark p-3.5 sm:p-4 border-l-4 border-brand-gold shadow-2xl border border-slate-200/80 flex items-center gap-3.5 z-20">
-                      <div className="h-10 w-10 bg-brand-blue text-white flex items-center justify-center shrink-0 shadow-md">
-                        <Trophy className="h-5 w-5 text-brand-gold" />
-                      </div>
-                      <div>
-                        <span className="text-[10px] font-extrabold font-display text-brand-red uppercase tracking-widest block">
-                          Championship Spotlight
-                        </span>
-                        <span className="font-display font-extrabold text-xs sm:text-sm text-brand-dark tracking-tight block">
-                          EMC UK Global Winner 2026
-                        </span>
-                      </div>
-                    </div>
                   </div>
                 </ScrollReveal>
               </div>
@@ -216,17 +155,42 @@ export default function HomePage() {
                   </h2>
                   <div className="text-slate-500 font-sans mt-5 text-sm sm:text-base leading-[1.6] space-y-4 text-justify">
                     <p>
-                      The Elizalde Mathematics Competition (EMC) is an International math contest dedicated to engaging students in the beauty and power of mathematics. Founded on the principles of academic excellence and inclusivity, EMC is designed to spark curiosity, challenge young minds, and cultivate a lifelong interest in mathematics across diverse student communities.
+                      The Elizalde Mathematics Competition (EMC) is an international math contest dedicated to engaging students in the beauty and power of mathematics. Founded on academic excellence and inclusivity, it challenges young minds and cultivates a lifelong passion for problem-solving across diverse communities.
                     </p>
                     <p>
-                      More than just a competition, EMC serves as a developmental platform that encourages participants to think critically, solve problems creatively, and apply logical reasoning to real-world scenarios. Through a series of thoughtfully curated rounds, students are exposed to stimulating mathematical challenges that deepen their understanding and stretch their intellectual capabilities.
+                      More than a competition, EMC is a developmental platform for critical thinking. Through curated rounds, participants at all levels stretch their intellectual capabilities, build resilience, and join a vibrant global community of aspiring mathematicians.
                     </p>
-                    <p>
-                      Whether students are just beginning their mathematical journey or already excelling at advanced levels, EMC offers an enriching experience that promotes growth, resilience, and innovation. By participating, students not only gain recognition on a global stage but also join a vibrant community of aspiring mathematicians who are passionate about learning and discovery.
-                    </p>
-                    <p className="font-medium text-brand-dark">
-                      Join thousands of students across the globe. Compete. Learn. Excel.
-                    </p>
+                    <div className="mt-8 pt-8 border-t border-slate-100">
+                      <p className="font-medium text-brand-dark mb-6">
+                        Join thousands of students across the globe:
+                      </p>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {/* Compete */}
+                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col items-start transition-all hover:shadow-md hover:-translate-y-1">
+                          <div className="h-10 w-10 rounded-xl mb-4 flex items-center justify-center bg-brand-red/10 text-brand-red">
+                            <Target className="h-5 w-5" />
+                          </div>
+                          <span className="font-display font-bold text-brand-dark text-lg mb-1">Compete</span>
+                          <span className="text-sm text-slate-500 leading-tight">On a global stage</span>
+                        </div>
+                        {/* Learn */}
+                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col items-start transition-all hover:shadow-md hover:-translate-y-1">
+                          <div className="h-10 w-10 rounded-xl mb-4 flex items-center justify-center bg-brand-blue/10 text-brand-blue">
+                            <Brain className="h-5 w-5" />
+                          </div>
+                          <span className="font-display font-bold text-brand-dark text-lg mb-1">Learn</span>
+                          <span className="text-sm text-slate-500 leading-tight">Beyond the syllabus</span>
+                        </div>
+                        {/* Excel */}
+                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col items-start transition-all hover:shadow-md hover:-translate-y-1">
+                          <div className="h-10 w-10 rounded-xl mb-4 flex items-center justify-center bg-brand-gold/20 text-brand-dark">
+                            <Trophy className="h-5 w-5" />
+                          </div>
+                          <span className="font-display font-bold text-brand-dark text-lg mb-1">Excel</span>
+                          <span className="text-sm text-slate-500 leading-tight">In future endeavors</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </ScrollReveal>
 
@@ -241,6 +205,11 @@ export default function HomePage() {
             4. MISSION & VISION SECTION — Stacked Images + Text
             ────────────────────────────────────────────────────────────────── */}
         <MissionVisionSection />
+
+        {/* ──────────────────────────────────────────────────────────────────
+            4a. MASCOT SECTION
+            ────────────────────────────────────────────────────────────────── */}
+        <MascotSection />
 
         {/* ──────────────────────────────────────────────────────────────────
             4a. WHO CAN PARTICIPATE SECTION
@@ -292,6 +261,7 @@ export default function HomePage() {
             11. FAQ SECTION — Split Layout (Reference Pattern #7)
             ────────────────────────────────────────────────────────────────── */}
         <PartnersSection />
+        <SamplePapersSection />
         <FAQSection />
 
         {/* ──────────────────────────────────────────────────────────────────
@@ -329,7 +299,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-slate-100 font-sans text-sm sm:text-base leading-[1.6] max-w-xl mx-auto">
-              Registration for EMC 2026 is officially open. Coordinate teams of 3–4 students across Elementary, Middle, or High School categories.
+              Registration for EMC 2027 is officially open. Coordinate teams of 3–4 students across Elementary, Middle, or High School categories.
             </p>
 
             <div className="pt-4">
@@ -343,11 +313,11 @@ export default function HomePage() {
                 {isRegisterLoading ? (
                   <>
                     <Loader2 className="h-5 w-5 animate-spin text-brand-blue" />
-                    Loading...
+                    <span>Loading...</span>
                   </>
                 ) : (
                   <>
-                    Register
+                    <span>Register</span>
                     <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform text-brand-blue" />
                   </>
                 )}
@@ -367,12 +337,23 @@ export default function HomePage() {
           14. FOOTER — Social Links Bar + CTA Footer (Reference Pattern #9, #10)
           ────────────────────────────────────────────────────────────────── */}
       {/* Social Links Strip */}
-      <div className="bg-white border-t border-slate-200 py-5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-8 text-xs font-semibold font-display uppercase tracking-wider text-slate-500">
-          <a href="#" className="hover:text-brand-blue transition-colors">Facebook</a>
-          <a href="#" className="hover:text-brand-blue transition-colors">Twitter</a>
-          <a href="#" className="hover:text-brand-blue transition-colors">Instagram</a>
-          <a href="#" className="hover:text-brand-blue transition-colors">LinkedIn</a>
+      <div className="bg-white border-t border-slate-200 py-6">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-6 lg:gap-10">
+          <a href="https://www.facebook.com/profile.php?id=100069948300838" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 border border-slate-200 rounded-full text-slate-500 hover:text-[#1877F2] hover:border-[#1877F2] hover:bg-white hover:shadow-md transition-all duration-300 flex items-center justify-center group" aria-label="Facebook">
+            <svg className="w-6 h-6 fill-current transition-colors" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/theelizaldegroup" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 border border-slate-200 rounded-full text-slate-500 hover:text-[#E4405F] hover:border-[#E4405F] hover:bg-white hover:shadow-md transition-all duration-300 flex items-center justify-center group" aria-label="Instagram">
+            <svg className="w-6 h-6 fill-current transition-colors" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/elizalde-mathematics-competition-emc/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 border border-slate-200 rounded-full text-slate-500 hover:text-[#0A66C2] hover:border-[#0A66C2] hover:bg-white hover:shadow-md transition-all duration-300 flex items-center justify-center group" aria-label="LinkedIn">
+            <svg className="w-6 h-6 fill-current transition-colors" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@theemcolympiad" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 border border-slate-200 rounded-full text-slate-500 hover:text-[#FF0000] hover:border-[#FF0000] hover:bg-white hover:shadow-md transition-all duration-300 flex items-center justify-center group" aria-label="YouTube">
+            <svg className="w-6 h-6 fill-current transition-colors" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 border border-slate-200 rounded-full text-slate-500 hover:text-[#25D366] hover:border-[#25D366] hover:bg-white hover:shadow-md transition-all duration-300 flex items-center justify-center group" aria-label="WhatsApp">
+            <svg className="w-6 h-6 fill-current transition-colors" viewBox="0 0 24 24"><path d="M11.996 0a11.967 11.967 0 0 0-10.155 18.35L0 24l5.807-1.521a11.968 11.968 0 1 0 6.189-22.48zM19.066 17.15c-.328.925-1.892 1.774-2.613 1.848-.682.071-1.529.135-4.321-1.025-3.344-1.39-5.501-4.835-5.666-5.056-.164-.22-1.354-1.8-1.354-3.435 0-1.635.848-2.438 1.15-2.753.303-.314.654-.393.872-.393.218 0 .436 0 .622.01.196.01.464-.075.725.556.273.655.939 2.292 1.021 2.457.082.164.136.353.027.573-.109.219-.164.354-.327.546-.164.191-.345.419-.49.563-.164.164-.336.345-.147.671.189.327.844 1.395 1.815 2.26 1.252 1.115 2.302 1.458 2.628 1.611.327.153.518.125.714-.093.196-.219.845-1.023 1.074-1.373.229-.35.458-.292.752-.185.295.107 1.865.88 2.181 1.037.316.157.527.235.603.366.077.13.077.75-.251 1.675z"/></svg>
+          </a>
         </div>
       </div>
 
@@ -405,9 +386,9 @@ export default function HomePage() {
                 Categories
               </h5>
               <ul className="text-sm space-y-3 font-sans text-slate-500">
-                <li className="whitespace-nowrap">Elementary (Years 4–6)</li>
-                <li className="whitespace-nowrap">Middle School (Years 7–9)</li>
-                <li className="whitespace-nowrap">High School (Years 10–12)</li>
+                <li className="whitespace-nowrap">Elementary (Year 4–6)</li>
+                <li className="whitespace-nowrap">Middle School (Year 7–9)</li>
+                <li className="whitespace-nowrap">High School (Year 10–12)</li>
               </ul>
             </div>
 
@@ -420,12 +401,13 @@ export default function HomePage() {
                 <li>Math Projects</li>
                 <li>National Round</li>
                 <li>International Round</li>
+                <li><a href="#sample-papers" className="hover:text-brand-blue transition-colors block mt-3">Sample Papers</a></li>
               </ul>
             </div>
 
             <div className="md:col-span-4 space-y-4">
               <h5 className="text-sm lg:text-[15px] font-bold font-display tracking-[0.05em] text-brand-dark uppercase">
-                Registration Help
+                Do you need our help?
               </h5>
               <p className="text-sm text-slate-500 leading-relaxed font-sans">
                 Have questions regarding standard paper rosters, exam centers, or timeline extensions?

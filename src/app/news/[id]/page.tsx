@@ -14,6 +14,7 @@ import {
 
 import Logo from "../../../components/Logo";
 import { newsArticles } from "../../../data/newsData";
+import GlobalHeader from "../../../components/GlobalHeader";
 
 interface NewsDetailProps {
   params: Promise<{ id: string }>;
@@ -49,21 +50,7 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-brand-dark antialiased">
       {/* Navbar */}
-      <header className="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center focus:outline-none">
-            <Logo className="h-14 w-48 sm:h-16 sm:w-56" />
-          </Link>
-
-          <Link
-            href="/news"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 font-display"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Newsroom</span>
-          </Link>
-        </div>
-      </header>
+      <GlobalHeader />
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-12 lg:py-20 space-y-8">

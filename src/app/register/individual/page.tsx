@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Check } from "lucide-react";
+import GlobalHeader from "../../../components/GlobalHeader";
 
 import StudentDetailsStep from "../../../components/registration/StudentDetailsStep";
 import SchoolDetailsStep from "../../../components/registration/SchoolDetailsStep";
@@ -66,20 +67,7 @@ export default function IndividualRegistrationPage() {
 
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-brand-dark flex flex-col">
-      <header className="bg-brand-bg/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link
-            href="/register"
-            className="flex items-center gap-2 text-sm font-bold font-display uppercase tracking-widest text-slate-500 hover:text-brand-dark transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 text-inherit" />
-            Back
-          </Link>
-          <div className="font-display font-extrabold text-lg text-brand-dark tracking-tight">
-            EMC Olympiad
-          </div>
-        </div>
-      </header>
+      <GlobalHeader />
 
       <main className="flex-grow py-12 px-6">
         <div className="max-w-3xl mx-auto">

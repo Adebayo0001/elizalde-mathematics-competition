@@ -15,6 +15,7 @@ import {
 
 import Logo from "../../components/Logo";
 import { newsArticles, NewsItem } from "../../data/newsData";
+import GlobalHeader from "../../components/GlobalHeader";
 import ArticleModal from "../../components/ArticleModal";
 
 export default function NewsPage() {
@@ -44,30 +45,7 @@ export default function NewsPage() {
       {/* ──────────────────────────────────────────────────────────────────
           1. HEADER NAVBAR
           ────────────────────────────────────────────────────────────────── */}
-      <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center focus:outline-none">
-            <Logo className="h-14 w-48 sm:h-16 sm:w-56" />
-          </Link>
-
-          <div className="flex items-center gap-6">
-            <Link
-              href="/"
-              className="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-brand-blue font-display transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>Back to Home</span>
-            </Link>
-
-            <Link
-              href="/register"
-              className="px-6 py-2.5 bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all shadow-sm"
-            >
-              Register Now
-            </Link>
-          </div>
-        </div>
-      </header>
+      <GlobalHeader />
 
       {/* ──────────────────────────────────────────────────────────────────
           2. HERO BANNER

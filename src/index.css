@@ -65,6 +65,14 @@
   color: var(--color-brand-blue);
 }
 
+/* Ensure icons on blue backgrounds are white */
+.bg-brand-blue .lucide,
+.hover\:bg-brand-blue:hover .lucide,
+.group:hover .group-hover\:bg-brand-blue .lucide,
+.group\/link:hover .group-hover\/link\:bg-brand-blue .lucide {
+  color: white !important;
+}
+
 /* Smooth scroll for the whole page */
 html {
   scroll-behavior: smooth;

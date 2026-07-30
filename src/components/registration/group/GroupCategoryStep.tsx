@@ -35,9 +35,9 @@ export default function GroupCategoryStep({ data, updateData, onNext, onBack }: 
           <select required className={selectClass} value={data.category}
             onChange={(e) => updateData({ category: e.target.value })}>
             <option value="" disabled>Select Category</option>
-            <option value="Elementary">Elementary (Years 4–6)</option>
-            <option value="Middle School">Middle School (Years 7–9)</option>
-            <option value="High School">High School (Years 10–12)</option>
+            <option value="Elementary">Elementary (Year 4–6)</option>
+            <option value="Middle School">Middle School (Year 7–9)</option>
+            <option value="High School">High School (Year 10–12)</option>
           </select>
           {data.category && (
             <p className="text-xs text-brand-blue font-sans mt-1">
