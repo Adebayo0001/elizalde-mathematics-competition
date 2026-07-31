@@ -179,7 +179,7 @@ export default function HomePage() {
                             }
                           }
                         }}
-                        className="flex flex-col sm:flex-row gap-4 sm:gap-10 overflow-hidden pt-4 -mt-4"
+                        className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8 lg:gap-10 overflow-hidden pt-4 -mt-4"
                       >
                         {/* Compete */}
                         <motion.div 
@@ -189,8 +189,8 @@ export default function HomePage() {
                           }}
                           className="flex items-center justify-between sm:justify-start gap-3 group cursor-default w-full sm:w-auto p-4 px-6 sm:p-0 sm:px-0 bg-brand-red/5 sm:bg-transparent rounded-xl sm:rounded-none hover:bg-brand-red/10 sm:hover:bg-transparent transition-colors"
                         >
-                          <span className="font-display font-black text-brand-red text-5xl lg:text-6xl tracking-tight group-hover:scale-105 transition-transform">Compete.</span>
-                          <Calculator className="h-8 w-8 lg:h-10 lg:w-10 text-brand-red opacity-80 group-hover:scale-110 transition-transform" />
+                          <span className="font-display font-black text-brand-red text-4xl sm:text-4xl lg:text-5xl tracking-tight group-hover:scale-105 transition-transform">Compete.</span>
+                          <Calculator className="h-6 w-6 sm:hidden text-brand-red opacity-80 group-hover:scale-110 transition-transform flex-shrink-0" />
                         </motion.div>
                         {/* Learn */}
                         <motion.div 
@@ -200,8 +200,8 @@ export default function HomePage() {
                           }}
                           className="flex items-center justify-between sm:justify-start gap-3 group cursor-default w-full sm:w-auto p-4 px-6 sm:p-0 sm:px-0 bg-brand-blue/5 sm:bg-transparent rounded-xl sm:rounded-none hover:bg-brand-blue/10 sm:hover:bg-transparent transition-colors"
                         >
-                          <span className="font-display font-black text-brand-blue text-5xl lg:text-6xl tracking-tight group-hover:scale-105 transition-transform">Learn.</span>
-                          <Book className="h-8 w-8 lg:h-10 lg:w-10 text-brand-blue opacity-80 group-hover:scale-110 transition-transform" />
+                          <span className="font-display font-black text-brand-blue text-4xl sm:text-4xl lg:text-5xl tracking-tight group-hover:scale-105 transition-transform">Learn.</span>
+                          <Book className="h-6 w-6 sm:hidden text-brand-blue opacity-80 group-hover:scale-110 transition-transform flex-shrink-0" />
                         </motion.div>
                         {/* Excel */}
                         <motion.div 
@@ -211,8 +211,8 @@ export default function HomePage() {
                           }}
                           className="flex items-center justify-between sm:justify-start gap-3 group cursor-default w-full sm:w-auto p-4 px-6 sm:p-0 sm:px-0 bg-brand-gold/5 sm:bg-transparent rounded-xl sm:rounded-none hover:bg-brand-gold/10 sm:hover:bg-transparent transition-colors"
                         >
-                          <span className="font-display font-black text-brand-gold text-5xl lg:text-6xl tracking-tight group-hover:scale-105 transition-transform">Excel.</span>
-                          <Trophy className="h-8 w-8 lg:h-10 lg:w-10 text-brand-gold opacity-80 group-hover:scale-110 transition-transform" />
+                          <span className="font-display font-black text-brand-gold text-4xl sm:text-4xl lg:text-5xl tracking-tight group-hover:scale-105 transition-transform">Excel.</span>
+                          <Trophy className="h-6 w-6 sm:hidden text-brand-gold opacity-80 group-hover:scale-110 transition-transform flex-shrink-0" />
                         </motion.div>
                       </motion.div>
                     </div>
