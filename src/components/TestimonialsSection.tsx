@@ -16,21 +16,21 @@ const testimonials: Testimonial[] = [
   {
     quote: "My experience with EMC was truly an incredible experience. I have been inspired to embrace bigger challenges in Mathematics and be more creative in all aspect of LIFE. Thank YOU, EMC!",
     author: "ALVARO AGHENTA",
-    role: "Student Competitor",
+    role: "Student",
     location: "Nigeria",
     rating: 5,
   },
   {
     quote: "I had a wonderful time at the Elizalde Mathematics Competition, EMC challenge me, helped me learn new things, and improved both my math and presentation skills. It was truly a stimulating experience. I enjoyed being at EMC, and I am looking foward to join again this YEAR!",
     author: "IKECHUKWU OGALA",
-    role: "Student Competitor",
+    role: "Student",
     location: "Nigeria",
     rating: 5,
   },
   {
     quote: "EMC Modelling round was one unforgettable experience at the Elizalde Mathematics Competition series, to my TEAMMATES and our mentor, I believe we all had a wonderful and impactful round. Thank YOU, EMC!",
     author: "Isley George",
-    role: "Student Competitor",
+    role: "Student",
     location: "USA",
     rating: 5,
   }
@@ -116,9 +116,6 @@ export default function TestimonialsSection() {
                   </h4>
                   <p className="text-sm font-sans font-medium text-slate-500">
                     {testimonials[activeIndex].role}
-                  </p>
-                  <p className="text-[11px] font-bold font-display uppercase tracking-wider text-brand-red mt-2">
-                    {testimonials[activeIndex].location}
                   </p>
                 </div>
               </motion.div>

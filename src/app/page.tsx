@@ -124,20 +124,28 @@ export default function HomePage() {
         {/* ──────────────────────────────────────────────────────────────────
             3. ABOUT SECTION — Two Column Layout
             ────────────────────────────────────────────────────────────────── */}
-        <section id="about" className="py-16 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <section id="about" className="py-16 lg:py-28 bg-white relative overflow-hidden group/section">
+          {/* Subtle Interactive Math Elements (Section-wide) */}
+          <div className="absolute top-[10%] left-[5%] text-brand-blue/10 sm:text-brand-blue/20 hover:text-brand-blue/70 transition-colors duration-500 text-7xl font-serif select-none cursor-default animate-float-math">∑</div>
+          <div className="absolute bottom-[15%] left-[3%] text-brand-red/20 hover:text-brand-red/70 transition-colors duration-500 text-8xl font-serif select-none cursor-default animate-float-math-delayed hidden sm:block">π</div>
+          <div className="absolute top-[20%] right-[5%] text-brand-gold/15 sm:text-brand-gold/30 hover:text-brand-gold/80 transition-colors duration-500 text-7xl font-serif select-none cursor-default animate-float-math-slow">∞</div>
+          <div className="absolute bottom-[25%] right-[3%] text-slate-300 hover:text-slate-500 transition-colors duration-500 text-8xl font-serif select-none cursor-default animate-float-math hidden sm:block">∫</div>
+          <div className="absolute top-[50%] left-[45%] text-brand-dark/15 hover:text-brand-dark/50 transition-colors duration-500 text-6xl font-serif select-none cursor-default animate-float-math-delayed hidden lg:block">Δ</div>
+          <div className="absolute top-[75%] left-[35%] text-brand-blue/15 hover:text-brand-blue/60 transition-colors duration-500 text-7xl font-serif select-none cursor-default animate-float-math-slow hidden sm:block">Ω</div>
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
               
               {/* Left Column — Image */}
               <div className="lg:col-span-5 w-full">
                 <ScrollReveal direction="right" delay={0.1}>
-                  <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-slate-50 flex items-center justify-center p-8 mb-6 lg:mb-0 w-full shadow-lg rounded-none">
+                  <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-slate-50 flex items-center justify-center p-8 mb-6 lg:mb-0 w-full shadow-lg rounded-none group">
                     <Image 
-                      src="/images/Elizade-logo.png" 
+                      src="/images/logo-elizalde.png" 
                       alt="Elizalde Mathematics Competition Logo" 
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-contain p-12"
+                      className="object-contain p-12 relative z-10 transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                 </ScrollReveal>
@@ -164,30 +172,21 @@ export default function HomePage() {
                       <p className="font-medium text-brand-dark mb-6">
                         Join thousands of students across the globe:
                       </p>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                      <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
                         {/* Compete */}
-                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col items-start transition-all hover:shadow-md hover:-translate-y-1">
-                          <div className="h-10 w-10 rounded-xl mb-4 flex items-center justify-center bg-brand-red/10 text-brand-red">
-                            <Target className="h-5 w-5" />
-                          </div>
-                          <span className="font-display font-bold text-brand-dark text-lg mb-1">Compete</span>
-                          <span className="text-sm text-slate-500 leading-tight">On a global stage</span>
+                        <div className="flex flex-col items-start group cursor-default">
+                          <span className="font-display font-black text-brand-red text-2xl sm:text-3xl tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">Compete.</span>
+                          <span className="text-sm sm:text-base text-slate-500 font-medium">On a global stage</span>
                         </div>
                         {/* Learn */}
-                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col items-start transition-all hover:shadow-md hover:-translate-y-1">
-                          <div className="h-10 w-10 rounded-xl mb-4 flex items-center justify-center bg-brand-blue/10 text-brand-blue">
-                            <Brain className="h-5 w-5" />
-                          </div>
-                          <span className="font-display font-bold text-brand-dark text-lg mb-1">Learn</span>
-                          <span className="text-sm text-slate-500 leading-tight">Beyond the syllabus</span>
+                        <div className="flex flex-col items-start group cursor-default">
+                          <span className="font-display font-black text-brand-blue text-2xl sm:text-3xl tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">Learn.</span>
+                          <span className="text-sm sm:text-base text-slate-500 font-medium">Beyond the syllabus</span>
                         </div>
                         {/* Excel */}
-                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col items-start transition-all hover:shadow-md hover:-translate-y-1">
-                          <div className="h-10 w-10 rounded-xl mb-4 flex items-center justify-center bg-brand-gold/20 text-brand-dark">
-                            <Trophy className="h-5 w-5" />
-                          </div>
-                          <span className="font-display font-bold text-brand-dark text-lg mb-1">Excel</span>
-                          <span className="text-sm text-slate-500 leading-tight">In future endeavors</span>
+                        <div className="flex flex-col items-start group cursor-default">
+                          <span className="font-display font-black text-brand-gold text-2xl sm:text-3xl tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">Excel.</span>
+                          <span className="text-sm sm:text-base text-slate-500 font-medium">In future endeavors</span>
                         </div>
                       </div>
                     </div>

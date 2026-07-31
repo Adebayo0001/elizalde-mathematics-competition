@@ -216,7 +216,7 @@ export default function WorldOfMathematiciansSection() {
         {selectedYear === "2027 (Upcoming)" ? (
           /* Upcoming 2027 Teaser Card */
           <div className="bg-brand-blue text-white p-8 sm:p-12 lg:p-16 text-center space-y-6 max-w-3xl mx-auto border border-brand-blue/30 shadow-2xl relative overflow-hidden">
-            <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto text-brand-gold font-display font-extrabold text-6xl shadow-inner">
+            <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto text-brand-gold font-display font-extrabold text-4xl sm:text-6xl shadow-inner">
               ?
             </div>
             <div className="space-y-2">

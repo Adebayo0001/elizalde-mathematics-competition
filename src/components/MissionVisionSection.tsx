@@ -36,7 +36,7 @@ export default function MissionVisionSection() {
                   Championship Spotlight
                 </span>
                 <span className="font-display font-extrabold text-xs sm:text-sm text-brand-dark tracking-tight block">
-                  EMC UK Global Winners 2026
+                  EMC UK Global Winner 2026
                 </span>
               </div>
             </div>
