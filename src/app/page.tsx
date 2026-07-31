@@ -11,6 +11,8 @@ import {
   Trophy,
   Users,
   BookOpen,
+  Book,
+  Circle,
   Layers,
   GraduationCap,
   Brain,
@@ -166,23 +168,53 @@ export default function HomePage() {
                       <p className="font-medium text-brand-dark mb-6">
                         Join thousands of students across the globe:
                       </p>
-                      <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
+                      <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        variants={{
+                          visible: {
+                            transition: {
+                              staggerChildren: 0.2
+                            }
+                          }
+                        }}
+                        className="flex flex-col sm:flex-row gap-4 sm:gap-10 overflow-hidden pt-4 -mt-4"
+                      >
                         {/* Compete */}
-                        <div className="flex flex-col items-start group cursor-default">
-                          <span className="font-display font-black text-brand-red text-2xl sm:text-3xl tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">Compete.</span>
-                          <span className="text-sm sm:text-base text-slate-500 font-medium">On a global stage</span>
-                        </div>
+                        <motion.div 
+                          variants={{
+                            hidden: { y: 80, opacity: 0 },
+                            visible: { y: 0, opacity: 1, transition: { type: "spring", bounce: 0.5, duration: 0.8 } }
+                          }}
+                          className="flex items-center justify-between sm:justify-start gap-3 group cursor-default w-full sm:w-auto p-4 px-6 sm:p-0 sm:px-0 bg-brand-red/5 sm:bg-transparent rounded-xl sm:rounded-none hover:bg-brand-red/10 sm:hover:bg-transparent transition-colors"
+                        >
+                          <span className="font-display font-black text-brand-red text-5xl lg:text-6xl tracking-tight group-hover:scale-105 transition-transform">Compete.</span>
+                          <Circle className="h-8 w-8 lg:h-10 lg:w-10 text-brand-red opacity-80 group-hover:scale-110 transition-transform" />
+                        </motion.div>
                         {/* Learn */}
-                        <div className="flex flex-col items-start group cursor-default">
-                          <span className="font-display font-black text-brand-blue text-2xl sm:text-3xl tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">Learn.</span>
-                          <span className="text-sm sm:text-base text-slate-500 font-medium">Beyond the syllabus</span>
-                        </div>
+                        <motion.div 
+                          variants={{
+                            hidden: { y: 80, opacity: 0 },
+                            visible: { y: 0, opacity: 1, transition: { type: "spring", bounce: 0.5, duration: 0.8 } }
+                          }}
+                          className="flex items-center justify-between sm:justify-start gap-3 group cursor-default w-full sm:w-auto p-4 px-6 sm:p-0 sm:px-0 bg-brand-blue/5 sm:bg-transparent rounded-xl sm:rounded-none hover:bg-brand-blue/10 sm:hover:bg-transparent transition-colors"
+                        >
+                          <span className="font-display font-black text-brand-blue text-5xl lg:text-6xl tracking-tight group-hover:scale-105 transition-transform">Learn.</span>
+                          <Book className="h-8 w-8 lg:h-10 lg:w-10 text-brand-blue opacity-80 group-hover:scale-110 transition-transform" />
+                        </motion.div>
                         {/* Excel */}
-                        <div className="flex flex-col items-start group cursor-default">
-                          <span className="font-display font-black text-brand-gold text-2xl sm:text-3xl tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">Excel.</span>
-                          <span className="text-sm sm:text-base text-slate-500 font-medium">In future endeavors</span>
-                        </div>
-                      </div>
+                        <motion.div 
+                          variants={{
+                            hidden: { y: 80, opacity: 0 },
+                            visible: { y: 0, opacity: 1, transition: { type: "spring", bounce: 0.5, duration: 0.8 } }
+                          }}
+                          className="flex items-center justify-between sm:justify-start gap-3 group cursor-default w-full sm:w-auto p-4 px-6 sm:p-0 sm:px-0 bg-brand-gold/5 sm:bg-transparent rounded-xl sm:rounded-none hover:bg-brand-gold/10 sm:hover:bg-transparent transition-colors"
+                        >
+                          <span className="font-display font-black text-brand-gold text-5xl lg:text-6xl tracking-tight group-hover:scale-105 transition-transform">Excel.</span>
+                          <Trophy className="h-8 w-8 lg:h-10 lg:w-10 text-brand-gold opacity-80 group-hover:scale-110 transition-transform" />
+                        </motion.div>
+                      </motion.div>
                     </div>
                   </div>
                 </ScrollReveal>

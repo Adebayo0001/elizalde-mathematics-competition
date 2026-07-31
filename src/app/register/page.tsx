@@ -11,6 +11,24 @@ export default function RegistrationTypePage() {
 
       <main className="flex-grow flex items-center justify-center py-16 px-6">
         <div className="max-w-2xl w-full mx-auto">
+          {/* Breadcrumb */}
+          <nav className="flex mb-8 justify-center" aria-label="Breadcrumb">
+            <ol className="inline-flex items-center space-x-2">
+              <li className="inline-flex items-center">
+                <Link href="/" className="inline-flex items-center text-sm font-semibold text-slate-500 hover:text-brand-blue transition-colors">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Home
+                </Link>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <span className="mx-2 text-slate-300">/</span>
+                  <span className="text-sm font-semibold text-brand-dark">Register</span>
+                </div>
+              </li>
+            </ol>
+          </nav>
+
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-display font-extrabold text-brand-dark tracking-tight mb-4">
               How are you registering?

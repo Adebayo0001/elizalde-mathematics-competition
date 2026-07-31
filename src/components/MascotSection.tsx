@@ -52,10 +52,7 @@ const MascotSection = () => {
           {/* Right Column — Narrative */}
           <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col lg:pl-8">
             <ScrollReveal direction="right" delay={0.2}>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-blue/10 text-brand-blue font-semibold text-[11px] uppercase tracking-widest mb-6">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>The Spirit of EMC</span>
-              </div>
+
               
               <h2 className="font-display font-semibold text-[28px] lg:text-[40px] text-brand-dark mb-5 tracking-tight leading-[1.12]">
                 Meet <span className="text-brand-blue">Owlbert</span> – <br className="hidden sm:block" />
