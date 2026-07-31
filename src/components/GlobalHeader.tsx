@@ -30,9 +30,9 @@ export default function GlobalHeader() {
     <header className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-slate-200/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
         {/* Brand/Logo */}
-        <Link href="/" className="flex items-center gap-3 text-brand-dark focus:outline-none hover:opacity-90 transition-opacity">
-          <Logo className="h-16 w-16 text-brand-blue" />
-          <span className="font-display font-extrabold text-sm sm:text-xl text-brand-dark tracking-wide uppercase mt-1 whitespace-nowrap">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 text-brand-dark focus:outline-none hover:opacity-90 transition-opacity">
+          <Logo className="h-10 w-10 sm:h-16 sm:w-16 text-brand-blue flex-shrink-0" />
+          <span className="font-display font-extrabold text-[11px] sm:text-xl text-brand-dark tracking-wide uppercase mt-1 whitespace-nowrap">
             EMC OLYMPIAD
           </span>
         </Link>
@@ -47,14 +47,14 @@ export default function GlobalHeader() {
         </nav>
 
         {/* Header Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           {/* Register Button (Desktop & Mobile) */}
           <button
             type="button"
             onClick={handleRegisterClick}
             disabled={isRegisterLoading}
             id="nav-register-btn"
-            className="px-5 py-2 sm:px-6 sm:py-2.5 bg-brand-blue hover:bg-brand-blue/90 disabled:opacity-80 disabled:cursor-wait text-white font-semibold rounded-none text-xs uppercase tracking-widest transition-all shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer inline-flex items-center justify-center gap-2 min-w-[6rem] sm:min-w-[7.5rem]"
+            className="px-3 py-1.5 sm:px-6 sm:py-2.5 bg-brand-blue hover:bg-brand-blue/90 disabled:opacity-80 disabled:cursor-wait text-white font-semibold rounded-none text-[10px] sm:text-xs uppercase tracking-wide sm:tracking-widest transition-all shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue cursor-pointer inline-flex items-center justify-center gap-2 min-w-[5rem] sm:min-w-[7.5rem]"
           >
             {isRegisterLoading ? (
               <>
