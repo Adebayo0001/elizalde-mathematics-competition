@@ -125,13 +125,7 @@ export default function HomePage() {
             3. ABOUT SECTION — Two Column Layout
             ────────────────────────────────────────────────────────────────── */}
         <section id="about" className="py-16 lg:py-28 bg-white relative overflow-hidden group/section">
-          {/* Subtle Interactive Math Elements (Section-wide) */}
-          <div className="absolute top-[10%] left-[5%] text-brand-blue/10 sm:text-brand-blue/20 hover:text-brand-blue/70 transition-colors duration-500 text-7xl font-serif select-none cursor-default animate-float-math">∑</div>
-          <div className="absolute bottom-[15%] left-[3%] text-brand-red/20 hover:text-brand-red/70 transition-colors duration-500 text-8xl font-serif select-none cursor-default animate-float-math-delayed hidden sm:block">π</div>
-          <div className="absolute top-[20%] right-[5%] text-brand-gold/15 sm:text-brand-gold/30 hover:text-brand-gold/80 transition-colors duration-500 text-7xl font-serif select-none cursor-default animate-float-math-slow">∞</div>
-          <div className="absolute bottom-[25%] right-[3%] text-slate-300 hover:text-slate-500 transition-colors duration-500 text-8xl font-serif select-none cursor-default animate-float-math hidden sm:block">∫</div>
-          <div className="absolute top-[50%] left-[45%] text-brand-dark/15 hover:text-brand-dark/50 transition-colors duration-500 text-6xl font-serif select-none cursor-default animate-float-math-delayed hidden lg:block">Δ</div>
-          <div className="absolute top-[75%] left-[35%] text-brand-blue/15 hover:text-brand-blue/60 transition-colors duration-500 text-7xl font-serif select-none cursor-default animate-float-math-slow hidden sm:block">Ω</div>
+
 
           <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -139,7 +133,7 @@ export default function HomePage() {
               {/* Left Column — Image */}
               <div className="lg:col-span-5 w-full">
                 <ScrollReveal direction="right" delay={0.1}>
-                  <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-slate-50 flex items-center justify-center p-8 mb-6 lg:mb-0 w-full shadow-lg rounded-none group">
+                  <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] bg-transparent flex items-center justify-center mb-6 lg:mb-0 w-full rounded-none group">
                     <Image 
                       src="/images/logo-elizalde.png" 
                       alt="Elizalde Mathematics Competition Logo" 
