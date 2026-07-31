@@ -38,7 +38,7 @@ export default function GlobalHeader() {
         </Link>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden xl:flex items-center gap-8 text-[15px] font-semibold font-display tracking-wide text-slate-700">
+        <nav className="hidden xl:flex items-center gap-5 text-sm font-medium font-display tracking-wide text-slate-700">
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href} className="hover:text-brand-blue transition-colors">
               {link.name}
