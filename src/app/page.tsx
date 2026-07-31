@@ -12,7 +12,7 @@ import {
   Users,
   BookOpen,
   Book,
-  Circle,
+  Calculator,
   Layers,
   GraduationCap,
   Brain,
@@ -190,7 +190,7 @@ export default function HomePage() {
                           className="flex items-center justify-between sm:justify-start gap-3 group cursor-default w-full sm:w-auto p-4 px-6 sm:p-0 sm:px-0 bg-brand-red/5 sm:bg-transparent rounded-xl sm:rounded-none hover:bg-brand-red/10 sm:hover:bg-transparent transition-colors"
                         >
                           <span className="font-display font-black text-brand-red text-5xl lg:text-6xl tracking-tight group-hover:scale-105 transition-transform">Compete.</span>
-                          <Circle className="h-8 w-8 lg:h-10 lg:w-10 text-brand-red opacity-80 group-hover:scale-110 transition-transform" />
+                          <Calculator className="h-8 w-8 lg:h-10 lg:w-10 text-brand-red opacity-80 group-hover:scale-110 transition-transform" />
                         </motion.div>
                         {/* Learn */}
                         <motion.div 
