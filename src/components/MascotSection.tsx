@@ -7,7 +7,7 @@ import { ScrollReveal } from "./ui/ScrollReveal";
 
 const MascotSection = () => {
   return (
-    <section className="py-16 lg:py-28 bg-slate-50 overflow-hidden relative">
+    <section className="py-16 lg:py-28 bg-white overflow-hidden relative">
       {/* Subtle background pattern/blob */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-blue/5 to-transparent pointer-events-none" />
       
@@ -18,17 +18,15 @@ const MascotSection = () => {
           <div className="lg:col-span-5 order-2 lg:order-1 relative flex justify-center lg:justify-center">
             <ScrollReveal direction="left" delay={0.1}>
               <div className="relative">
-                {/* Decorative background blob behind mascot */}
-                <div className="absolute inset-0 bg-brand-gold/20 rounded-full blur-3xl transform scale-110" />
                 
                 <motion.div 
                   animate={{ y: [0, -12, 0] }}
                   transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                  className="relative z-10 drop-shadow-2xl"
+                  className="relative z-10"
                 >
                   <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                     <Image 
-                      src="/images/img12-Photoroom-150x150.png" 
+                      src="/images/emc--mascot.jpeg" 
                       alt="Owlbert - The EMC Mascot" 
                       fill
                       className="object-contain"

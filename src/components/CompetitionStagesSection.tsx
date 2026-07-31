@@ -34,7 +34,7 @@ export default function CompetitionStagesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
           
           {/* Column 1: Image */}
-          <ScrollReveal className="relative w-full h-[400px] lg:h-auto rounded-none overflow-hidden shadow-2xl border border-slate-200">
+          <ScrollReveal className="relative w-full aspect-square lg:aspect-[4/5] self-start rounded-none overflow-hidden shadow-2xl border border-slate-200">
             <Image
               src="/images/EMC-global-winner_2.jpeg"
               alt="EMC global winner"

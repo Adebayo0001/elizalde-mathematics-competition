@@ -128,3 +128,29 @@ html {
   box-sizing: border-box;
 }
 
+/* Floating math elements animations */
+@keyframes float-math {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(5deg); }
+  66% { transform: translateY(10px) rotate(-5deg); }
+}
+
+@keyframes float-math-alt {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(15px) rotate(-10deg); }
+  66% { transform: translateY(-10px) rotate(10deg); }
+}
+
+.animate-float-math {
+  animation: float-math 12s ease-in-out infinite;
+}
+
+.animate-float-math-slow {
+  animation: float-math-alt 15s ease-in-out infinite;
+}
+
+.animate-float-math-delayed {
+  animation: float-math 14s ease-in-out infinite;
+  animation-delay: -5s;
+}
+

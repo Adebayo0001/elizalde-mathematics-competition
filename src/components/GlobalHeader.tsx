@@ -32,7 +32,7 @@ export default function GlobalHeader() {
         {/* Brand/Logo */}
         <Link href="/" className="flex items-center gap-3 text-brand-dark focus:outline-none hover:opacity-90 transition-opacity">
           <Logo className="h-16 w-16 text-brand-blue" />
-          <span className="font-display font-extrabold text-[1.15rem] sm:text-xl text-brand-dark tracking-wide uppercase mt-1">
+          <span className="font-display font-extrabold text-sm sm:text-xl text-brand-dark tracking-wide uppercase mt-1 whitespace-nowrap">
             EMC OLYMPIAD
           </span>
         </Link>
